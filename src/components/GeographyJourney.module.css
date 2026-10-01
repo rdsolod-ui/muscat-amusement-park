@@ -1,0 +1,49 @@
+.journey{position:absolute;inset:0;pointer-events:none;overflow:hidden;color:#fff7e6;contain:layout paint}
+.mapFrame{position:absolute;left:1%;top:14%;width:66%;height:73%;overflow:hidden}
+.surface{position:absolute;inset:0 0 64px;overflow:hidden;border-radius:3px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 92%,transparent),linear-gradient(180deg,transparent,#000 8%,#000 88%,transparent);mask-composite:intersect}
+.satellite,.cartographic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform-origin:50% 50%}
+.canvas{position:absolute;inset:0;transition:opacity .8s ease}
+.mapShade{position:absolute;inset:0;background:linear-gradient(180deg,#071b2315,transparent 45%,#061b282a);pointer-events:none}
+.pin{position:absolute;left:50%;top:50%;width:38px;height:38px;transform:translate(-50%,-50%);display:grid;place-items:center;filter:drop-shadow(0 2px 7px #0a1b25)}
+.pin i{position:absolute;inset:0;border:1px solid #f8e3a399;border-radius:50%;box-shadow:0 0 0 9px #092d4138}
+.pin span{width:8px;height:8px;border:1.5px solid #fff4d5;background:#214b53;border-radius:50%}
+.placeName{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);padding-bottom:27px;text-align:center;white-space:nowrap;text-shadow:0 2px 14px #05242a,0 1px 4px #000,0 0 24px #071725}
+.placeName>span{display:block;font-family:"Aref Ruqaa","IBM Plex Sans Arabic",serif;font-size:38px;font-weight:700;line-height:1.3}
+.placeName strong{display:block;font-size:14px;letter-spacing:.23em;font-weight:500;margin-top:2px}
+.placeName small{display:block;font-size:10px;letter-spacing:.04em;margin-top:8px}
+.north{position:absolute;top:13%;right:12%;display:grid;justify-items:center;gap:9px;font-size:11px;letter-spacing:.15em;text-shadow:0 1px 6px #073039}
+.north i{height:36px;width:1px;background:linear-gradient(#f9f0d7,transparent);position:relative}
+.north i:before{content:"";position:absolute;left:-3px;top:0;width:7px;height:7px;border-top:1px solid;border-left:1px solid;transform:rotate(45deg)}
+.sea{position:absolute;left:50%;bottom:15%;transform:translateX(-50%);font-size:11px;letter-spacing:.4em;opacity:.75;text-shadow:0 1px 7px #001}
+.source{position:absolute;bottom:7px;left:16%;right:8%;font-size:10px;line-height:1.65;text-align:right;color:var(--muted)}
+.source span{display:block}
+.scale{position:absolute;left:7%;top:16%;width:240px;font-size:13px;letter-spacing:.12em;color:#fff7e6;text-align:left;text-shadow:0 1px 5px #051e25,0 0 14px #051e25}
+.scale>div{height:1px;background:var(--line);margin:12px 0;position:relative}
+.scale i{position:absolute;right:0;top:0;height:1px;background:var(--gold)}
+.scale small{font-size:9px;letter-spacing:.16em;color:#dce8e3}
+@media(min-width:1800px){.placeName>span{font-size:46px}.placeName strong{font-size:18px}.placeName small{font-size:12px}.source{font-size:12px}.scale{font-size:16px;width:280px}.scale small{font-size:11px}}
+@media(max-width:1100px){.mapFrame{left:-4%;width:69%}.placeName>span{font-size:30px}.source{left:15%;right:12%;font-size:9px}.scale{top:18%;left:7%;width:170px;font-size:11px}}
+@media(max-width:760px){.mapFrame{left:0;right:0;top:53%;width:100%;height:38%}.surface{bottom:50px;mask-image:linear-gradient(180deg,transparent,#000 12%,#000 89%,transparent)}.placeName>span{font-size:27px}.placeName strong{font-size:11px;letter-spacing:.16em}.placeName small{font-size:9px}.placeName{transform:translate(-50%,0);padding-top:24px;padding-bottom:0}.source{font-size:8px;left:5%;right:5%;bottom:0;text-align:center;line-height:1.5}.north{right:10%;top:13%;font-size:9px}.north i{height:23px}.scale,.sea{display:none}.pin{width:30px;height:30px}}
+@media(prefers-reduced-motion:reduce){.canvas{transition:none}}
+
+/* The optional mobile slot keeps geography visible between the heading and the longer copy. */
+.journey .placeName>span{direction:rtl;text-align:right}
+@media screen and (max-width:900px){
+ .journey[data-geography-embedded=true] .mapFrame{left:0;right:0;top:0;width:100%;height:100%}
+ .journey[data-geography-embedded=true] .surface{bottom:55px;mask-image:linear-gradient(180deg,transparent,#000 7%,#000 90%,transparent)}
+ .journey[data-geography-embedded=true] .placeName{transform:translate(-50%,0);padding-top:24px;padding-bottom:0}
+ .journey[data-geography-embedded=true] .placeName>span{font-size:27px}
+ .journey[data-geography-embedded=true] .placeName strong{font-size:11px;letter-spacing:.16em}
+ .journey[data-geography-embedded=true] .placeName small{font-size:9px}
+ .journey[data-geography-embedded=true] .source{font-size:8px;left:1%;right:1%;bottom:0;text-align:center;line-height:1.5}
+ .journey[data-geography-embedded=true] .scale,.journey[data-geography-embedded=true] .sea{display:none}
+}
+/* Keep the licence notice over unobscured sea, away from the right-hand copy scrim. */
+@media screen and (min-width:901px){
+ .source{left:7%;right:55%;bottom:144px;text-align:left;color:#e7eeeb;text-shadow:0 1px 4px #031b22,0 0 10px #031b22}
+}
+/* The same Earth renderer has an explicit mobile frame, separate from the reading column. */
+.earthScene{position:absolute;inset:0;pointer-events:none}
+@media screen and (max-width:900px){
+ .earthScene[data-earth-embedded=true]{z-index:0}
+}

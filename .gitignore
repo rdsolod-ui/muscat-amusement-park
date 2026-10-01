@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env
+.env.*
+*.log
+*.blend1
+*.blend2
+*.srt
+.release/
+deploy/
+receipts/
+.DS_Store

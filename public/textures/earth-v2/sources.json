@@ -1,0 +1,63 @@
+{
+  "created": "2026-09-26",
+  "usageGuidance": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "disclosure": "Historical satellite composites; illustrative cinematic lighting and cloud movement, not live weather or satellite data. No NASA endorsement.",
+  "sources": [
+    {
+      "file": "earth-day-nasa-5400.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg",
+      "record": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "credit": "NASA/GSFC; Reto Stöckli",
+      "period": "July 2004 composite",
+      "outputs": [
+        {
+          "path": "textures/earth-v2/day-4096.webp",
+          "bytes": 893776,
+          "sha256": "313a5b17562036f51fda093fdf1550829b2b93af771f8c1f94bad89c4fdbfd3e"
+        },
+        {
+          "path": "textures/earth-v2/day-2048.webp",
+          "bytes": 192558,
+          "sha256": "fa1c06b4611e7c124b750b98c4bdf8c7195da588d7988181aa0f20073f325998"
+        }
+      ],
+      "sha256": "f55226d46d27e05511f2118dc6aa24f5dbf9b6b2cddc87cc6e0e7dd067c00b11"
+    },
+    {
+      "file": "earth-clouds-nasa-2048.jpg",
+      "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+      "record": "https://visibleearth.nasa.gov/images/57747/blue-marble-clouds/77558l",
+      "credit": "NASA Goddard Space Flight Center; Reto Stöckli; enhancements by Robert Simmon",
+      "period": "2002 composite",
+      "outputs": [
+        {
+          "path": "textures/earth-v2/clouds-2048.webp",
+          "bytes": 799166,
+          "sha256": "08f046f085df6a543c2a3aa5669e5495dc5f422f3e2746494413eeffc5e029e0"
+        }
+      ],
+      "sha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793"
+    },
+    {
+      "file": "earth-night-nasa-3600.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/144000/144897/BlackMarble_2016_01deg_gray.jpg",
+      "record": "https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/",
+      "credit": "NASA Earth Observatory; Joshua Stevens; Suomi NPP VIIRS data from Miguel Román, NASA GSFC",
+      "period": "2016 composite",
+      "outputs": [
+        {
+          "path": "textures/earth-v2/night-2048.webp",
+          "bytes": 89250,
+          "sha256": "2e3584b23428a204c09e9f92fa569c933a32478b0c0a90cf1c4d53c1eb8db272"
+        }
+      ],
+      "sha256": "4d2158f59123dadf0696a1cf8909c45018a1de8d0daab40da04122a5aa7f27c6"
+    }
+  ],
+  "landMask": {
+    "source": "Natural Earth public domain; existing project earth-land-mask.png",
+    "sourceSha256": "cecd1a419272ebca77019265ba2d0db53c8eaf0e73af47e16cef625df7245ad1",
+    "path": "textures/earth-v2/land-mask-2048.png",
+    "sha256": "602bd5f0dc34d15e03893e4cd3dc2ebe92d16d20b1ede24d1287e656d13a7dcf"
+  }
+}

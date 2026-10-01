@@ -1,0 +1,57 @@
+{
+  "retrievedAt": "2026-10-01T22:28:29.162740+00:00",
+  "imagery": {
+    "service": "Esri World Imagery",
+    "request": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/export?bbox=603975.158494393%2C2599202.068280774%2C635975.158494393%2C2631202.068280774&bboxSR=32640&imageSR=32640&size=3200%2C3200&format=jpg&transparent=false&f=json",
+    "attribution": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+    "sourceAcquisitionDate": "Composite dates vary; retrieval date is not acquisition date",
+    "processing": "32 km square export in UTM 40N, 3200x3200; WebP compression; no generative modification",
+    "outputPixelSpacingMeters": 10,
+    "nativeResolution": "Varies by source and location",
+    "terms": "https://www.esri.com/en-us/legal/terms/data-attributions"
+  },
+  "terrain": {
+    "source": "Copernicus DEM GLO-30, AWS 2021 release",
+    "attribution": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved",
+    "license": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+    "sources": [
+      {
+        "id": "Copernicus_DSM_COG_10_N23_00_E058_00_DEM",
+        "href": "https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_10_N23_00_E058_00_DEM/Copernicus_DSM_COG_10_N23_00_E058_00_DEM.tif",
+        "sourceWindow": [
+          59,
+          754,
+          1153,
+          1063
+        ]
+      }
+    ],
+    "verticalExaggeration": 1
+  },
+  "anchor": {
+    "lat": 23.64305,
+    "lon": 58.17629,
+    "easting": 619975.158494393,
+    "northing": 2615202.068280774
+  },
+  "boundsUTM": [
+    603975.158494393,
+    2599202.068280774,
+    635975.158494393,
+    2631202.068280774
+  ],
+  "crs": "EPSG:32640",
+  "scope": "Real regional imagery and sampled surface heights. Proposed site centre; not a surveyed or approved site boundary, individual building model, or live imagery.",
+  "files": [
+    {
+      "path": "muscat-satellite.webp",
+      "bytes": 2672856,
+      "sha256": "849ddc2247562f3f4d5101744d15045ab9a88bb0887a3cde6a1d8fcc3cbf9ad8"
+    },
+    {
+      "path": "muscat-terrain.json",
+      "bytes": 187805,
+      "sha256": "4d0cf6ccc68aa093b1c6a043cd860f95ead1f52e1bfb78ab309bab5b5c3c5175"
+    }
+  ]
+}

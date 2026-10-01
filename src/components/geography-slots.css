@@ -1,0 +1,11 @@
+/* Parent-owned mobile portal slots; global selectors must not be in a CSS module. */
+#geography-mobile-slot,
+#earth-mobile-slot{display:none}
+@media screen and (max-width:900px){
+  #geography-mobile-slot{display:block;position:relative;width:100%;height:360px;margin:22px 0 28px;isolation:isolate}
+  #earth-mobile-slot{display:block;position:relative;width:100%;height:330px;margin:22px 0 28px;isolation:isolate;overflow:hidden}
+}
+@media print{
+  #geography-mobile-slot,
+  #earth-mobile-slot{display:none!important}
+}

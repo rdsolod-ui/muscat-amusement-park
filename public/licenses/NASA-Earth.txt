@@ -1,0 +1,10 @@
+EARTH VISUALIZATION SOURCES — MUSCAT AMUSEMENT & WATER PARK
+NASA Blue Marble Next Generation (July 2004): NASA/GSFC, Reto Stöckli.
+NASA Blue Marble cloud composite (2002): NASA Goddard Space Flight Center, Reto Stöckli; enhancements by Robert Simmon.
+NASA Black Marble night lights (2016): NASA Earth Observatory / Joshua Stevens, using Suomi NPP VIIRS data from Miguel Román, NASA GSFC.
+Land/water mask and Oman boundary: Natural Earth, public domain.
+
+Historical composites used in an illustrative 3D globe. Lighting and cloud drift are cinematic choices, not live observations.
+NASA is acknowledged only as an imagery source. No NASA endorsement is stated or implied.
+Usage guidance: https://www.nasa.gov/nasa-brand-center/images-and-media/
+Source URLs and SHA-256 checksums: textures/earth-v2/sources.json

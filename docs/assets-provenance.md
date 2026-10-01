@@ -1,0 +1,42 @@
+# Asset provenance
+
+
+
+The project distinguishes concept imagery, geographic context and operational claims.
+
+
+
+| Asset group | Provenance and treatment |
+
+|---|---|
+
+| `design/muscat-park.blend`, `public/models/muscat-park.glb` | Project-created concept scene. The GLB is a browser-optimised derivative, not a CAD/construction deliverable. The public Blender file packs its material resources and contains no satellite context raster. The original private context scene remains separate; third-party material rights continue to apply. |
+
+| `design/visuals/*.png`, matching `public/media/*vision.webp` | Generated concept illustrations prepared for this project. They show an intended atmosphere, not documentary photographs or engineering dimensions. |
+
+| Other park renders in `public/media/` | Rendered project concept geometry. No claim of completed construction. |
+
+| `public/media/source-masterplan-diagram.svg` | Project-created vector redraw of the project-owner-supplied composition, without its embedded map screenshot. Original labels total 37 ha; the traced image extent is approximately 50.4 ha and is not a cadastral survey. This source diagram is not a building footprint or a certified land balance. |
+
+| `public/media/site-evidence.svg` and any local satellite context | Geographic reference includes third-party basemap imagery. Keep provider attribution; no open-data or unrestricted redistribution licence is asserted. Esri static map guidance: https://doc.arcgis.com/en/arcgis-online/reference/static-maps.htm . Keep imagery-provider credits on or beside each relevant visual. |
+
+| Earth imagery in `public/textures/earth-v2/` | Historical NASA composites, with per-image source/credit/output hashes in `sources.json`. Illustrative lighting and cloud movement; not live weather. No NASA endorsement. |
+
+| Muscat satellite and terrain in `public/data/geography/` | Site-centred Esri World Imagery and Copernicus DEM, with attribution and source details in `credits.html` and `sources.json`. Real regional context; the parcel remains an image-traced proposal, not an official survey. |
+| Natural Earth geography | Public-domain geographic context; see `public/licenses/Natural-Earth.txt`. Boundaries are illustrative, not authoritative project land limits. |
+
+| Fonts | Aref Ruqaa and IBM Plex families, self-hosted under their SIL Open Font License notices in `public/licenses/`. |
+
+| Poly Haven materials | Source texture/HDR resources are covered by the retained Poly Haven notice. Packing a resource does not remove its provenance. |
+
+
+
+Arabic copy is a working bilingual project text; local Omani editorial review remains separate. Do not interpret country references, a national flag or a policy citation as project endorsement, an awarded plot, confirmed investment or an operating licence.
+
+
+
+This file is a public provenance summary. Private transcripts, research evidence logs, deployment receipts and local workstation details are intentionally not included.
+
+
+
+Detailed scope of licences: [asset licence boundaries](ASSET-LICENSES.md). No licence for the complete repository or all supplied ride models is inferred from a third-party CC0/OFL notice.

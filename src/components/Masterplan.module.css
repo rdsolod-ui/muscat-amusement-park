@@ -1,0 +1,32 @@
+.programme{display:grid;grid-template-columns:minmax(0,1fr);gap:13px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);direction:rtl}
+.selector{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px;direction:ltr}
+.selector button{display:grid;place-items:center;width:43px;min-height:43px;border:1px solid var(--line);border-radius:50%;font:400 14px/1 "IBM Plex Sans",sans-serif;color:var(--muted);transition:background .2s,color .2s,border-color .2s}
+.selector button:hover{color:var(--ink);border-color:var(--gold)}
+.selector button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.selector button:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+.detail{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:7px 14px;align-items:start;min-width:0;direction:ltr}
+.number{grid-column:1;grid-row:1/3;color:var(--gold);font:300 34px/1.1 "IBM Plex Sans",sans-serif;padding-top:3px}
+.heading{grid-column:2;grid-row:1;text-align:right;min-width:0}
+.heading h3{font:700 24px/1.4 "Aref Ruqaa",serif;margin:0;color:var(--ink);letter-spacing:0}
+.heading>span{display:block;font:400 13px/1.5 "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:2px;unicode-bidi:isolate}
+.area{grid-column:3;grid-row:1;text-align:right;white-space:nowrap;padding-top:3px;color:var(--gold)}
+.area>span{display:block;font-size:14px;line-height:1.5}
+.area>span[lang=en]{font:400 10px/1.5 "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:3px}
+.description{grid-column:2/4;grid-row:2;min-width:0;text-align:right}
+.description p{margin:0;font-size:13px;line-height:1.8;color:var(--ink)}
+.description p[lang=en]{font:400 12px/1.6 "IBM Plex Sans",sans-serif;color:var(--muted);margin-top:5px;unicode-bidi:isolate}
+.areaNote{margin-top:11px!important;padding-top:10px;border-top:1px solid var(--line);text-align:right;font-size:11px;line-height:1.75;color:var(--muted)}
+.areaNote>span{display:block;font:400 10px/1.6 "IBM Plex Sans",sans-serif;margin-top:4px;unicode-bidi:isolate}
+@media(min-width:1300px){.programme{grid-template-columns:minmax(0,1fr) auto;column-gap:22px;align-items:start}.selector{grid-column:2;grid-row:1;padding-top:4px;gap:6px}.selector button{width:39px;min-height:39px;font-size:12px}.detail{grid-column:1;grid-row:1}.heading h3{font-size:24px}.detail{grid-template-columns:32px minmax(0,1fr) auto;column-gap:10px}.number{font-size:30px}}
+@media(max-width:520px){.programme{gap:14px;margin-top:14px;padding-top:13px}.selector{justify-content:space-between;gap:6px}.selector button{width:43px;min-height:43px}.detail{grid-template-columns:29px minmax(0,1fr);column-gap:10px}.number{font-size:28px;grid-row:1/4}.heading{grid-column:2;grid-row:1}.heading h3{font-size:24px}.area{grid-column:2;grid-row:2;display:flex;justify-content:flex-end;align-items:baseline;gap:10px;padding:0;white-space:normal}.area>span{font-size:12px}.area>span[lang=en]{font-size:10px;margin:0}.description{grid-column:2;grid-row:3}.description p{font-size:13px}.description p[lang=en]{font-size:11px}.areaNote{font-size:10px}.areaNote>span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.selector button{transition:none}}
+@media print{.selector{display:none}.programme{display:block}.detail{break-inside:avoid}.areaNote{break-inside:avoid}}
+.detailPanel{min-width:0;width:100%}
+.detailPanel[data-portaled=true] .programme{display:flex;flex-direction:column;gap:17px;margin-top:23px;padding-top:18px}
+.detailPanel[data-portaled=true] .selector{justify-content:flex-end;gap:9px;width:100%;padding:0}
+.detailPanel[data-portaled=true] .selector button{width:43px;min-height:43px;font-size:13px}
+.detailPanel[data-portaled=true] .detail{width:100%;grid-template-columns:32px minmax(0,1fr) auto;column-gap:12px}
+.detailPanel[data-portaled=true] .description p{font-size:14px;line-height:1.85}
+.detailPanel[data-portaled=true] .description p[lang=en]{font-size:13px;line-height:1.65}
+.detailPanel[data-portaled=true] .areaNote{margin-top:18px!important;font-size:11px}
+.renderCredit{margin:7px 0 0!important;color:var(--muted);text-align:left;font:400 10px/1.5 "IBM Plex Sans",sans-serif}

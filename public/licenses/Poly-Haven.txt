@@ -1,0 +1,12 @@
+Poly Haven source-resource notice — retained from the reference visual study
+License: CC0 (public domain dedication).
+Source pages:
+https://polyhaven.com/a/kloppenheim_06_puresky
+https://polyhaven.com/a/qwantani_dusk_1_puresky
+https://polyhaven.com/a/coast_sand_05
+Kloppenheim06 pure sky: Greg Zaal (original), Jarod Guest (sky edit).
+Qwantani dusk1 pure sky: Greg Zaal (photography), Jarod Guest (sky edit).
+CoastSand05: Rob Tuytel (photography), Dario Barresi (processing).
+Downloaded 2026-09-26, self-hosted. HDR images provide generic sky/lighting; they are not documentary images of Salalah or current weather. Sand texture is a visual material sample, not a survey of the local beach.
+
+This retained notice describes the reference resources. It does not assert that every listed HDR or sand file is present in this Muscat public package.
