@@ -2,7 +2,7 @@
   "meta": {
     "title_ar": "منتزه مسقط الترفيهي والمائي | وقت للعائلة وذكريات للمدينة",
     "title_en": "Muscat Amusement & Water Park | A Family Destination for Muscat",
-    "description_ar": "تصور لوجهة عائلية في السيب تجمع الألعاب والحديقة المائية والمركز العائلي الداخلي وممشى العائلة، مع تطوير مرحلي واستثمار أولي مدروس.",
+    "description_ar": "تصور لوجهة عائلية في السيب تجمع الألعاب والحديقة المائية وممشى من طابقين وقبة عائلية، مع تطوير مرحلي.",
     "description_en": "A proposed family destination in Seeb, Muscat, combining rides, a water park, an indoor family centre and City Walk through phased development."
   },
   "chapters": [
@@ -12,18 +12,9 @@
       "kicker_en": "A proposed family destination · Seeb, Muscat",
       "title_ar": "مسقط. ذكريات نصنعها معاً.",
       "title_en": "Muscat. Memories made together.",
-      "body_ar": "وقت يجمع الآباء والأبناء في وجهة عائلية، وتبقى ذكراه مرتبطة بمسقط.",
-      "body_en": "A place for parents and children to share their day—and carry memories of Muscat with them.",
-      "points": [
-        {
-          "ar": "ألعاب وحديقة مائية وتجارب داخلية في وجهة واحدة",
-          "en": "Rides, a water park and indoor experiences in one destination"
-        },
-        {
-          "ar": "تصور لتطوير الموقع المقترح على مراحل",
-          "en": "A concept to develop the proposed site in phases"
-        }
-      ],
+      "body_ar": "وقت يجمع الآباء والأبناء، وذكريات تحمل اسم مسقط.",
+      "body_en": "Time for parents and children. Memories that belong to Muscat.",
+      "points": [],
       "note_ar": null,
       "note_en": null
     },
@@ -31,24 +22,11 @@
       "id": "city",
       "kicker_ar": "قيمة للمدينة",
       "kicker_en": "Value for the city",
-      "title_ar": "سبب جديد للخروج واكتشاف مسقط.",
-      "title_en": "A new reason to step out and discover Muscat.",
-      "body_ar": "يمكن ليوم عائلي في المنتزه أن يقود إلى مطعم محلي أو تجربة ثقافية في المدينة. نطمح إلى وجهة تخدم السكان، وتضيف إلى رحلة الزائر سبباً جديداً لاكتشاف مسقط خارج الفندق.",
-      "body_en": "A family day at the park can lead to a local meal or a cultural experience in the city. The ambition is to serve residents and give visitors another reason to discover Muscat beyond their hotel.",
-      "points": [
-        {
-          "ar": "مسارات عائلية مقترحة بالتعاون مع الفنادق ومنظمي الرحلات",
-          "en": "Proposed family itineraries with hotels and tour operators"
-        },
-        {
-          "ar": "تجارب تربط الترفيه بالطعام والثقافة المحلية",
-          "en": "Experiences connecting leisure with local food and culture"
-        },
-        {
-          "ar": "متابعة الزيارات والإنفاق خارج المنتزه لقياس الأثر",
-          "en": "Track visits and spending beyond the park to assess impact"
-        }
-      ],
+      "title_ar": "سبب لاكتشاف مسقط.",
+      "title_en": "A reason to explore Muscat.",
+      "body_ar": "وجهة تدعو العائلات والزوار إلى الخروج واكتشاف المدينة، وتفتح مجالاً للأعمال المحلية.",
+      "body_en": "A reason to leave the hotel, discover Muscat and support local enterprise.",
+      "points": [],
       "note_ar": "الشراكات والأثر السياحي أهداف تحتاج إلى اختبار وتطوير.",
       "note_en": "Partnerships and tourism impact are objectives to test and develop."
     },
@@ -56,32 +34,11 @@
       "id": "site",
       "kicker_ar": "التكوين الأصلي للموقع",
       "kicker_en": "The original site composition",
-      "title_ar": "ثلاث تجارب يربطها ممشى العائلة.",
-      "title_en": "Three experiences connected by a family walk.",
-      "body_ar": "نطوّر الفكرة انطلاقاً من الرسم الأصلي للموقع قرب شارعي السلام والفروسية في السيب: الألعاب في الغرب، والحديقة المائية في الشرق، ومحور عائلي بينهما.",
-      "body_en": "The concept follows the supplied site diagram near A Salam and Al Furusiyyah streets in Seeb: rides to the west, the water park to the east and a family spine between them.",
-      "points": [
-        {
-          "ar": "الألعاب الترفيهية · 17.5 هكتار",
-          "en": "Amusement park · 17.5 ha"
-        },
-        {
-          "ar": "الحديقة المائية · 9 هكتارات",
-          "en": "Water park · 9 ha"
-        },
-        {
-          "ar": "ممشى العائلة والمركز الداخلي · منطقة City Walk البالغة 5 هكتارات",
-          "en": "Family walk and indoor centre · within the 5 ha City Walk zone"
-        },
-        {
-          "ar": "مواقف سطحية · 4 هكتارات",
-          "en": "Surface parking · 4 ha"
-        },
-        {
-          "ar": "منطقة تقنية · 1.5 هكتار",
-          "en": "Technical area · 1.5 ha"
-        }
-      ],
+      "title_ar": "ثلاث مناطق. وجهة واحدة.",
+      "title_en": "Three zones. One destination.",
+      "body_ar": "الألعاب غرباً، والمياه شرقاً، وبينهما ممشى ينتهي بقبة العائلة.",
+      "body_en": "Rides west, water east, a promenade leading to the family dome.",
+      "points": [],
       "note_ar": "هذه مساحات مكتوبة على التصور الأصلي ومجموعها 37 هكتاراً؛ أما الحدود المنقولة من الصورة فتبلغ نحو 50.4 هكتار. يلزم تأكيد الحدود الرسمية والمساحة الصالحة للتطوير، ومساحة City Walk ليست مساحة مبنى.",
       "note_en": "These original concept labels total 37 ha; the traced image boundary is approximately 50.4 ha. Official limits and buildable land need verification. The City Walk area is not a building footprint."
     },
@@ -89,72 +46,48 @@
       "id": "indoor",
       "kicker_ar": "قلب المنتزه",
       "kicker_en": "The heart of the park",
-      "title_ar": "تستمر المتعة داخل المركز العائلي.",
-      "title_en": "The family day continues indoors.",
-      "body_ar": "مركز داخلي مدمج يجمع ألعاب الأطفال والتجارب العائلية والطعام والراحة. وجوده في قلب المشروع يتيح تنويع الزيارة بحسب الموسم وأعمار الأطفال.",
-      "body_en": "A compact indoor centre brings together children's play, shared family experiences, food and rest. At the heart of the project, it gives families more ways to shape their visit around the season and their children's ages.",
+      "title_ar": "تحت قبة واحدة.",
+      "title_en": "Under one dome.",
+      "body_ar": "في نهاية الممشى: قبة نصف كروية لألعاب الليزر للأطفال والعروض الحية.",
+      "body_en": "At the promenade’s end: a hemisphere for children’s laser tag and live shows.",
       "points": [
         {
-          "ar": "تجارب داخلية فعلية للعب والاكتشاف",
-          "en": "Indoor experiences for play and discovery"
-        },
-        {
-          "ar": "استقبال وشراء تذاكر واستراحة في مكان مريح",
-          "en": "Comfortable arrival, ticketing and rest"
-        },
-        {
-          "ar": "تصميم مدمج يمكن تطويره مع نمو المشروع",
-          "en": "A compact design that can evolve with the project"
+          "ar": "ألعاب داخلية ومتاجر عائلية تكمل اليوم.",
+          "en": "Indoor play and family shopping complete the day."
         }
       ],
-      "note_ar": null,
-      "note_en": null
+      "note_ar": "تُفصل أنشطة الليزر والعروض صوتياً ووظيفياً؛ السعة والمخارج والإنشاءات تُدرس في المرحلة التالية.",
+      "note_en": "Laser tag and performances require acoustic and operational separation; capacity, egress and structure follow in design."
     },
     {
       "id": "rides",
       "kicker_ar": "اللعب معاً",
       "kicker_en": "Playing together",
-      "title_ar": "أول مغامرة. وضحكة يشترك فيها الجميع.",
-      "title_en": "A first adventure. A laugh everyone shares.",
-      "body_ar": "مزيج من الألعاب للصغار والعائلات ومحبي الحركة، مع ألعاب رئيسية قريبة من المركز الداخلي. الفكرة هي حماية فترات الانتظار الطويلة وتقليل المسافة إلى التجربة.",
-      "body_en": "A mix of rides for younger children, families and active guests, with selected signature rides close to the indoor centre. The idea is to protect longer waits and shorten the journey to the experience.",
+      "title_ar": "علامة جديدة في أفق مسقط.",
+      "title_en": "A new landmark for Muscat.",
+      "body_ar": "عجلة بارتفاع ٩٠ متراً وأفعوانية كبيرة تصنعان قلب المغامرة.",
+      "body_en": "A 90-metre wheel and a major coaster anchor the adventure.",
       "points": [
         {
-          "ar": "ألعاب يشارك فيها الآباء والأبناء",
-          "en": "Rides parents and children can enjoy together"
-        },
-        {
-          "ar": "انتظار محمي وانتقالات قصيرة للألعاب المختارة",
-          "en": "Protected waiting and short links to selected rides"
-        },
-        {
-          "ar": "توسّع تدريجي في الألعاب الخارجية بحسب الطلب",
-          "en": "Gradual expansion of outdoor rides as demand develops"
+          "ar": "دوّارات عائلية، برج سقوط وصالات ألعاب.",
+          "en": "Carousels, a drop tower and arcades."
         }
       ],
-      "note_ar": null,
-      "note_en": null
+      "note_ar": "ارتفاع ٩٠ متراً هدف مفاهيمي. اختيار المصنع والسلامة وقيود الارتفاع تحتاج إلى دراسات واعتمادات.",
+      "note_en": "90 metres is a concept target. Manufacturer selection, safety and height constraints require study and approval."
     },
     {
       "id": "water",
       "kicker_ar": "يوم قرب الماء",
       "kicker_en": "A day by the water",
-      "title_ar": "مساحة للّعب والراحة لكل العائلة.",
-      "title_en": "Room for the whole family to play and relax.",
-      "body_ar": "حديقة مائية عائلية بمناطق لعب للصغار، ومنزلقات ومسابح مختارة، وأماكن مظللة للراحة. تتطور مكوّناتها على مراحل بعد التحقق من احتياجات التشغيل والمياه.",
-      "body_en": "A family water park with younger children's play, selected slides and pools, and shaded places to rest. Its programme develops in stages after operating and water requirements are assessed.",
+      "title_ar": "يوم على الماء.",
+      "title_en": "A day by the water.",
+      "body_ar": "مسبح أمواج، ومنزلقات، ونادٍ شاطئي يوازن بين المغامرة والاسترخاء.",
+      "body_en": "A wave pool, water slides and a beach lounge for every pace.",
       "points": [
         {
-          "ar": "تجارب مائية لأعمار مختلفة",
-          "en": "Water experiences for different ages"
-        },
-        {
-          "ar": "تبديل ملابس وخدمات عائلية قرب مناطق اللعب",
-          "en": "Changing and family facilities close to the play areas"
-        },
-        {
-          "ar": "معالجة مياه وسلامة وصيانة ضمن تصميم المشروع",
-          "en": "Water treatment, safety and maintenance built into the design"
+          "ar": "كراسي استرخاء ومظلات وكبائن بجوار الماء.",
+          "en": "Loungers, umbrellas and poolside cabanas."
         }
       ],
       "note_ar": null,
@@ -164,22 +97,14 @@
       "id": "city-walk",
       "kicker_ar": "ممشى العائلة",
       "kicker_en": "City Walk",
-      "title_ar": "طريق فيه ما يدعو إلى البقاء.",
-      "title_en": "A walk with reasons to stay.",
-      "body_ar": "ممشى يربط الألعاب بالماء والمركز الداخلي، مع مقاهٍ ومطاعم ومحال صغيرة تلائم العائلة. فوق الجزء المخصص للمشاة، يمنح سقف من الشرائح ظلاً خفيفاً ومتفرقاً، مع رذاذ ماء في الموسم الحار.",
-      "body_en": "A walk connecting rides, water play and the indoor centre, with cafés, restaurants and small family-oriented shops. A slatted canopy above the pedestrian area provides light, dappled shade, with water misting in the hot season.",
+      "title_ar": "شارع يستحق أن نمشيه.",
+      "title_en": "A street worth exploring.",
+      "body_ar": "مبانٍ من طابقين، وشرفات مقاهٍ مظللة، ومحال تدعو إلى التوقف.",
+      "body_en": "Two-storey façades, shaded café terraces and shops worth stopping for.",
       "points": [
         {
-          "ar": "طعام الشارع وجلسات ونباتات ونوافير للراحة بين التجارب",
-          "en": "Street food, seating, planting and fountains for pauses between experiences"
-        },
-        {
-          "ar": "تنشيط موسمي للممشى بأنشطة وفعاليات عائلية",
-          "en": "Seasonal activities and family events along the walk"
-        },
-        {
-          "ar": "تشغيل موسمي للرذاذ مع معالجة المياه وصيانة الفوّهات",
-          "en": "Seasonal misting operation with water treatment and nozzle maintenance"
+          "ar": "ممرات مغطاة ببرجولات ورذاذ موسمي خفيف.",
+          "en": "Pergola-covered paths with gentle seasonal mist."
         }
       ],
       "note_ar": null,
@@ -191,8 +116,8 @@
       "kicker_en": "A considered first investment",
       "title_ar": "ابدأ بما يصنع التجربة. ثم توسّع.",
       "title_en": "Start with what makes the experience. Then expand.",
-      "body_ar": "يركّز النهج على خفض متطلبات الاستثمار الأولي من خلال مركز داخلي مدمج، ومواقف سطحية، وممرات عملية، ومجموعة مختارة من التجارب. تُضاف المساحات المغلقة والألعاب اللاحقة عندما تدعمها الحاجة التشغيلية والطلب.",
-      "body_en": "The approach aims to limit initial capital requirements through a compact indoor centre, surface parking, practical paths and a selected experience mix. Further enclosed space and rides follow operating needs and demand.",
+      "body_ar": "البرنامج الجديد يشمل عجلة ٩٠ متراً وأفعوانية كبيرة وقبة متعددة الاستخدامات. لا يُعد برنامجاً منخفض التكلفة دون دراسة جدوى وعروض أسعار.",
+      "body_en": "The expanded programme includes a 90-metre wheel, major coaster and multipurpose dome. It is not a verified low-CAPEX scheme; feasibility and supplier quotations are needed.",
       "points": [
         {
           "ar": "مبانٍ بسيطة وتوظيف مدروس للهوية البصرية",
@@ -214,22 +139,22 @@
       "id": "phasing",
       "kicker_ar": "التطوير على مراحل",
       "kicker_en": "Development in phases",
-      "title_ar": "كل مرحلة تمنح العائلة زيارة متكاملة.",
-      "title_en": "Every phase should offer a complete family visit.",
-      "body_ar": "بعد التحقق من الأرض والجدوى، يبدأ المشروع بنواة تستطيع استقبال العائلات وتشغيل خدماتها. ثم تتسع التجربة وفق التمويل والطلب ونتائج التشغيل.",
-      "body_en": "After land and feasibility checks, the project starts with a core able to welcome families and operate its services. The experience then grows with funding, demand and operating evidence.",
+      "title_ar": "رؤية متكاملة. تنفيذ على مراحل.",
+      "title_en": "One vision. Phased delivery.",
+      "body_ar": "تُحدد المراحل بعد تأكيد الأرض والجدوى والتمويل.",
+      "body_en": "Phases follow land verification, feasibility and funding.",
       "points": [
         {
-          "ar": "المرحلة الأولى: المركز العائلي الداخلي وألعابه والبنية الأساسية اللازمة",
-          "en": "Phase one: the indoor family centre, its attractions and essential infrastructure"
+          "ar": "تأكيد الأرض والوصول",
+          "en": "Verify land and access"
         },
         {
-          "ar": "المرحلة الثانية: الحديقة المائية والخدمات المرتبطة بها",
-          "en": "Phase two: the water park and its supporting services"
+          "ar": "التصميم والجدوى والتمويل",
+          "en": "Design, feasibility and funding"
         },
         {
-          "ar": "المرحلة الثالثة: توسيع الألعاب الخارجية والبرنامج الموسمي",
-          "en": "Phase three: expand outdoor rides and the seasonal programme"
+          "ar": "تنفيذ مرحلي قابل للتشغيل",
+          "en": "Deliver viable operating phases"
         }
       ],
       "note_ar": "تسلسل مقترح؛ تُحدّد المواعيد والنطاق بعد التحقق من الجدوى والموافقات والتمويل.",
@@ -239,47 +164,31 @@
       "id": "comfort",
       "kicker_ar": "من الوصول إلى نهاية اليوم",
       "kicker_en": "From arrival to the end of the day",
-      "title_ar": "الراحة جزء من التجربة.",
-      "title_en": "Comfort is part of the experience.",
-      "body_ar": "تبدأ الزيارة بمواقف سطحية مستهدفة تستوعب 1,000 سيارة، ومنطقة إنزال واضحة ومسار مريح إلى المدخل. داخل المنتزه، تكون الراحة والخدمات الأساسية قريبة من العائلة.",
-      "body_en": "The visit starts with a target of 1,000 surface parking spaces, a clear drop-off and a comfortable route to the entrance. Inside the park, rest and essential facilities stay close to the family.",
+      "title_ar": "الراحة من أول خطوة.",
+      "title_en": "Comfort from the first step.",
+      "body_ar": "من المواقف إلى الألعاب: ممرات مظللة ببرجولات ورذاذ ماء ناعم.",
+      "body_en": "From parking to play: pergolas and fine mist along pedestrian routes.",
       "points": [
         {
-          "ar": "مسار مشاة تحت مظلة الشرائح ورذاذ موسمي",
-          "en": "A pedestrian route beneath the slatted canopy with seasonal misting"
-        },
-        {
-          "ar": "دورات مياه ومرافق عائلية وصلاة ومسارات ميسّرة",
-          "en": "Toilets, family and prayer facilities, and accessible routes"
-        },
-        {
-          "ar": "تخطيط وصول الخدمات والطوارئ وإدارة تدفق الزوار",
-          "en": "Plan service and emergency access alongside visitor flows"
+          "ar": "١٬٠٠٠ موقف مستهدف، ومدخل واضح عبر قوس ترحيبي.",
+          "en": "1,000 target spaces and a welcoming entrance arch."
         }
       ],
-      "note_ar": "1,000 موقف هو هدف البرنامج؛ يلزم التحقق من توزيعها في هذا التصور ومن الدخول والطاقة المرورية.",
-      "note_en": "1,000 spaces is the programme target; this layout, road access and traffic capacity need verification."
+      "note_ar": "الرذاذ موسمي ويتطلب معالجة مياه وصيانة وتشغيلاً ملائماً للرطوبة والرياح. عدد المواقف تحقق هندسي أولي، وليس اعتماداً مرورياً.",
+      "note_en": "Seasonal misting needs treated water, maintenance and humidity/wind controls. Parking count is geometric, not a traffic approval."
     },
     {
       "id": "character",
       "kicker_ar": "هوية وفرص محلية",
       "kicker_en": "Character and local opportunity",
-      "title_ar": "مكان يرحّب بالعالم ويمنح الأعمال المحلية مساحة.",
-      "title_en": "A place that welcomes the world and makes room for local business.",
-      "body_ar": "الطعام والعلامات والخدمات العُمانية جزء مقترح من تجربة الزائر. ويمكن أن تُضفي لمسات مستوحاة من الثقافة الروسية وفعاليات عائلية طابعاً مميزاً يدعو إلى الاكتشاف.",
-      "body_en": "Omani food, brands and services are proposed as part of the visitor experience. Russian-inspired cultural touches and family events could give the destination a distinctive character to discover.",
+      "title_ar": "واجهات تصنع شخصية المكان.",
+      "title_en": "A street with character.",
+      "body_ar": "واجهات مستوحاة من ممشى «جزيرة الأحلام»، بروح تناسب مسقط.",
+      "body_en": "Dream Island-inspired streetscapes, adapted to the character of Muscat.",
       "points": [
         {
-          "ar": "فرص للمقاهي والمحلات الصغيرة والمورّدين المحليين",
-          "en": "Opportunities for cafés, small shops and local suppliers"
-        },
-        {
-          "ar": "قصة بصرية وثقافية تناسب العائلة وسياق عُمان",
-          "en": "A visual and cultural story suited to families and Oman's context"
-        },
-        {
-          "ar": "برنامج فعاليات يتطور مع الشركاء والمجتمع",
-          "en": "An events programme developed with partners and the community"
+          "ar": "مطاعم ومقاهٍ ومتاجر صغيرة بواجهات نابضة بالحياة.",
+          "en": "Lively frontages for dining, cafés and small shops."
         }
       ],
       "note_ar": "الموضوعات الثقافية والشراكات مقترحة؛ ولا تعني دعماً رسمياً أو اتفاقيات ترخيص مؤكدة.",
@@ -289,24 +198,11 @@
       "id": "land-request",
       "kicker_ar": "القرار التالي",
       "kicker_en": "The next decision",
-      "title_ar": "لنحدد معاً الطريق إلى تخصيص الأرض.",
-      "title_en": "Let us agree the path to the land decision.",
-      "body_ar": "نطلب النظر في تخصيص الموقع المقترح لهذه الوجهة العائلية، وتحديد شروط تطويره والجهات المعنية بالمراجعة. تبدأ قيمة المشروع للمدينة بخطوة واضحة نحو أرض مؤكدة ومشروع قابل للتنفيذ.",
-      "body_en": "We ask for consideration of the proposed site for this family destination, with clear development conditions and responsible reviewing parties. Public value begins with a clear next step towards verified land and a deliverable project.",
-      "points": [
-        {
-          "ar": "تأكيد الجهة المختصة وحدود الأرض وحقوق استخدامها",
-          "en": "Confirm the competent authority, official boundary and land rights"
-        },
-        {
-          "ar": "تحديد اشتراطات تصريف المياه والوصول والشبكات",
-          "en": "Define drainage, access and utility requirements"
-        },
-        {
-          "ar": "الاتفاق على حزمة الجدوى التالية ومسؤوليات المراجعة",
-          "en": "Agree the next feasibility submission and review responsibilities"
-        }
-      ],
+      "title_ar": "لنمنح هذه الرؤية مكاناً.",
+      "title_en": "Give this vision a home.",
+      "body_ar": "نطلب النظر في تخصيص الموقع، وبدء دراسة مشتركة لشروط تطويره.",
+      "body_en": "Consider the proposed land allocation and agree the development studies.",
+      "points": [],
       "note_ar": "الحدود والحقوق والهيدرولوجيا والتمويل والموافقات لم تُؤكد بعد؛ وقد تتغير المساحة القابلة للتطوير والبرنامج بعد التحقق.",
       "note_en": "Boundaries, rights, hydrology, funding and approvals are not yet confirmed; validation may change the developable area and programme."
     }

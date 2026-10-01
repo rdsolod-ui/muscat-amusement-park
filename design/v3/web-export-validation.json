@@ -1,0 +1,148 @@
+{
+  "file": "muscat-park-v3.glb",
+  "bytes": 7621664,
+  "sha256": "130de4c0d2e7fad1d86707cdca660face1caf34b8151c3884800f7013a3af30f",
+  "meshCount": 76,
+  "nodeCount": 76,
+  "meshoptDecoderRequired": true,
+  "noTopologySimplificationInThisPass": true,
+  "contextRaster": false,
+  "compressedValidation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 2,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNSUPPORTED_EXTENSION",
+        "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+        "severity": 2,
+        "pointer": "/extensionsUsed/0"
+      },
+      {
+        "code": "IMAGE_NPOT_DIMENSIONS",
+        "message": "Image has non-power-of-two dimensions: 1039x474.",
+        "severity": 2,
+        "pointer": "/images/1"
+      }
+    ],
+    "truncated": false
+  },
+  "decodedValidation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 18,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "IMAGE_NPOT_DIMENSIONS",
+        "message": "Image has non-power-of-two dimensions: 1039x474.",
+        "severity": 2,
+        "pointer": "/images/1"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/27/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/31/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/41/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/28/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/29/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/33/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/34/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/36/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/37/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/38/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/39/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/40/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+        "severity": 2,
+        "pointer": "/meshes/30/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/32/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+        "severity": 2,
+        "pointer": "/meshes/35/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+        "severity": 2,
+        "pointer": "/meshes/42/primitives/0/indices"
+      },
+      {
+        "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+        "message": "Indices accessor contains 72 degenerate triangles (out of 3456).",
+        "severity": 2,
+        "pointer": "/meshes/56/primitives/1/indices"
+      }
+    ],
+    "truncated": false
+  }
+}

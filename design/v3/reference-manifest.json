@@ -1,0 +1,22 @@
+{
+  "revision": "v3",
+  "source_scene": "design/muscat-park.blend",
+  "source_sha256": "2bcdf5c7cd8ffff24e962499160ee82125350c954ce694b76d92b200eff3e443",
+  "source_policy": [
+    "Current user request controls programme changes.",
+    "Parcel and five zoning polygons retained from supplied composition.",
+    "Parking1000 bay coordinates remain unchanged.",
+    "Existing supplied-model Condor, Drop Tower, Typhoon and Chain Carousel retained.",
+    "New90m wheel and large coaster are authored conceptual presentation geometry, not supplied engineering models.",
+    "No low-CAPEX or approved-phasing claim."
+  ],
+  "units": "metres",
+  "public_no_map_raster": true,
+  "validation_targets": {
+    "wheel_total_height_m": 90,
+    "parking_spaces": 1000,
+    "parcel_outline_vertices_unchanged": true,
+    "all_images_packed": true,
+    "no_absolute_private_paths": true
+  }
+}

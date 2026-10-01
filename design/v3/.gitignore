@@ -1,0 +1,8 @@
+# Regenerable local working files; keep final source and audit reports.
+*.blend1
+*.blend2
+/scripts/__pycache__/
+/all-v3-footprints.json
+/fit-points.json
+/plan-geometry.json
+/muscat-park-v3-raw.glb

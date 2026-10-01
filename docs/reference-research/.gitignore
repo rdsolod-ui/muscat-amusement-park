@@ -1,0 +1,5 @@
+# Local-only visual QA captures of externally licensed reference photographs.
+*-inspection.png
+qa/
+candidates.json
+image-readback.json

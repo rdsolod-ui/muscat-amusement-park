@@ -6,7 +6,7 @@ import * as THREE from "three";
 import {asset} from "@/lib/assets";
 function DepthRange(){const {camera}=useThree();useFrame(()=>{const cam=camera as THREE.PerspectiveCamera,near=Math.max(.1,cam.position.length()/50);if(Math.abs(cam.near-near)>.001){cam.near=near;cam.far=10000;cam.updateProjectionMatrix()}});return null}
 function Model(){
- const {scene}=useGLTF(asset("models/muscat-park.glb"));
+ const {scene}=useGLTF(asset("models/muscat-park-v3.glb"));
  const clone=useMemo(()=>scene.clone(true),[scene]);
  const {camera,size,invalidate}=useThree();
  useLayoutEffect(()=>{

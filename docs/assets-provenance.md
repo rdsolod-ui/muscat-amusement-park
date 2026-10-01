@@ -40,3 +40,10 @@ This file is a public provenance summary. Private transcripts, research evidence
 
 
 Detailed scope of licences: [asset licence boundaries](ASSET-LICENSES.md). No licence for the complete repository or all supplied ride models is inferred from a third-party CC0/OFL notice.
+
+## Revision 3 additions
+
+- `design/v3/muscat-park-v3.blend` and `public/models/muscat-park-v3.glb` are the current editable and optimized concept scene. The previous source remains unchanged. Model-derived renders and `masterplan-v3.svg` express the updated proposal, not an approved design. See [model provenance and limits](../design/v3/README.md).
+- `design/visuals/v3/generated/` and `public/media/v3/` contain eight distinct generated concept illustrations. [The manifest](../design/visuals/v3/visual-manifest.json) maps each image to one chapter. These are not documentary photographs or engineering evidence.
+- `public/data/design-references.json` indexes 25 real reference photographs in nine functional groups. Images remain at their credited source URLs; their bytes are not redistributed in this repository. Each record includes the source page, author/provider, relevance and rights status. Marketing composites are identified in the catalogue. See [research catalogue](reference-research/README.md).
+- Dream Island facade, arcade and beach photographs are precedent research only. The proposed architecture is project-created; no reference photograph is baked into the Blender model. No supplier selection, commercial partnership or endorsement is implied.

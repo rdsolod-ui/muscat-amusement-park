@@ -1,0 +1,39 @@
+{
+  "file": "muscat-park-v3.glb",
+  "world_up": "glTF Y",
+  "bounds_gltf_m": {
+    "min": [
+      -645.4805908203125,
+      -1.012309311643513,
+      -292.40734114521615
+    ],
+    "max": [
+      545.5704345703125,
+      90,
+      349.2997056471693
+    ]
+  },
+  "centre_gltf_m": [
+    -49.955078125,
+    44.49384534417824,
+    28.446182250976562
+  ],
+  "wheel_total_height_m": 90,
+  "wheel_y_bounds_m": [
+    0,
+    90
+  ],
+  "water": {
+    "alphaMode": "OPAQUE",
+    "rgba": [
+      0.008999999612569809,
+      0.3700000047683716,
+      0.47999998927116394,
+      1
+    ],
+    "doubleSided": true
+  },
+  "external_image_uris": [],
+  "absolute_host_path_in_json": false,
+  "pass": true
+}

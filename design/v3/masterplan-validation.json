@@ -1,0 +1,11 @@
+{
+  "revision": "v3",
+  "file": "public/media/masterplan-v3.svg",
+  "sha256": "80aaef81900686d96b2e2cccf24ad14db324d6bb87df04bc679eb00fefbc8dd5",
+  "basis": "scene-manifest.json,plan-geometry.json and locked parking-reference.json",
+  "bay_count": 1000,
+  "geometry_coordinates": "inverse of the same source-pixel to local-metre mapping used by Blender",
+  "wheel_height_m": 90.0,
+  "external_images": 0,
+  "xml_valid": true
+}

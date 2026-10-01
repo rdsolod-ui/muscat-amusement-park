@@ -1,0 +1,497 @@
+/* Present on a large landscape display. Import after globals.css.
+   The scale is tied to viewport width, not the display's CSS pixel density.
+   80-inch 16:9 / 6 m is a design assumption, not a room-readability certificate. */
+@media screen and (min-width: 901px) and (orientation: landscape) {
+  .experience.is-present {
+    --tv-title-ar: max(2rem, 3.2vw);
+    --tv-title-en: max(1.25rem, 1.7vw);
+    --tv-body-ar: max(1.25rem, 2vw);
+    --tv-body-en: max(1rem, 1.55vw);
+    --tv-detail-ar: max(1.125rem, 1.7vw);
+    --tv-detail-en: max(1rem, 1.35vw);
+    --tv-note-ar: max(1rem, 1.4vw);
+    --tv-note-en: max(.9375rem, 1.15vw);
+    --tv-gap: .8vw;
+    --tv-copy-width: 44vw;
+    scrollbar-color: var(--teal) var(--bg);
+  }
+
+  .experience.is-present .chapter {
+    height: auto;
+    min-height: 100svh;
+    padding: 12svh 4.6vw 13svh;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3vw;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .experience.is-present .chapter .copy,
+  .experience.is-present .chapter.hero .copy,
+  .experience.is-present .chapter.place .copy {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .experience.is-present .chapter.hero .copy,
+  .experience.is-present .chapter.place .copy {
+    width: var(--tv-copy-width);
+    margin-left: auto;
+  }
+
+  .experience.is-present .chapter .copy h1,
+  .experience.is-present .chapter .copy h2 {
+    font-size: var(--tv-title-ar);
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-wrap: balance;
+    overflow-wrap: normal;
+  }
+
+  .experience.is-present .chapter .copy .title-en {
+    margin-top: .5vw;
+    color: var(--teal);
+    font-size: var(--tv-title-en);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+  }
+
+  .experience.is-present .chapter .eyebrow,
+  .experience.is-present .tv-secondary {
+    display: none;
+  }
+
+  .experience.is-present .chapter .body-copy {
+    margin-top: 1.55vw;
+  }
+
+  .experience.is-present .chapter .body-copy p,
+  .experience.is-present .tv-lead [lang="ar"] {
+    font-size: var(--tv-body-ar);
+    font-weight: 400;
+    line-height: 1.58;
+    text-wrap: pretty;
+  }
+
+  .experience.is-present .chapter .body-copy .en,
+  .experience.is-present .tv-lead [lang="en"] {
+    margin-top: .7vw;
+    color: var(--muted);
+    font-size: var(--tv-body-en);
+    line-height: 1.42;
+    letter-spacing: 0;
+    text-wrap: pretty;
+  }
+
+  .experience.is-present .chapter .points {
+    display: flex;
+    margin-top: 1.2vw;
+    gap: var(--tv-gap);
+  }
+
+  .experience.is-present .chapter .points li,
+  .experience.is-present .tv-proof [lang="ar"] {
+    font-size: var(--tv-detail-ar);
+    line-height: 1.55;
+  }
+
+  .experience.is-present .chapter .points li .en,
+  .experience.is-present .tv-proof [lang="en"] {
+    font-size: var(--tv-detail-en);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter .points li {
+    padding-right: 1vw;
+  }
+
+  .experience.is-present .chapter .points li::before {
+    width: .28vw;
+    height: .28vw;
+    top: .72em;
+  }
+
+  .experience.is-present .chapter .assumption,
+  .experience.is-present .chapter .status-line,
+  .experience.is-present .chapter .national-note,
+  .experience.is-present .tv-qualifier [lang="ar"] {
+    margin-top: 1.1vw;
+    font-size: var(--tv-note-ar);
+    line-height: 1.55;
+  }
+
+  .experience.is-present .chapter .assumption .en,
+  .experience.is-present .chapter .status-line .en,
+  .experience.is-present .chapter .national-note .en,
+  .experience.is-present .tv-qualifier [lang="en"] {
+    font-size: var(--tv-note-en);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter .assumption summary .pair {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2vw;
+  }
+
+  .experience.is-present .chapter .assumption[open] {
+    padding: 1vw;
+    background: var(--solid);
+  }
+
+  .experience.is-present .chapter .primary-button,
+  .experience.is-present .chapter .text-link {
+    margin-top: 1.15vw;
+    font-size: max(1rem, 1.15vw);
+    gap: .85vw;
+  }
+
+  .experience.is-present .chapter .primary-button .en,
+  .experience.is-present .chapter .text-link .en,
+  .experience.is-present .chapter .national-note a {
+    font-size: max(.875rem, .95vw);
+  }
+
+  .experience.is-present .chapter .primary-button {
+    padding: .6vw 1vw;
+  }
+
+  /* No per-copy scroll pane: an over-budget chapter remains visibly long.
+     The remedy is editorial shortening, never clipping essential content. */
+  .experience.is-present .chapter .visual {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .experience.is-present .chapter .scene {
+    height: 70svh;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .experience.is-present .chapter .scene figcaption,
+  .experience.is-present .chapter .plan-caption {
+    font-size: max(.875rem, 1.1vw);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter .scene figcaption .en,
+  .experience.is-present .chapter .plan-caption [lang="en"] {
+    font-size: max(.8125rem, .95vw);
+    line-height: 1.35;
+  }
+
+  .experience.is-present .chapter .comfort-views {
+    gap: 1vw;
+  }
+
+  .experience.is-present .chapter .comfort-views figure {
+    height: 66svh;
+  }
+
+  .experience.is-present .chapter .comfort-views figcaption {
+    padding: 2.5vw 1vw 1vw;
+    font-size: var(--tv-note-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present .chapter .comfort-views figcaption .en {
+    font-size: var(--tv-note-en);
+  }
+
+  .experience.is-present .chapter .comfort-views figcaption b {
+    font-size: 3.4vw;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Compact, bilingual data roles, distinct from the main narrative. */
+  .experience.is-present .chapter-city .value-list {
+    margin-top: 1.3vw;
+  }
+
+  .experience.is-present .chapter-city .value-list article {
+    gap: 1vw;
+    padding: .75vw 0;
+    font-size: var(--tv-detail-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present .chapter-city .value-list article > span {
+    font-size: var(--tv-detail-en);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .experience.is-present .chapter-city .value-title {
+    margin-bottom: .35vw;
+    color: var(--gold);
+    font-size: var(--tv-detail-ar);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter-city .value-list .en,
+  .experience.is-present .chapter-city .value-title .en {
+    font-size: var(--tv-detail-en);
+    line-height: 1.35;
+  }
+
+  /* IDs and data attributes are stable across CSS-module hashes/portals. */
+  .experience.is-present #masterplan-detail-slot [data-programme-zones] {
+    margin-top: 1.2vw;
+    padding-top: 1vw;
+    gap: 1vw;
+  }
+
+  .experience.is-present #masterplan-detail-slot [role="group"] {
+    gap: .55vw;
+  }
+
+  .experience.is-present #masterplan-detail-slot [role="group"] button {
+    width: max(44px, 2.55vw);
+    min-height: max(44px, 2.55vw);
+    font-size: max(1rem, 1.05vw);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .experience.is-present #muscat-zone-detail {
+    grid-template-columns: 2.3vw minmax(0, 1fr) auto;
+    gap: .45vw .65vw;
+  }
+
+  .experience.is-present #muscat-zone-detail > span {
+    font-size: 2vw;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .experience.is-present #muscat-zone-detail h3 {
+    font-size: max(1.5rem, 2.25vw);
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+
+  .experience.is-present #muscat-zone-detail > div > span[lang="ar"] {
+    font-size: var(--tv-note-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present #muscat-zone-detail > div > span[lang="en"] {
+    font-size: var(--tv-note-en);
+    line-height: 1.4;
+    margin-top: .15vw;
+  }
+
+  .experience.is-present #muscat-zone-detail p[lang="ar"] {
+    font-size: var(--tv-detail-ar);
+    line-height: 1.55;
+  }
+
+  .experience.is-present #muscat-zone-detail p[lang="en"] {
+    font-size: var(--tv-detail-en);
+    line-height: 1.4;
+    margin-top: .4vw;
+  }
+
+  .experience.is-present #masterplan-detail-slot [data-portaled] > p {
+    margin-top: 1vw !important;
+    padding-top: .7vw;
+    font-size: var(--tv-note-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present #masterplan-detail-slot [data-portaled] > p > span {
+    margin-top: .25vw;
+    font-size: var(--tv-note-en);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter-site .plan-tools {
+    gap: .6vw;
+    margin-top: .7vw;
+    flex-wrap: wrap;
+  }
+
+  .experience.is-present .chapter-site .stage-tabs button,
+  .experience.is-present .chapter-site .plan-actions button {
+    font-size: max(.875rem, 1vw);
+    min-height: max(44px, 2.6vw);
+    padding: .45vw .65vw;
+  }
+
+  .experience.is-present .chapter-site .stage-tabs button [lang="en"] {
+    font-size: max(.8125rem, .82vw);
+  }
+
+  /* Final decision and three phases share one full-width composition. */
+  .experience.is-present .chapter-land-request {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.4vw;
+    align-content: center;
+  }
+
+  .experience.is-present .chapter-land-request .copy {
+    width: 100%;
+    max-width: 77vw;
+  }
+
+  .experience.is-present .chapter-land-request .body-copy {
+    margin-top: .85vw;
+  }
+
+  .experience.is-present .chapter-land-request .phase-columns {
+    gap: 2vw;
+  }
+
+  .experience.is-present .chapter-land-request .phase-columns article {
+    padding: .8vw 0;
+    gap: .7vw;
+    font-size: var(--tv-detail-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present .chapter-land-request .phase-columns .en {
+    font-size: var(--tv-detail-en);
+    line-height: 1.4;
+  }
+
+  .experience.is-present .chapter-land-request .phase-number {
+    font-size: 2vw;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .experience.is-present .chapter-land-request .capital-note {
+    max-width: none;
+    margin-top: .8vw;
+    font-size: var(--tv-note-ar);
+    line-height: 1.5;
+  }
+
+  .experience.is-present .chapter-land-request .capital-note .en {
+    font-size: var(--tv-note-en);
+    line-height: 1.4;
+  }
+
+  /* Operator chrome scales as well; it is smaller than audience copy. */
+  .experience.is-present .header {
+    height: 9.5svh;
+    padding: 1svh 4.6vw;
+    gap: 1.5vw;
+  }
+
+  .experience.is-present .brand {
+    min-width: 0;
+    gap: .65vw;
+  }
+
+  .experience.is-present .brand svg {
+    width: max(40px, 2.6vw);
+    height: max(45px, 3vw);
+  }
+
+  .experience.is-present .brand [lang="ar"] {
+    font-size: max(1.5rem, 1.7vw);
+  }
+
+  .experience.is-present .brand .en {
+    font-size: max(.75rem, .7vw);
+  }
+
+  .experience.is-present .header nav {
+    gap: 1.4vw;
+    padding: .4vw 1.3vw;
+  }
+
+  .experience.is-present .header nav button {
+    padding: .3vw 0;
+    font-size: max(.8125rem, .9vw);
+  }
+
+  .experience.is-present .header nav button .en {
+    font-size: max(.6875rem, .7vw);
+  }
+
+  .experience.is-present .dock {
+    bottom: 1.7svh;
+    padding: .4vw .6vw .4vw 1vw;
+    gap: 1.8vw;
+    border-radius: 3vw;
+  }
+
+  .experience.is-present .chapter-label {
+    min-width: 0;
+    gap: 1vw;
+  }
+
+  .experience.is-present .chapter-label .pair {
+    font-size: max(.875rem, .95vw);
+  }
+
+  .experience.is-present .chapter-label .en {
+    font-size: max(.75rem, .75vw);
+  }
+
+  .experience.is-present .chapter-count {
+    font-size: max(1.375rem, 1.35vw);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .experience.is-present .chapter-count i {
+    font-size: max(.75rem, .75vw);
+  }
+
+  .experience.is-present .icon-button {
+    width: max(38px, 2.3vw);
+    height: max(38px, 2.3vw);
+  }
+
+  .experience.is-present .icon-button svg {
+    width: max(18px, 1.05vw);
+    height: max(18px, 1.05vw);
+  }
+
+  .experience.is-present .present-button {
+    min-height: max(44px, 2.6vw);
+    padding: .4vw .9vw;
+    gap: .55vw;
+    border-radius: 2vw;
+  }
+
+  .experience.is-present .present-button .pair {
+    font-size: max(.75rem, .8vw);
+  }
+
+  .experience.is-present .present-button .en {
+    font-size: max(.6875rem, .7vw);
+  }
+
+  .experience.is-present :is(button, a, summary):focus-visible {
+    outline-width: max(2px, .12vw);
+    outline-offset: max(4px, .2vw);
+  }
+}
+
+@media screen and (min-width:901px) and (orientation:landscape){
+ .experience.is-present .chapter-city .body-copy{display:block}
+ .experience.is-present .chapter .scene-rides,.experience.is-present .chapter .scene-water,.experience.is-present .chapter .scene-indoor{height:auto;aspect-ratio:16/10}
+ .experience.is-present .scene-rides img,.experience.is-present .scene-water img,.experience.is-present .scene-indoor img{object-fit:contain}
+ .experience.is-present .reference-gallery{width:94vw;max-width:none;padding:2vw}
+ .experience.is-present .reference-top h2{font-size:2.6vw}
+ .experience.is-present .reference-top p{font-size:1.6vw}
+ .experience.is-present .reference-intro{font-size:1.5vw;margin:1vw 0}
+ .experience.is-present .reference-intro span{font-size:1.25vw}
+ .experience.is-present .reference-areas{gap:.6vw;padding:1vw 0}
+ .experience.is-present .reference-areas button{font-size:1.1vw;padding:.55vw .8vw}
+ .experience.is-present .reference-areas button [lang=en]{font-size:.9vw}
+ .experience.is-present .reference-area h3{font-size:2vw;margin:1vw 0 .5vw}
+ .experience.is-present .reference-area h3 span{font-size:1.45vw}
+ .experience.is-present .reference-area>p,.experience.is-present .reference-photos p{font-size:1.55vw;max-width:none}
+ .experience.is-present .reference-area p>span{font-size:1.3vw}
+ .experience.is-present .reference-photos{gap:2vw;margin-top:1.5vw}
+ .experience.is-present .reference-photos h4{font-size:1.7vw}
+ .experience.is-present .reference-photos figcaption>a{font-size:1.15vw}
+ .experience.is-present .reference-photos small{font-size:.85vw}
+}

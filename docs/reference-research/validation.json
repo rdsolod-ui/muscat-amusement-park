@@ -1,0 +1,201 @@
+{
+  "checked_on": "2026-10-02",
+  "catalog_references": 25,
+  "images_loaded": 25,
+  "photos": [
+    {
+      "id": "parking-shade",
+      "width": 2560,
+      "height": 545
+    },
+    {
+      "id": "arrival-plaza",
+      "width": 5712,
+      "height": 4284
+    },
+    {
+      "id": "muttrah-roundabout",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": "roundabout-parking",
+      "width": 3000,
+      "height": 1686
+    },
+    {
+      "id": "entrance-arch",
+      "width": 2288,
+      "height": 1712
+    },
+    {
+      "id": "citywalk-yellow",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "id": "citywalk-white",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "id": "promenade-carousel",
+      "width": 1368,
+      "height": 640
+    },
+    {
+      "id": "cafe-miller",
+      "width": 2000,
+      "height": 1494
+    },
+    {
+      "id": "cafe-vaudreuil",
+      "width": 2000,
+      "height": 1494
+    },
+    {
+      "id": "mist-edge",
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "id": "mist-under",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "public-pergola",
+      "width": 2000,
+      "height": 2000
+    },
+    {
+      "id": "dome-shell",
+      "width": 1000,
+      "height": 625
+    },
+    {
+      "id": "dome-concert",
+      "width": 1000,
+      "height": 625
+    },
+    {
+      "id": "laser-family",
+      "width": 1080,
+      "height": 548
+    },
+    {
+      "id": "wheel-typology",
+      "width": 2560,
+      "height": 1617
+    },
+    {
+      "id": "coaster-typology",
+      "width": 2560,
+      "height": 1617
+    },
+    {
+      "id": "water-family",
+      "width": 2560,
+      "height": 1706
+    },
+    {
+      "id": "water-slides",
+      "width": 2560,
+      "height": 1917
+    },
+    {
+      "id": "water-cabana",
+      "width": 860,
+      "height": 645
+    },
+    {
+      "id": "drop-tower",
+      "width": 1170,
+      "height": 658
+    },
+    {
+      "id": "arcade-interior",
+      "width": 860,
+      "height": 618
+    },
+    {
+      "id": "wave-pool",
+      "width": 2560,
+      "height": 1707
+    },
+    {
+      "id": "beach-loungers",
+      "width": 1368,
+      "height": 640
+    }
+  ],
+  "filters": [
+    {
+      "id": "parking",
+      "count": 2
+    },
+    {
+      "id": "arrival",
+      "count": 2
+    },
+    {
+      "id": "entrance",
+      "count": 2
+    },
+    {
+      "id": "citywalk",
+      "count": 4
+    },
+    {
+      "id": "cafes",
+      "count": 4
+    },
+    {
+      "id": "comfort",
+      "count": 4
+    },
+    {
+      "id": "dome",
+      "count": 3
+    },
+    {
+      "id": "rides",
+      "count": 5
+    },
+    {
+      "id": "water",
+      "count": 5
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "scroll": 375
+  },
+  "console_errors": [],
+  "licence_summary": {
+    "creative_commons": 3,
+    "unsplash": 1,
+    "external_reference_only": 21,
+    "source_image_bytes_mirrored": false
+  },
+  "coverage": [
+    "parking",
+    "roundabout_access_to_parking",
+    "entrance_arch",
+    "citywalk_facades",
+    "arcade_interior",
+    "cafe_terraces",
+    "pergola_mist",
+    "dome_shell",
+    "dome_concert",
+    "laser_tag",
+    "observation_wheel",
+    "coaster",
+    "carousel",
+    "drop_tower",
+    "water_slides",
+    "wave_pool",
+    "beach_loungers_and_umbrellas"
+  ],
+  "scope": "Local reference board and external image rendering only; no publication"
+}

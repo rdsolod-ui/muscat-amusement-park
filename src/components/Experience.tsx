@@ -9,23 +9,23 @@ import {ArrowLeft,ArrowRight,ChevronDown,Compass,ExternalLink,EyeOff,Info,List,M
 import content from "@/data/content.json";
 import {asset} from "@/lib/assets";
 import Masterplan from "./Masterplan";
+import ReferenceGallery from "./ReferenceGallery";
 
 type Chapter=typeof content.chapters[number];
 const source=(id:string)=>content.chapters.find(c=>c.id===id)!;
-const places:Chapter={...source("site"),id:"place",kicker_ar:"سلطنة عُمان · مسقط · السيب",kicker_en:"Sultanate of Oman · Muscat · Seeb",title_ar:"من مسقط، تبدأ حكاية جديدة.",title_en:"Muscat. The beginning of a new story.",body_ar:"الموقع المقترح في السيب، جنوب شارع السلام وقرب شارع الفروسية. نقطة انطلاق لوجهة عائلية جديدة.",body_en:"The proposed site is in Seeb, south of A Salam Street near Al Furusiyyah Street. The starting point for a new family destination.",points:[],note_ar:"المطابقة بصرية. يلزم تأكيد الحدود الرسمية وحقوق الأرض والمياه والوصول.",note_en:"Visual location match. Official boundaries, land rights, drainage and access need verification."};
-const chapters=[source("family"),places,source("rides"),{...source("site"),title_en:"Three experiences. One family walk."},source("city-walk"),source("character"),source("water"),source("indoor"),source("comfort"),{...source("city"),title_ar:"فرص جديدة لمسقط.",title_en:"New opportunities for Muscat."},source("land-request")];
+const places:Chapter={...source("site"),id:"place",kicker_ar:"سلطنة عُمان · مسقط · السيب",kicker_en:"Sultanate of Oman · Muscat · Seeb",title_ar:"من مسقط، تبدأ حكاية جديدة.",title_en:"Muscat. The beginning of a new story.",body_ar:"الموقع المقترح في السيب، جنوب شارع السلام وقرب شارع الفروسية.",body_en:"Seeb, south of A Salam Street, near Al Furusiyyah Street.",points:[],note_ar:"المطابقة بصرية. يلزم تأكيد الحدود الرسمية وحقوق الأرض والمياه والوصول.",note_en:"Visual location match. Official boundaries, land rights, drainage and access need verification."};
+const chapters=[source("family"),places,source("rides"),source("site"),source("city-walk"),source("character"),source("water"),source("indoor"),source("comfort"),source("city"),source("land-request")];
 const journeyProgress=[0,.23,.39,.53,.62,.70,.76,.81,.835,.86,1];
 const ExperienceScene=dynamic(()=>import("./ExperienceScene"),{ssr:false});
-const names=[["الرؤية","Vision"],["المكان","Place"],["الألعاب","Landmark"],["المخطط العام","Masterplan"],["ممشى العائلة","City Walk"],["هوية المكان","Character"],["الحديقة المائية","Water park"],["المركز العائلي","Indoor"],["راحة العائلة","Family comfort"],["فرص لمسقط","City value"],["الفصل التالي","Next chapter"]];
-const media:Record<string,string>={city:"hero-vision.webp",indoor:"indoor-vision.webp",rides:"rides.webp",water:"water-vision.webp","city-walk":"citywalk-vision.webp",character:"citywalk-vision.webp"};
+const names=[["الرؤية","Vision"],["المكان","Place"],["الألعاب","Landmark"],["المخطط العام","Masterplan"],["ممشى العائلة","City Walk"],["هوية المكان","Character"],["الحديقة المائية","Water park"],["قبة العائلة","Family dome"],["راحة العائلة","Family comfort"],["فرص لمسقط","City value"],["طلب الأرض","Land request"]];
+const media:Record<string,string>={city:"v3/city.webp",indoor:"v3/dome.webp",rides:"v3/rides.webp",water:"v3/water.webp","city-walk":"v3/promenade.webp",character:"v3/facades.webp",comfort:"v3/mist.webp"};
+const referenceArea:Record<string,string>={family:"entrance",place:"arrival",rides:"rides",site:"parking","city-walk":"citywalk",character:"cafes",water:"water",indoor:"dome",comfort:"comfort",city:"citywalk","land-request":"parking"};
 export function Pair({ar,en,className=""}:{ar:string;en:string;className?:string}){return <span className={"pair "+className}><span lang="ar" dir="rtl">{ar}</span><span className="en" lang="en" dir="ltr">{en}</span></span>}
 function PhaseColumns(){return <div className="phase-columns">{source("phasing").points.map((p,i)=><article key={i}><span className="phase-number">0{i+1}</span><Pair ar={p.ar} en={p.en}/></article>)}</div>}
-function ComfortViews(){return <div className="comfort-views"><figure><img src={asset("media/masterplan-top.webp")} alt="الوصول ومواقف السيارات — Arrival and surface parking" loading="lazy"/><figcaption><b>1,000</b><Pair ar="الوصول · موقف سطحي مستهدف" en="Arrival · target surface parking spaces"/></figcaption></figure><figure><img src={asset("media/citywalk-vision.webp")} alt="الممشى المظلل بالرذاذ الموسمي — Slatted shade and seasonal mist" loading="lazy"/><figcaption><Pair ar="الممشى · ظل خفيف ووقت للراحة" en="The walk · dappled shade and time to rest"/></figcaption></figure><p className="view-credit"><small lang="en">Map context: Esri, Vantor, Earthstar Geographics, GIS User Community.</small><Pair ar="نموذج مفاهيمي + تصور للأجواء" en="Concept model + atmosphere visualization"/></p></div>}
-function CityValue(){return <div className="value-list">{[["للعائلات والزوار","For families and visitors","وقت معاً، وتجربة تدعو لاكتشاف مسقط.","Shared moments. A reason to explore Muscat."],["للأعمال المحلية","For local enterprise","مقاهٍ ومتاجر وفرص للمورّدين المحليين.","Cafés, shops and opportunities for local suppliers."],["لمسقط","For Muscat","وجهة تنمو على مراحل وفق الطلب.","A destination that grows in phases with demand."]].map((v,i)=><article key={i}><span>0{i+1}</span><div><Pair ar={v[0]} en={v[1]} className="value-title"/><Pair ar={v[2]} en={v[3]}/></div></article>)}</div>}
+function CityValue(){return <div className="value-list">{[["وقت للعائلة","Time together"],["فرص للأعمال المحلية","Local enterprise"],["سبب لزيارة المدينة","A reason to explore"]].map((v,i)=><article key={i}><Pair ar={v[0]} en={v[1]} className="value-title"/></article>)}</div>}
 function Scene({chapter,active,paused,reduced}:{chapter:Chapter;active:boolean;paused:boolean;reduced:boolean}){
  if(chapter.id==="site")return <Masterplan active={active} paused={paused} reduced={reduced}/>;
- if(chapter.id==="comfort")return <ComfortViews/>;
- return <figure className={"scene scene-"+chapter.id}><img src={asset("media/"+media[chapter.id])} alt={chapter.title_ar+" — "+chapter.title_en} loading="lazy"/><div className="scene-shade"/><figcaption><span className="scene-dot"/><Pair ar={chapter.id==="rides"?"نموذج مفاهيمي · ألعاب مقترحة":"تصور بصري مقترح"} en={chapter.id==="rides"?"Concept model · proposed attractions":"Proposed concept visualization"}/>{chapter.id==="rides"&&<small className="map-credit" lang="en">Map context: Esri, Vantor, Earthstar Geographics, GIS User Community.</small>}</figcaption></figure>;
+ return <figure className={"scene scene-"+chapter.id}><img src={asset("media/"+media[chapter.id])} alt={chapter.title_ar+" — "+chapter.title_en} loading="lazy"/><div className="scene-shade"/><figcaption><span className="scene-dot"/><Pair ar="تصور مولد للمشروع المقترح" en="Generated concept visualization"/></figcaption></figure>;
 }
 export default function Experience(){
  const root=useRef<HTMLDivElement>(null);
@@ -37,12 +37,13 @@ export default function Experience(){
  const [present,setPresent]=useState(false);
  const [menu,setMenu]=useState(false);
  const [sources,setSources]=useState(false);
+ const [references,setReferences]=useState(false);
  const [hidden,setHidden]=useState(false);
  const [failed,setFailed]=useState(false);
  const [ready,setReady]=useState(false);
  const [tabHidden,setTabHidden]=useState(false);
  const previousProgress=useRef(0);
- const motionPaused=paused||tabHidden||menu||sources;
+ const motionPaused=paused||tabHidden||menu||sources||references;
  const sceneReady=useCallback(()=>setReady(true),[]);
  const sceneFailed=useCallback(()=>setFailed(true),[]);
  const menuRef=useRef<HTMLDialogElement>(null);
@@ -74,13 +75,13 @@ export default function Experience(){
  useEffect(()=>{const visibility=()=>setTabHidden(document.hidden);document.addEventListener("visibilitychange",visibility);return()=>document.removeEventListener("visibilitychange",visibility)},[]);
  useEffect(()=>{
    const key=(e:KeyboardEvent)=>{
-     if(menu||sources||e.altKey||e.ctrlKey||e.metaKey||e.isComposing)return;
+     if(menu||sources||references||e.altKey||e.ctrlKey||e.metaKey||e.isComposing)return;
      if((e.target as HTMLElement)?.closest('input,textarea,select,[contenteditable=true],[role=tablist],[role=slider]'))return;
      if(e.key==="ArrowRight"||e.key==="PageDown"){e.preventDefault();go(active+1)}
      if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(active-1)}
      if(e.key==="Escape"){setPresent(false);setHidden(false)}
    };window.addEventListener("keydown",key);return()=>window.removeEventListener("keydown",key);
- },[active,go,menu,sources]);
+ },[active,go,menu,sources,references]);
  useEffect(()=>{if(menu&&!menuRef.current?.open)menuRef.current?.showModal();else if(!menu)menuRef.current?.close()},[menu]);
  useEffect(()=>{if(sources&&!sourcesRef.current?.open)sourcesRef.current?.showModal();else if(!sources)sourcesRef.current?.close()},[sources]);
  useEffect(()=>{
@@ -89,7 +90,7 @@ export default function Experience(){
    if(el){const tween=gsap.fromTo(el,{opacity:0,y:12},{opacity:1,y:0,duration:.55,ease:"power2.out"});return()=>{tween.kill();gsap.set(el,{clearProps:"opacity,transform"})}}
  },[present,active,reduced,motionPaused]);
  const togglePresent=()=>{const next=!present;setPresent(next);if(next)window.scrollTo({top:0});else setTimeout(()=>document.getElementById(chapters[active].id)?.scrollIntoView({behavior:"instant"}),30)};
- return <div ref={root} className={"experience "+(present?"is-present ":"")+(paused||reduced?"motion-paused":"")} data-version="1.1.0" data-scene-ready={ready} data-graphics={failed?"static":"webgl"} data-chapters={chapters.length}>
+ return <div ref={root} className={"experience "+(present?"is-present ":"")+(paused||reduced?"motion-paused":"")} data-version="2.0.0" data-scene-ready={ready} data-graphics={failed?"static":"webgl"} data-chapters={chapters.length}>
    <div className="scene-wrap" aria-hidden="true">{failed?(active===1?<GeographyJourney active stage={1} staticView/>:active===0?<div className="earth-fallback"><img src={asset("textures/earth-v2/day-4096.webp")} alt=""/><span>OMAN · MUSCAT</span></div>:null):<ExperienceScene progress={progress} theme={theme} reducedMotion={reduced} activeChapter={active} paused={motionPaused} onReady={sceneReady} onFailure={sceneFailed}/>}</div>
    <a className="skip" href="#family">انتقل إلى المحتوى · Skip to content</a>
    {!hidden&&<header className="header" dir="ltr">
@@ -100,26 +101,27 @@ export default function Experience(){
    <main tabIndex={-1}>{chapters.map((c,i)=><section id={c.id} key={c.id} aria-labelledby={"title-"+c.id} className={"chapter chapter-"+c.id+" "+(i===active?"is-active ":"")+(i===0?"hero":"")+(i===1?" place":"")} style={present&&i!==active?{display:"none"}:undefined}>
      {i===0&&<div className="country-banner"><img src={asset("brand/oman-flag.jpg")} alt="علم سلطنة عُمان — Oman flag"/><Pair ar="سلطنة عُمان" en="Sultanate of Oman"/></div>}
      {i>1&&i<10&&<div className="visual"><Scene chapter={c} active={i===active} paused={motionPaused} reduced={reduced}/></div>}
-     {i===10&&<div className="final-background"><img src={asset("media/masterplan-oblique.webp")} alt=""/></div>}
+
      <div className="copy">
        <Pair ar={c.kicker_ar} en={c.kicker_en} className="eyebrow"/>
        {i===0?<h1 id={"title-"+c.id}>{c.title_ar}</h1>:<h2 id={"title-"+c.id}>{c.title_ar}</h2>}
        <p className="title-en" lang="en" dir="ltr">{c.title_en}</p>
        {i===0&&<div id="earth-mobile-slot" aria-hidden="true">{failed&&<div className="mobile-earth-static"><img src={asset("textures/earth-v2/day-4096.webp")} alt=""/></div>}</div>}
        {i===1&&<div id="geography-mobile-slot" aria-hidden="true"/>}
-       {i!==9&&i!==3&&<div className="body-copy"><p lang="ar" dir="rtl">{c.body_ar}</p><p className="en" lang="en" dir="ltr">{c.body_en}</p></div>}
-       {i>1&&i!==3&&i!==9&&i!==10&&<ul className="points">{c.points.map((p,j)=><li key={j}><Pair ar={p.ar} en={p.en}/></li>)}</ul>}
-       {i===9&&<CityValue/>}{i===3&&<div id="masterplan-detail-slot"/>}
-       {i===0&&<div className="national-note"><Pair ar="رؤية وطنية تُلهم فرصاً محلية للعائلات والسياحة والأعمال." en="A national vision inspiring local opportunities for families, tourism and enterprise."/><a href="https://www.oman2040.om/" target="_blank" rel="noreferrer">رؤية عُمان 2040 · Oman Vision 2040 ↗</a></div>}
-       {i===1&&<div className="national-note"><Pair ar="رؤية عُمان 2040" en="Oman Vision 2040"/><Pair ar="جودة الحياة والسياحة وتنويع الاقتصاد." en="Quality of life, tourism and economic diversification."/></div>}
-       {c.note_ar&&i!==10&&i!==3&&i!==9&&<details className="assumption"><summary><Pair ar="حدود التصور" en="Concept assumptions"/><ChevronDown size={15}/></summary><Pair ar={c.note_ar} en={c.note_en||""}/></details>}
+       {i!==3&&<div className="body-copy tv-lead"><p lang="ar" dir="rtl">{c.body_ar}</p><p className="en" lang="en" dir="ltr">{c.body_en}</p></div>}
+       {i>1&&i!==3&&i!==9&&i!==10&&<ul className="points tv-proof">{c.points.map((p,j)=><li key={j}><Pair ar={p.ar} en={p.en}/></li>)}</ul>}
+       {i===9&&!present&&<CityValue/>}{i===3&&<div id="masterplan-detail-slot"/>}
+       {i===0&&<div className="national-note tv-secondary"><Pair ar="رؤية وطنية تُلهم فرصاً محلية للعائلات والسياحة والأعمال." en="A national vision inspiring local opportunities for families, tourism and enterprise."/><a href="https://www.oman2040.om/" target="_blank" rel="noreferrer">رؤية عُمان 2040 · Oman Vision 2040 ↗</a></div>}
+       {i===1&&<div className="national-note tv-secondary"><Pair ar="رؤية عُمان 2040" en="Oman Vision 2040"/><Pair ar="جودة الحياة والسياحة وتنويع الاقتصاد." en="Quality of life, tourism and economic diversification."/></div>}
+       {!present&&c.note_ar&&i!==10&&i!==3&&i!==9&&<details className="assumption"><summary><Pair ar="حدود التصور" en="Concept assumptions"/><ChevronDown size={15}/></summary><Pair ar={c.note_ar} en={c.note_en||""}/></details>}
        {i===0&&<button className="primary-button" onClick={()=>go(1)}><Pair ar="اكتشف الرؤية" en="Explore the vision"/><ArrowLeft size={22}/></button>}
        {i===1&&<a className="text-link" href="https://www.google.com/maps/search/?api=1&query=23.64305%2C58.17629" target="_blank" rel="noreferrer"><Pair ar="استكشف الموقع على خرائط جوجل" en="Explore the location on Google Maps"/><ExternalLink size={17}/></a>}
-       {i===2&&<div className="status-line"><span/><Pair ar="ألعاب مقترحة · يُحدّد الاختيار بعد دراسة الجدوى" en="Proposed attractions · selection follows feasibility"/></div>}
+       {i===2&&<div className="status-line tv-qualifier"><span/><Pair ar="أهداف مفاهيمية · رهن الجدوى والاعتمادات" en="Concept targets · feasibility and approvals required"/></div>}
+       {i>1&&i<10&&<button className="text-link reference-trigger" onClick={()=>setReferences(true)}><Pair ar="حلول من أماكن حقيقية" en="Real-world photo references"/><ExternalLink size={18}/></button>}
        {i===10&&<><div className="decision-points">{c.points.map((p,j)=><Pair key={j} ar={p.ar} en={p.en}/>)}</div><button className="text-link" onClick={()=>setSources(true)}><Pair ar="المراجع وخطوات التحقق" en="Sources and verification steps"/><Info size={18}/></button></>}
      </div>
-     {i===0&&<div className="hero-coordinate"><span>23°38′ N &nbsp; 58°10′ E</span><Pair ar="السيب، مسقط" en="Seeb, Muscat"/><small>PROPOSED FAMILY DESTINATION · 2026</small></div>}
-     {i===10&&<div className="final-phases"><PhaseColumns/><p className="capital-note"><small className="map-credit" lang="en">Map context: Esri, Vantor, Earthstar Geographics, GIS User Community.</small><Pair ar="خفض الاستثمار الأولي هدف تصميمي. يبدأ التنفيذ بعد تأكيد الأرض والجدوى والتمويل؛ وقد تتحمل المرحلة الأولى بنية أساسية مشتركة كبيرة." en="Lower initial capital is a design objective. Land, feasibility and funding come first; phase one may carry substantial shared infrastructure."/></p></div>}
+     {i===0&&<div className="hero-coordinate tv-secondary"><span>23°38′ N &nbsp; 58°10′ E</span><Pair ar="السيب، مسقط" en="Seeb, Muscat"/><small>PROPOSED FAMILY DESTINATION · 2026</small></div>}
+     {i===10&&<div className="final-phases"><PhaseColumns/><p className="capital-note tv-qualifier"><Pair ar="رؤية مرحلية؛ الميزانية والتمويل قيد الدراسة." en="Phased concept; budget and funding to be established."/></p></div>}
    </section>)}</main>
    {!hidden?<footer className="dock" dir="ltr">
      <button className="chapter-label" onClick={()=>setMenu(true)} aria-label="اختيار الفصل · Choose chapter"><span className="chapter-count">{String(active+1).padStart(2,"0")}<i>/ {chapters.length}</i></span><Pair ar={names[active][0]} en={names[active][1]}/><ChevronDown size={15}/></button>
@@ -134,6 +136,7 @@ export default function Experience(){
        <button className={"present-button "+(present?"selected":"")} onClick={togglePresent} aria-label={present?"إنهاء العرض · Exit presentation":"عرض تقديمي · Present"} aria-pressed={present}>{present?<Minimize2 size={17}/>:<Maximize2 size={17}/>}<Pair ar={present?"إنهاء العرض":"عرض تقديمي"} en={present?"Exit presentation":"Present"}/></button>
      </div>
    </footer>:<button className="restore" onClick={()=>setHidden(false)}><Pair ar="إظهار الأدوات" en="Show controls"/></button>}
+   <ReferenceGallery open={references} onClose={()=>setReferences(false)} initialArea={referenceArea[chapters[active].id]}/>
    <dialog ref={menuRef} className="dialog chapter-dialog" onCancel={()=>setMenu(false)} onClick={e=>{if(e.target===e.currentTarget)setMenu(false)}}>
      <button className="dialog-close icon-button" onClick={()=>setMenu(false)} aria-label="إغلاق · Close"><X/></button>
      <Pair ar="حكاية المكان" en="The destination story" className="dialog-title"/>
@@ -143,7 +146,8 @@ export default function Experience(){
      <button className="dialog-close icon-button" onClick={()=>setSources(false)} aria-label="إغلاق · Close"><X/></button>
      <Pair ar="تصور يمكن البناء عليه" en="A concept to develop and verify" className="dialog-title"/>
      <Pair ar="هذه مادة لمناقشة تخصيص الأرض، وليست موافقة على المشروع أو مخططاً هندسياً معتمداً." en="A land allocation discussion concept, not an approved project or an engineering design."/>
-     <ul className="source-list">
+     <button className="text-link" onClick={()=>{setSources(false);setReferences(true)}}><Pair ar="افتح صور الحلول حسب المنطقة" en="Open photographs by zone"/><ExternalLink size={18}/></button>
+     <ul className="source-list"><li><Pair ar="الرسم الأصلي للمقارنة" en="Original source diagram for comparison"/><a href={asset("media/source-masterplan-diagram.svg")} target="_blank" rel="noreferrer">المخطط الأصلي · Original diagram ↗</a></li><li><Pair ar="البرنامج الموسّع يشمل عجلة ٩٠ متراً وأفعوانية كبيرة وقبة. التكلفة والسلامة والسعات لم تُعتمد؛ والتصميم يحتاج إلى عروض ومراجعات هندسية." en="The expanded programme includes a 90-metre wheel, major coaster and dome. Cost, safety and capacities are unapproved; supplier quotations and engineering reviews are required."/></li>
        <li><Pair ar="الموقع: السيب، جنوب شارع السلام قرب شارع الفروسية. المطابقة البصرية لا تثبت الملكية أو الحدود الرسمية." en="Location: Seeb, south of A Salam Street near Al Furusiyyah Street. Visual registration does not establish ownership or official limits."/><a href="https://www.google.com/maps/search/?api=1&query=23.64305%2C58.17629" target="_blank" rel="noreferrer">Google Maps ↗</a></li>
        <li><Pair ar="مجموع مساحات المخطط الأصلي ٣٧ هكتاراً. مساحة الحد المرسوم على الصورة نحو ٥٠٫٤ هكتار؛ يلزم التحقق المساحي والهيدرولوجي والمروري." en="Original zone labels total 37 ha. The image-traced outline is approximately 50.4 ha; survey, hydrology and traffic verification are required."/></li>
        <li><Pair ar="المجسم يستند إلى المخطط الأصلي ونماذج ألعاب مقدمة. الصور التصورية المولدة تشرح الأجواء ولا تثبت المواصفات أو التكلفة." en="The model follows the original diagram and supplied ride models. Generated concept images illustrate atmosphere, not final specifications or cost."/></li>

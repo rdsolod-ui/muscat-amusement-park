@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "uniqueChapterVisuals": 8,
+  "rule": "Each generated image belongs to one presentation chapter only. Earth/geography and final decision use no generated artwork.",
+  "records": [
+    {
+      "chapter": "site",
+      "asset": "media/v3/aerial.webp",
+      "source": "design/visuals/v3/generated/aerial.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 625904,
+      "sha256": "8e936ab740b9a99707c2c955bfed754ae6acfd262c66f84d563e990c6623124b"
+    },
+    {
+      "chapter": "rides",
+      "asset": "media/v3/rides.webp",
+      "source": "design/visuals/v3/generated/rides.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 642396,
+      "sha256": "fb46e12df6bad48920144ee1216612da3b1f760a857ddc434be79f608ea1457c"
+    },
+    {
+      "chapter": "city-walk",
+      "asset": "media/v3/promenade.webp",
+      "source": "design/visuals/v3/generated/promenade.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 424678,
+      "sha256": "c3ba4ca6da4ebbdd0005cc337ba873b73e1bb7a93fb1b5f67c352668cc32bab8"
+    },
+    {
+      "chapter": "character",
+      "asset": "media/v3/facades.webp",
+      "source": "design/visuals/v3/generated/facades.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 459674,
+      "sha256": "5f0f5fb4d57ccad6bb2506d5529bf8af96559f40356bffb17f4c0a3470584c99"
+    },
+    {
+      "chapter": "water",
+      "asset": "media/v3/water.webp",
+      "source": "design/visuals/v3/generated/water.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 442632,
+      "sha256": "ffa092d1d84ad4dffa0369a4c5903a2ddeeee8e89393206d78666dcb8ff14c21"
+    },
+    {
+      "chapter": "indoor",
+      "asset": "media/v3/dome.webp",
+      "source": "design/visuals/v3/generated/dome.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 395124,
+      "sha256": "25936738e873ca5d6c093abb936ecef341376fcd003084a88b351940b5922911"
+    },
+    {
+      "chapter": "comfort",
+      "asset": "media/v3/mist.webp",
+      "source": "design/visuals/v3/generated/mist.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 298478,
+      "sha256": "9318d948fddad0024a975ae50306b1ca3c79752b7374dd6ae35e368e3ef5f464"
+    },
+    {
+      "chapter": "city",
+      "asset": "media/v3/city.webp",
+      "source": "design/visuals/v3/generated/city.png",
+      "kind": "generated-concept",
+      "width": 1672,
+      "height": 941,
+      "bytes": 410908,
+      "sha256": "cf7628cd552f770593b004e8a7174ec039ec1dcbfc09553d9d1eb21f8a664879"
+    }
+  ]
+}

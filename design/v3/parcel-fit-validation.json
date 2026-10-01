@@ -1,0 +1,76 @@
+{
+  "basis": "all authored v3 mesh vertices projected into local site coordinates",
+  "not_checked": "ride safety envelopes, foundations, flood protection and planning approvals",
+  "objects": {
+    "V3 all pedestrian pergolas and mist pipes": {
+      "outside_vertex_count": 0,
+      "total_vertices": 108880,
+      "tolerance_m": 0.05
+    },
+    "V3 arrival arch": {
+      "outside_vertex_count": 0,
+      "total_vertices": 1932,
+      "tolerance_m": 0.05,
+      "convex_hull_outside_m2": 0.0
+    },
+    "V3 cafe verandas and furniture": {
+      "outside_vertex_count": 0,
+      "total_vertices": 11876,
+      "tolerance_m": 0.05
+    },
+    "V3 connecting pedestrian paths": {
+      "outside_vertex_count": 0,
+      "total_vertices": 48,
+      "tolerance_m": 0.05
+    },
+    "V3 dome family venue": {
+      "outside_vertex_count": 0,
+      "total_vertices": 8280,
+      "tolerance_m": 0.05,
+      "convex_hull_outside_m2": 0.0
+    },
+    "V3 family carousels": {
+      "outside_vertex_count": 0,
+      "total_vertices": 1408,
+      "tolerance_m": 0.05
+    },
+    "V3 grand coaster concept": {
+      "outside_vertex_count": 0,
+      "total_vertices": 11512,
+      "tolerance_m": 0.05,
+      "convex_hull_outside_m2": 0.0
+    },
+    "V3 observation wheel90m": {
+      "outside_vertex_count": 0,
+      "total_vertices": 9928,
+      "tolerance_m": 0.05,
+      "convex_hull_outside_m2": 0.0
+    },
+    "V3 park entry lettering": {
+      "outside_vertex_count": 0,
+      "total_vertices": 976,
+      "tolerance_m": 0.05
+    },
+    "V3 parking shade and wayfinding": {
+      "outside_vertex_count": 0,
+      "total_vertices": 4312,
+      "tolerance_m": 0.05
+    },
+    "V3 performance forecourt": {
+      "outside_vertex_count": 0,
+      "total_vertices": 800,
+      "tolerance_m": 0.05
+    },
+    "V3 two-storey promenade facades": {
+      "outside_vertex_count": 0,
+      "total_vertices": 20517,
+      "tolerance_m": 0.05
+    },
+    "V3 wave pool and beach": {
+      "outside_vertex_count": 0,
+      "total_vertices": 14004,
+      "tolerance_m": 0.05,
+      "convex_hull_outside_m2": 0.0
+    }
+  }
+}

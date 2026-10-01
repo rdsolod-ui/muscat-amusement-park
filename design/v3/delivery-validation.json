@@ -1,0 +1,137 @@
+{
+  "revision": "v3",
+  "date": "2026-10-02",
+  "status": "prepared and model-validated; publication and browser QA handled separately",
+  "files": [
+    {
+      "file": "design/v3/muscat-park-v3.blend",
+      "bytes": 16108843,
+      "sha256": "44318f4afc768618502b68df2c719f15be3cfb686edb1223a27f3e2707424cb9"
+    },
+    {
+      "file": "public/models/muscat-park-v3.glb",
+      "bytes": 7621664,
+      "sha256": "130de4c0d2e7fad1d86707cdca660face1caf34b8151c3884800f7013a3af30f"
+    },
+    {
+      "file": "design/v3/masterplan-v3.svg",
+      "bytes": 166579,
+      "sha256": "80aaef81900686d96b2e2cccf24ad14db324d6bb87df04bc679eb00fefbc8dd5"
+    },
+    {
+      "file": "public/media/masterplan-v3.svg",
+      "bytes": 166579,
+      "sha256": "80aaef81900686d96b2e2cccf24ad14db324d6bb87df04bc679eb00fefbc8dd5"
+    },
+    {
+      "file": "design/visuals/v3/aerial.png",
+      "bytes": 3351840,
+      "sha256": "e3407ddcf417dbee57ac2ecfbfafed8745fc305e70f0d4d9be9f866c7f42a71d",
+      "dimensions": [
+        2100,
+        1400
+      ]
+    },
+    {
+      "file": "design/visuals/v3/approach.png",
+      "bytes": 2625119,
+      "sha256": "ec6e78a8a3d84221475840f99d3cc8391addf64a92408989d959afa739e56b01",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/dome.png",
+      "bytes": 2760107,
+      "sha256": "02f37dc33812a0be25a0c058d6592086da529b26f2b6d773a778a3528c11c44f",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/entrance.png",
+      "bytes": 2748933,
+      "sha256": "78519cd947fc5e3f3c0875066e9b1ddd0e2735d3e8e57418fd4a2c76a383586c",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/masterplan-top.png",
+      "bytes": 2811174,
+      "sha256": "817a77bf07ea88892b6d7a57dec20ccf15d3201b3abbd5858845e19d27c8ac4c",
+      "dimensions": [
+        1920,
+        1220
+      ]
+    },
+    {
+      "file": "design/visuals/v3/parking.png",
+      "bytes": 2807792,
+      "sha256": "a46a37ed3ae27f4c108dad8b524fc49c64d49a865f1271e16264ab637d182975",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/pergola.png",
+      "bytes": 2847244,
+      "sha256": "597610e348bdf169efa56303572b5f3ddfac423a9458af676db6c8da1bb91955",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/promenade.png",
+      "bytes": 2906535,
+      "sha256": "7c9a5ef5596d4a309d0dd138bc3664caee08f92c852ff378e1956a70158da437",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/rides.png",
+      "bytes": 2841891,
+      "sha256": "84c45189d202160594e81958ab7a542579f3c60579bda01a1dcfff77e983f7de",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "design/visuals/v3/water.png",
+      "bytes": 2794774,
+      "sha256": "54438e64d419d40506ebd709225afb2f854a39f9d8f4d639a4557835c27eea6d",
+      "dimensions": [
+        1800,
+        1200
+      ]
+    }
+  ],
+  "unique_render_hashes": 10,
+  "svg_copies_identical": true,
+  "svg_arabic_codepoint_count": 189,
+  "svg_visual_readback": "Arabic shaping, primary labels and English secondary labels visually inspected",
+  "public_script_and_report_absolute_host_path_hits": [],
+  "source_scene_unchanged": true,
+  "checks": {
+    "portable": true,
+    "wheel_height_m": 90.0,
+    "parking_count": 1000,
+    "new_mesh_groups_contained": 13,
+    "mesh_objects": 82,
+    "triangles": 667827
+  },
+  "not_verified": [
+    "engineering and planning approvals",
+    "legal and cadastral boundary",
+    "ride safety and hydraulics",
+    "actual venue display readability"
+  ]
+}

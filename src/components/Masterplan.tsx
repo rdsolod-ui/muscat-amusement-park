@@ -7,13 +7,13 @@ import {Box,MapPin,X} from "lucide-react";
 import {asset} from "@/lib/assets";
 import styles from "./Masterplan.module.css";
 const ParkViewer=dynamic(()=>import("./ParkViewer"),{ssr:false,loading:()=> <div className="viewer-loading">تحميل المجسم · Loading model…</div>});
-const labels=[["المخطط الأصلي","Original plan"],["المجسم","Blender model"],["رؤية المكان","The vision"]];
+const labels=[["المخطط المحدّث","Updated plan"],["المجسم","Blender model"],["رؤية المكان","The vision"]];
 const zones=[
- {id:1,ar:"حديقة الألعاب",en:"Amusement park",area:"17.5",areaAr:"١٧٫٥",copyAr:"ألعاب عائلية وتجارب متنوعة في الجزء الغربي، مع مسارات مظللة ومناطق انتظار واستراحة.",copyEn:"Family rides and varied experiences to the west, connected by shaded paths, queues and places to rest."},
- {id:2,ar:"الحديقة المائية",en:"Water park",area:"9",areaAr:"٩",copyAr:"منطقة مائية مقترحة شرق الموقع، مع خدمات تبديل الملابس والراحة؛ يتطلب تطويرها دراسة المياه والتشغيل.",copyEn:"A proposed water park to the east, with changing and rest facilities; development requires water and operating studies."},
- {id:3,ar:"ممشى العائلة",en:"City Walk",area:"5",areaAr:"٥",copyAr:"محور يربط الألعاب والمياه والمركز العائلي الداخلي، مع المقاهي والمطاعم والمتاجر. المساحة تخص منطقة الممشى في المخطط الأصلي.",copyEn:"The link between rides, water and the indoor family centre, with cafés, dining and shops. The area refers to City Walk in the supplied plan."},
- {id:4,ar:"المواقف والدخول",en:"Parking and arrival",area:"4",areaAr:"٤",copyAr:"الهدف ١٬٠٠٠ موقف سطحي. العدد النهائي رهن التحقق من الأبعاد والمداخل وحركة السيارات والمشاة.",copyEn:"Target: 1,000 surface parking spaces. Final capacity depends on dimensions, access and vehicle and pedestrian circulation."},
- {id:5,ar:"الخدمات الفنية",en:"Technical services",area:"1.5",areaAr:"١٫٥",copyAr:"مساحة للخدمات الفنية والصيانة ودعم التشغيل، مع وصول خدمي مستقل يحتاج إلى تنسيق هندسي.",copyEn:"Space for technical services, maintenance and operating support, with service access to be coordinated in the engineering design."},
+ {id:1,ar:"حديقة الألعاب",en:"Amusement park",area:"17.5",areaAr:"١٧٫٥",copyAr:"عجلة ٩٠ متراً، وأفعوانية كبيرة، ودوّارات، وبرج سقوط وصالات ألعاب.",copyEn:"90-metre wheel, major coaster, carousels, drop tower and arcades."},
+ {id:2,ar:"الحديقة المائية",en:"Water park",area:"9",areaAr:"٩",copyAr:"مسبح أمواج، ومنزلقات، ونادٍ شاطئي بكراسي استرخاء ومظلات.",copyEn:"Wave pool, slides and a beach lounge with loungers and umbrellas."},
+ {id:3,ar:"ممشى العائلة",en:"City Walk",area:"5",areaAr:"٥",copyAr:"ممشى بواجهات من طابقين وشرفات مقاهٍ؛ قبة العائلة في نهايته.",copyEn:"Two-storey streetscape and café terraces, ending at the family dome."},
+ {id:4,ar:"المواقف والدخول",en:"Parking and arrival",area:"≈6.2",areaAr:"≈٦٫٢",copyAr:"١٬٠٠٠ موقف مستهدف؛ ٤ هكتارات تسمية أصلية، والتخطيط الحالي نحو ٦٫٢ هكتار.",copyEn:"1,000 target spaces. Original label: 4 ha; current traced footprint: ≈6.2 ha."},
+ {id:5,ar:"الخدمات الفنية",en:"Technical services",area:"1.5",areaAr:"١٫٥",copyAr:"صيانة ومعالجة مياه وخدمات، بوصول منفصل يحتاج إلى دراسة.",copyEn:"Maintenance, water treatment and services; separate access requires study."},
 ] as const;
 class ViewBoundary extends Component<{children:ReactNode},{error:boolean}>{state={error:false};static getDerivedStateFromError(){return{error:true}}render(){return this.state.error?<div className="viewer-fallback">يمكنك متابعة العرض بالصور<br/><span lang="en">The concept images remain available on this device.</span></div>:this.props.children}}
 export default function Masterplan({active,paused,reduced}:{active:boolean;paused:boolean;reduced:boolean}){
@@ -52,7 +52,7 @@ export default function Masterplan({active,paused,reduced}:{active:boolean;pause
      <div className={styles.detail} id="muscat-zone-detail" aria-live="polite" aria-atomic="true" data-selected-zone={zone.id}>
        <span className={styles.number} dir="ltr" aria-hidden="true">{String(zone.id).padStart(2,"0")}</span>
        <div className={styles.heading}><h3 lang="ar" dir="rtl">{zone.ar}</h3><span lang="en" dir="ltr">{zone.en}</span></div>
-       <div className={styles.area}><span lang="ar" dir="rtl">{zone.areaAr} هكتار</span><span lang="en" dir="ltr">{zone.area} ha · source plan</span></div>
+       <div className={styles.area}><span lang="ar" dir="rtl">{zone.areaAr} هكتار</span><span lang="en" dir="ltr">{zone.area} ha · {zone.id===4?"traced footprint":"source plan"}</span></div>
        <div className={styles.description}><p lang="ar" dir="rtl">{zone.copyAr}</p><p lang="en" dir="ltr">{zone.copyEn}</p></div>
      </div>
    </div>
@@ -60,14 +60,14 @@ export default function Masterplan({active,paused,reduced}:{active:boolean;pause
  </div>;
  return <div className="masterplan" ref={root}>
    <div className="plan-stage">
-     <div className="plan-layer original"><img src={asset("media/source-masterplan-diagram.svg")} alt="رسم توضيحي للمخطط الأصلي المقدم — Diagram following the supplied original site plan"/></div>
-     <div className="plan-layer" ref={model} style={{opacity:0}}><img src={asset("media/masterplan-oblique.webp")} alt="نموذج Blender للمخطط الأصلي — Blender model following the original diagram" loading="lazy"/></div>
-     <div className="plan-layer" ref={vision} style={{opacity:0}}><img src={asset("media/hero-vision.webp")} alt="تصور بصري مولد للمشروع المقترح — Generated concept vision of the proposed park" loading="lazy"/></div>
+     <div className="plan-layer original"><img src={asset("media/masterplan-v3.svg")} alt="المخطط المحدّث من نموذج Blender — Updated masterplan derived from the Blender model"/></div>
+     <div className="plan-layer" ref={model} style={{opacity:0}}><img src={asset("media/v3/model-aerial.webp")} alt="نموذج Blender المحدّث — Updated Blender concept model" loading="lazy"/></div>
+     <div className="plan-layer" ref={vision} style={{opacity:0}}><img src={asset("media/v3/aerial.webp")} alt="تصور بصري مولد للمشروع المقترح — Generated concept vision of the proposed park" loading="lazy"/></div>
      {map&&<div className="map-overlay"><img src={asset("media/site-evidence.svg")} alt="مطابقة الموقع والحدود المرسومة — Registered site location and image-traced outline"/></div>}
      {viewer&&<div className="live-viewer"><ViewBoundary><ParkViewer active={active&&!paused} reduced={reduced}/></ViewBoundary><button className="icon-button viewer-close" onClick={()=>setViewer(false)} aria-label="إغلاق المجسم · Close 3D"><X size={18}/></button><span className="viewer-hint">اسحب للاستكشاف · Drag to explore</span></div>}
      <div className="plan-caption"><span className="scene-dot"/><div lang="ar">{map?"مطابقة بصرية للموقع":viewer?"مجسم مفاهيمي قابل للاستكشاف":labels[stage][0]}</div><span lang="en" dir="ltr">{map?"Visual site registration":viewer?"Interactive concept model":labels[stage][1]}</span></div>
    </div>
-   {!map&&!viewer&&stage===1&&<p className={styles.renderCredit} lang="en" dir="ltr">Blender render context: Esri, Vantor, Earthstar Geographics, GIS User Community</p>}
+
    <div className="plan-tools">
      <div className="stage-tabs" role="group" aria-label="مراحل التصور · Concept stages">{labels.map((l,i)=><button key={i} className={!viewer&&!map&&i===stage?"selected":""} aria-pressed={!viewer&&!map&&i===stage} onClick={()=>select(i)}><span lang="ar">{l[0]}</span><span lang="en">{l[1]}</span></button>)}</div>
      <div className="plan-actions"><button aria-label="3D" disabled={graphicsOff} className={viewer?"selected":""} onClick={()=>{timeline.current?.kill();setMap(false);setViewer(!viewer)}} aria-pressed={viewer}><Box size={16}/><span>3D</span></button><button className={map?"selected":""} onClick={()=>{timeline.current?.kill();setViewer(false);setMap(!map)}} aria-pressed={map} aria-label="مطابقة الموقع · Site registration"><MapPin size={17}/></button></div>
