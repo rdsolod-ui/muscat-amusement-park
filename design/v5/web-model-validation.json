@@ -1,0 +1,129 @@
+[
+  {
+    "file": "boomerang-v5.glb",
+    "world_bounds_m": {
+      "min": [
+        -49.83502197265625,
+        0.0028633221373368656,
+        -19.882602687110055
+      ],
+      "max": [
+        49.83502197265625,
+        40.96044691915973,
+        19.882602687110055
+      ]
+    },
+    "world_dimensions_m": [
+      99.6700439453125,
+      40.95758359702239,
+      39.76520537422011
+    ],
+    "triangles": 374415,
+    "materials": 38,
+    "textures": 3,
+    "animation_clips": [],
+    "flags": [],
+    "external_image_uris": [],
+    "absolute_host_paths": false,
+    "pass": true
+  },
+  {
+    "file": "muscat-park-v5.glb",
+    "world_bounds_m": {
+      "min": [
+        -796.3283081054688,
+        -0.37819026624181085,
+        -654.577006912313
+      ],
+      "max": [
+        903.7415771484375,
+        89.99999689286756,
+        349.2997056471693
+      ]
+    },
+    "world_dimensions_m": [
+      1700.0698852539062,
+      90.37818715910937,
+      1003.8767125594823
+    ],
+    "triangles": 1409324,
+    "materials": 150,
+    "textures": 6,
+    "animation_clips": [
+      {
+        "name": "Park_Construction",
+        "duration_s": 15,
+        "channels": 9
+      },
+      {
+        "name": "Wheel_Rotation",
+        "duration_s": 60,
+        "channels": 37
+      },
+      {
+        "name": "Flags_Wind",
+        "duration_s": 4,
+        "channels": 7
+      }
+    ],
+    "flags": [
+      {
+        "name": "FLAG_Entrance_East_0",
+        "targets": [
+          2
+        ],
+        "has_uv": true
+      },
+      {
+        "name": "FLAG_Entrance_East_1",
+        "targets": [
+          2,
+          2,
+          2
+        ],
+        "has_uv": false
+      },
+      {
+        "name": "FLAG_Entrance_East_2",
+        "targets": [
+          2
+        ],
+        "has_uv": true
+      },
+      {
+        "name": "FLAG_Entrance_West_0",
+        "targets": [
+          2
+        ],
+        "has_uv": true
+      },
+      {
+        "name": "FLAG_Entrance_West_1",
+        "targets": [
+          2,
+          2,
+          2
+        ],
+        "has_uv": false
+      },
+      {
+        "name": "FLAG_Entrance_West_2",
+        "targets": [
+          2
+        ],
+        "has_uv": true
+      },
+      {
+        "name": "FLAG_Oman_Dome",
+        "targets": [
+          2
+        ],
+        "has_uv": true
+      }
+    ],
+    "external_image_uris": [],
+    "absolute_host_paths": false,
+    "wheel_height_m": 90.00005792988651,
+    "pass": true
+  }
+]

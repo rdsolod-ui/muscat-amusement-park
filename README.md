@@ -1,6 +1,6 @@
 # Muscat Amusement Park (MAP)
 
-![Updated City Walk presentation](docs/v3-citywalk-tv.jpg)
+![MAP City Walk concept with the hemisphere flag](public/media/v5/promenade.webp)
 
 An Arabic-first, bilingual concept website for a proposed family destination in Seeb, Muscat. The programme brings together rides, a water park, an indoor family centre and City Walk, with phased development and family public spaces.
 
@@ -32,12 +32,13 @@ The static export is written to `out/`. The preview server binds only to `127.0.
 
 - `src/`: React/Next.js presentation, public bilingual copy and styles.
 - `public/`: runtime images, fonts, geographic context and the browser GLB model.
-- `design/v3/muscat-park-v3.blend`: current editable Blender concept with packed resources.
-- `design/v3/masterplan-v3.svg`: updated plan derived from the model.
+- `design/v5/muscat-park-v5.blend`: current editable Blender concept with packed resources, flags and perimeter palms.
+- `design/v5/boomerang.blend`: actual supplied WFC-20A source geometry and reversible web LOD.
+- `design/v3/masterplan-v3.svg`: retained vector plan; its parcel and zone footprints remain preserved in the v5 model.
 - `public/references/index.html`: 25 real photographic references in nine zone groups, with source and rights information.
 - `design/muscat-park.blend`: preserved previous revision.
 - `design/visuals/`: selected full-resolution generated concept illustrations.
-- `docs/assets-provenance.md`: source and rights notes; third-party licence files are in `public/licenses/`.
+- `docs/assets-provenance.md` and `docs/v5-visual-provenance.md`: source and rights notes; third-party licence files are in `public/licenses/`.
 - `.github/workflows/build.yml`: installs the lockfile, builds and uploads the static output as an Actions artifact.
 
 ## Public preview and deployment
@@ -52,11 +53,11 @@ Public visibility does not create a blanket licence for project designs or third
 
 ## Presentation and source
 
-The eleven chapters follow the Salalah reference: Earth → Muscat/Seeb → proposed attractions → masterplan → City Walk → character → water park → indoor centre → family comfort → city value → phases and land decision. Arabic is primary and right-aligned; English is immediately below.
+The twelve chapters preserve the Salalah reference and add the requested Boomerang chapter: Earth/vision → Muscat/Seeb → masterplan → 90 m wheel → Boomerang → City Walk → character → water park → family dome → family comfort → city value → land and investment proposal. Arabic is primary and right-aligned; English is immediately below.
 
-Three.js / React Three Fiber render the Earth, real Muscat terrain and an on-demand model viewer. GSAP controls chapter transitions and the updated model-derived masterplan → Blender render → generated vision sequence. Next.js builds a static export; presentation animation requires no application backend or account credentials. Motion pause, system reduced-motion preferences and `?graphics=off` are supported.
+Three.js / React Three Fiber render the Earth, real Muscat terrain and an on-demand model viewer. GSAP controls chapter transitions and the satellite zoning → Blender render → generated vision sequence. Next.js builds a static export; presentation animation requires no application backend or account credentials. Motion pause, system reduced-motion preferences and `?graphics=off` are supported.
 
-Open `design/v3/muscat-park-v3.blend` in Blender to edit the current concept (metres, 16 cameras, packed materials, no external satellite texture). The 7.62 MB `public/models/muscat-park-v3.glb` is the current browser presentation export. The model is conceptual, not a construction or manufacturing deliverable.
+Open `design/v5/muscat-park-v5.blend` in Blender to edit the current metre-scale concept with packed materials and retained camera registration. The browser uses `public/models/muscat-park-v5.glb` (12.59 MB) and a separate `public/models/boomerang-v5.glb` (5.13 MB). Both contain their texture dependencies. Editable source, dimensions, animation contracts and native/export checks are documented in [the v5 model handoff](design/v5/README.md). The model is conceptual, not a construction or manufacturing deliverable.
 
 ## Revision 3
 
@@ -76,3 +77,14 @@ The first masterplan frame uses an attributed Google Maps satellite screenshot, 
 The detailed Blender model contains the supplied WFC-20A geometry, a 90 m concept observation wheel, entrance, two-storey cafe promenade and hemisphere venue. The 3D control plays 15-second illustrative construction followed by wheel rotation and a gentle orbit. The separate landmark animation assembles the wheel against a generated Muscat park-and-mountain background. [Model validation](design/v4/validation) and [motion contract](docs/v4-motion.md).
 
 No CAPEX, engineering, ride safety or civil access approval is implied. The 50 m wheel source filename does not set the concept height: the owner explicitly retained 90 m.
+
+
+## Revision 5
+
+The presentation now has twelve chapters, including a separate actual-source Boomerang viewer, native Blender render and the supplied portrait video in a phone frame. The model and image composition remain enlarged and softly faded into the left side; Arabic copy stays on the right. The native 90 m wheel assembly transitions to a generated finished-park view.
+
+The editable park adds a large moving Oman flag above the hemisphere, Oman/Russia flags at the entrance and 122 additional perimeter palms. Parcel boundaries, parking geometry, source road connection and aerial pins remain unchanged from v4. The latest parking image incorporates the owner’s corrected vehicle direction and landscaping.
+
+The final chapter presents MG Group’s project-supplied experience and a proposed ASAAS / Vision 2040 investment discussion. Its Salalah day/sunset/night loop uses generated lighting interpretations of a supplied real drone photograph; these are not three independent documentary shoots. Native/source media, generated edits and actual photography remain distinguished in [v5 visual provenance](docs/v5-visual-provenance.md) and [research notes](docs/v5-research.md).
+
+New runtime illustrations are WebP and video is WebM. `npm run check:export` requires the v5 models, all three Salalah images and twelve Arabic headings, verifies embedded dependencies and animation names, and checks media signatures. Browser interaction and in-room legibility are separate acceptance checks. Historical revision notes above describe their respective releases.

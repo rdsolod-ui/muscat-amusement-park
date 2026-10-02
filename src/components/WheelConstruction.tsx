@@ -5,6 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { ACESFilmicToneMapping, AnimationMixer, Box3, LoopOnce, LoopRepeat, MathUtils, PerspectiveCamera, Vector3, type AnimationAction } from "three";
 import { asset } from "@/lib/assets";
+import { gsap } from "gsap";
 import styles from "./WheelConstruction.module.css";
 
 export interface WheelConstructionProps {
@@ -16,6 +17,7 @@ export interface WheelConstructionProps {
 const MODEL = "models/muscat-wheel-v4.glb";
 const BACKGROUND = "media/v4/wheel-mountains.webp";
 const POSTER = "media/v4/wheel-poster.webp";
+const FINAL = "media/v5/wheel-final.webp";
 const CONSTRUCTION_CLIP = "Wheel_Construction";
 const ROTATION_CLIP = "Wheel_Rotation";
 
@@ -168,6 +170,10 @@ function WheelModel({ running, playback, onReady, onPhase, onFailure }: {
 export default function WheelConstruction({ active, paused, reduced }: WheelConstructionProps) {
   const frame = useRef<HTMLElement>(null);
   const playback = useRef<Playback>({ elapsed: 0, rotation: 0, complete: false });
+  const finalLayer = useRef<HTMLDivElement>(null);
+  const finalTransition = useRef<gsap.core.Timeline | null>(null);
+  const [finalReady, setFinalReady] = useState(false);
+  const [finalShown, setFinalShown] = useState(false);
   const [activated, setActivated] = useState(false);
   const [inView, setInView] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -204,12 +210,32 @@ export default function WheelConstruction({ active, paused, reduced }: WheelCons
   const staticMode = reduced || graphicsOff || failed;
   const running = active && inView && visible && !paused && !staticMode;
   const displayPhase = staticMode ? 5 : phase;
-  const showModel = activated && !staticMode;
-  const showPoster = staticMode || !ready;
+  const showModel = activated && !staticMode && !finalShown;
+  const showPoster = !finalShown && (staticMode || !ready);
   const label = PHASES[displayPhase];
+  useEffect(() => {
+    if (!activated) return;
+    let cancelled = false;
+    const image = new Image(); image.src = asset(FINAL);
+    image.decode().then(() => { if (!cancelled) setFinalReady(true); }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [activated]);
+  useEffect(() => {
+    if (!finalReady || !finalLayer.current || finalShown) return;
+    if (staticMode) { gsap.set(finalLayer.current, { opacity: 1 }); setFinalShown(true); return; }
+    if (phase !== 5) return;
+    // Let the completed assembly breathe before its matching photographic vision.
+    const timeline = gsap.timeline({ paused: true });
+    timeline.to(finalLayer.current, { opacity: 1, duration: 2.4, ease: "power2.inOut", onComplete: () => setFinalShown(true) }, 1.2);
+    finalTransition.current = timeline;
+    return () => { timeline.kill(); finalTransition.current = null; };
+  }, [finalReady, finalShown, staticMode, phase]);
+  useEffect(() => {
+    if (running) finalTransition.current?.resume(); else finalTransition.current?.pause();
+  }, [running, finalReady, phase]);
 
   return <figure ref={frame} className={"scene scene-rides " + styles.frame}
-    data-wheel-mode={staticMode ? "static" : ready ? "animated-model" : "loading"}
+    data-wheel-mode={finalShown ? "generated-final" : staticMode ? "static" : ready ? "animated-model" : "loading"}
     data-wheel-stage={displayPhase} data-wheel-running={running}>
     <div className={styles.stage} aria-hidden="true">
       {!backgroundFailed && <img className={styles.background} src={asset(BACKGROUND)} alt="" loading="lazy" onError={() => setBackgroundFailed(true)} />}
@@ -228,12 +254,16 @@ export default function WheelConstruction({ active, paused, reduced }: WheelCons
           </Canvas>
         </WheelBoundary>
       </div>}
+      <div ref={finalLayer} className={styles.finalLayer} style={{ opacity: 0 }}>
+        {activated && <img src={asset(FINAL)} className={styles.finalPhoto} alt="" />}
+        <div className={styles.heightLabel}><strong dir="ltr">90<span>m</span></strong><span lang="ar" dir="rtl">تسعون متراً من الدهشة</span><span lang="en" dir="ltr">Ninety metres of wonder</span></div>
+      </div>
     </div>
     <figcaption className={styles.caption}>
       <div className={styles.phases} aria-hidden="true">{PHASES.map((item, index) => <span key={item.en} data-complete={index <= displayPhase} />)}</div>
       <span className={styles.phaseAr} lang="ar" dir="rtl">{label.ar}</span>
       <span className={styles.phaseEn} lang="en" dir="ltr">{label.en}</span>
-      <span className={styles.note} lang="en" dir="ltr">{staticMode || !ready ? "Concept visualization" : "Concept model · illustrative assembly"}</span>
+      <span className={styles.note} lang="en" dir="ltr">{finalShown ? "Generated concept visualization · 90 m target" : staticMode || !ready ? "Concept visualization" : "Concept model · illustrative assembly"}</span>
     </figcaption>
   </figure>;
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "file": "design/visuals/v5/boomerang-render.png",
+    "removed": [
+      "tEXt:File"
+    ],
+    "original_idat_sha256": "dbd97a07e58d2db73e66f455b0dbdc3ab4c9d36e4b121ca20a9557f2800aac98",
+    "idat_chunks_byte_identical": true,
+    "sha256": "c77ef6abec8ac4f84eddaf9b806aa18dce951a688954d6b91ed8b390ed581853",
+    "host_path_remaining": false
+  },
+  {
+    "file": "design/visuals/v5/model-aerial.png",
+    "removed": [
+      "tEXt:File"
+    ],
+    "original_idat_sha256": "b00bc8e59f7d948611c690608db90f7b4396d69afd7d5f7a758c912c80e06744",
+    "idat_chunks_byte_identical": true,
+    "sha256": "81dd08d171926bdaee6d4fd0c2cb2cdc1e57ff792acfe7341b65d7203853ac79",
+    "host_path_remaining": false
+  },
+  {
+    "file": "design/visuals/v5/model-dome.png",
+    "removed": [
+      "tEXt:File"
+    ],
+    "original_idat_sha256": "b47e48de3cee5d04f090ae36efcb4dda2b8052e038d8827fce83facaa6f37d1b",
+    "idat_chunks_byte_identical": true,
+    "sha256": "320d5685af0b2dd03ebf6c2d236dbf2941abd432563de60bbc999de7499fcf3a",
+    "host_path_remaining": false
+  },
+  {
+    "file": "design/visuals/v5/model-entrance.png",
+    "removed": [
+      "tEXt:File"
+    ],
+    "original_idat_sha256": "7160b63095b5b52e001b5a5bf122c13a7fcce09780f9da9ab66486768c124bf9",
+    "idat_chunks_byte_identical": true,
+    "sha256": "8a2edde4c062c4499a0cce95418827be0dac861362deaf981b2ea4095743ecc9",
+    "host_path_remaining": false
+  }
+]

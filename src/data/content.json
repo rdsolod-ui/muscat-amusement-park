@@ -77,6 +77,23 @@
       "note_en": "90 metres is a concept target. Manufacturer selection, safety and height constraints require study and approval."
     },
     {
+      "id": "boomerang",
+      "kicker_ar": "قلب المغامرة",
+      "kicker_en": "At the heart of the adventure",
+      "title_ar": "لحظة تعود إليها.",
+      "title_en": "A moment to come back to.",
+      "body_ar": "أفعوانية بوميرانغ بحلقة رأسية؛ تجربة تصبح حكاية نتشاركها.",
+      "body_en": "A Boomerang looping coaster. A ride that becomes a story to share.",
+      "points": [
+        {
+          "ar": "مسار مميز يصنع حضوراً للمنتزه في أفق المدينة.",
+          "en": "A distinctive track gives the park a recognisable silhouette."
+        }
+      ],
+      "note_ar": "النموذج التفصيلي من ملف WFC-20A المقدم؛ المواصفات والتشغيل رهن التحقق.",
+      "note_en": "Detailed model from the supplied WFC-20A source; specifications and operation require verification."
+    },
+    {
       "id": "water",
       "kicker_ar": "يوم قرب الماء",
       "kicker_en": "A day by the water",
@@ -196,15 +213,24 @@
     },
     {
       "id": "land-request",
-      "kicker_ar": "القرار التالي",
-      "kicker_en": "The next decision",
-      "title_ar": "لنمنح هذه الرؤية مكاناً.",
-      "title_en": "Give this vision a home.",
-      "body_ar": "نطلب النظر في تخصيص الموقع، وبدء دراسة مشتركة لشروط تطويره.",
-      "body_en": "Consider the proposed land allocation and agree the development studies.",
-      "points": [],
-      "note_ar": "الحدود والحقوق والهيدرولوجيا والتمويل والموافقات لم تُؤكد بعد؛ وقد تتغير المساحة القابلة للتطوير والبرنامج بعد التحقق.",
-      "note_en": "Boundaries, rights, hydrology, funding and approvals are not yet confirmed; validation may change the developable area and programme."
+      "kicker_ar": "MG Group · نحو رؤية عُمان ٢٠٤٠",
+      "kicker_en": "MG Group · Towards Oman Vision 2040",
+      "title_ar": "وجهة لمسقط. قيمة لعُمان.",
+      "title_en": "A destination for Muscat. Value for Oman.",
+      "body_ar": "طموحنا: أكبر وجهة عائلية للألعاب في عُمان، دعماً لرؤية ٢٠٤٠.",
+      "body_en": "Our ambition: Oman’s largest family amusement destination, supporting Vision 2040.",
+      "points": [
+        {
+          "ar": "نطلب دعم بلدية مسقط لتخصيص الأرض وتأمين حقوق الانتفاع.",
+          "en": "We seek Muscat Municipality’s support for land allocation and land-use rights."
+        },
+        {
+          "ar": "وتيسير الاستثمار مع «أساس» ودراسة أهلية المشروع للمنح والحوافز المتاحة.",
+          "en": "And help to engage ASAAS investment and assess eligibility for available grants and incentives."
+        }
+      ],
+      "note_ar": "مقترح للنقاش؛ الشراكة والتمويل وحقوق الأرض لم تعتمد. عدد المنتزهات وخبرة الشركة مقدمان من MG Group؛ وصف الأكبر طموح للمشروع.",
+      "note_en": "Discussion proposal; partnership, funding and land rights are not approved. Park count and delivery experience are supplied by MG Group; the largest destination is an ambition, not an established ranking."
     }
   ]
 }

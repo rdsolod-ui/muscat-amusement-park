@@ -1,0 +1,48 @@
+{
+  "source": "WFC-20A.skp",
+  "source_sha256": "de22eab1dd6574b41d671921c333a1c56093ecebb7cc0a011c8eb7062883d816",
+  "dimensions_m": [
+    99.6700439453125,
+    39.76874542236328,
+    40.96331024169922
+  ],
+  "source_triangles": 534879,
+  "lod_ratio": 0.7,
+  "source_materials": 40,
+  "packed_textures": [
+    {
+      "name": "Image_0",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_1",
+      "packed": true,
+      "size": [
+        146,
+        150
+      ]
+    },
+    {
+      "name": "Image_2",
+      "packed": true,
+      "size": [
+        775,
+        775
+      ]
+    },
+    {
+      "name": "Image_3",
+      "packed": true,
+      "size": [
+        775,
+        775
+      ]
+    }
+  ],
+  "render": "Cycles48samples, denoised, 1920x1200",
+  "kind": "actual supplier source geometry; source dimensions are not independently certified"
+}

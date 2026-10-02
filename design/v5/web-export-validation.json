@@ -1,0 +1,344 @@
+[
+  {
+    "file": "boomerang-v5.glb",
+    "bytes": 5126608,
+    "sha256": "dc3e8a7cab61b14412268bfd3acb527f4ce63452f8033ae112835766315af652",
+    "meshes": 1,
+    "nodes": 1,
+    "materials": 38,
+    "textures": 3,
+    "clips": [],
+    "compressed": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 3,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        }
+      ],
+      "truncated": false
+    },
+    "decoded": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 2,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  {
+    "file": "muscat-park-v5.glb",
+    "bytes": 12590764,
+    "sha256": "f16ea99fb2da4d377bf637661c1b9ce440ee9692787e8727bb0c86149384b806",
+    "meshes": 102,
+    "nodes": 323,
+    "materials": 150,
+    "textures": 6,
+    "clips": [
+      {
+        "name": "Park_Construction",
+        "channels": 9,
+        "duration_s": 15
+      },
+      {
+        "name": "Wheel_Rotation",
+        "channels": 37,
+        "duration_s": 60
+      },
+      {
+        "name": "Flags_Wind",
+        "channels": 7,
+        "duration_s": 4
+      }
+    ],
+    "compressed": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 12,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/49/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/50/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/51/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/52/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/53/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/54/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/55/weights"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 1039x474.",
+          "severity": 2,
+          "pointer": "/images/4"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 2000x1143.",
+          "severity": 2,
+          "pointer": "/images/5"
+        }
+      ],
+      "truncated": false
+    },
+    "decoded": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 28,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/49/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/50/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/51/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/52/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/53/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/54/weights"
+        },
+        {
+          "code": "UNUSED_MESH_WEIGHTS",
+          "message": "The static morph target weights are always overridden.",
+          "severity": 2,
+          "pointer": "/meshes/55/weights"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 1039x474.",
+          "severity": 2,
+          "pointer": "/images/4"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 2000x1143.",
+          "severity": 2,
+          "pointer": "/images/5"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 72 degenerate triangles (out of 3456).",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/1/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/59/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/63/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/73/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/60/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/61/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/65/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/66/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/68/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/69/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/70/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/71/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/72/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+          "severity": 2,
+          "pointer": "/meshes/62/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/64/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/67/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+          "severity": 2,
+          "pointer": "/meshes/74/primitives/0/indices"
+        }
+      ],
+      "truncated": false
+    }
+  }
+]

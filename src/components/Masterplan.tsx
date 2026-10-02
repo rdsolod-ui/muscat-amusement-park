@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import {gsap} from "gsap";
 import {Box,MapPin,RotateCcw,X} from "lucide-react";
 import {asset} from "@/lib/assets";
-import frames from "@/data/masterplan-frames-v4.json";
+import frames from "@/data/masterplan-frames-v5.json";
 import styles from "./Masterplan.module.css";
 const ParkViewer=dynamic(()=>import("./ParkViewer"),{ssr:false,loading:()=> <div className="viewer-loading">تحميل المجسم · Loading model…</div>});
 const zones=[
@@ -69,7 +69,7 @@ export default function Masterplan({active,paused,reduced}:{active:boolean;pause
     <div className="plan-pins">{zones.map(item=>{const point=frame.pins[item.key];return <button key={item.key} className={"plan-pin "+(selectedZone===item.id?"is-selected":"")} style={{left:point[0]*100+"%",top:point[1]*100+"%"}} tabIndex={index===stage&&!viewer?0:-1} onClick={()=>chooseZone(item.id)} aria-label={item.ar+" · "+item.en} aria-pressed={selectedZone===item.id}><span>{String(item.id).padStart(2,"0")}</span></button>})}</div>
    </div>)}
    {closeup&&!viewer&&<figure className="zone-preview" key={zone.key}>
-    <img src={asset("media/v4/zone-"+zone.key+".webp")} alt={zone.ar+" — "+zone.en+" · Generated concept"}/>
+    <img src={asset("media/"+(zone.key==="city"||zone.key==="parking"?"v5":"v4")+"/zone-"+zone.key+".webp")} alt={zone.ar+" — "+zone.en+" · Generated concept"}/>
     <button className="icon-button zone-preview-close" onClick={()=>setCloseup(false)} aria-label="إغلاق الصورة · Close zone image"><X size={18}/></button>
     <figcaption><span lang="ar" dir="rtl">{zone.ar}</span><span lang="en" dir="ltr">{zone.en} · Concept</span></figcaption>
    </figure>}

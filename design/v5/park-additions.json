@@ -1,0 +1,113 @@
+{
+  "revision": "v5",
+  "source_v4_sha256": "88e38436c7af1bac6f083c5381e63d77fe68b14ee3577adb38c3e55d14dadc7d",
+  "units": "metres",
+  "flags": [
+    {
+      "object": "FLAG_Oman_Dome",
+      "country": "Oman",
+      "dimensions_m": [
+        12,
+        6.858
+      ],
+      "pole_height_m": 18,
+      "base_m": [
+        -81.56661987304688,
+        -266.9276428222656,
+        34.9
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_West_0",
+      "country": "Oman",
+      "dimensions_m": [
+        4.2,
+        2.4003
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        -14.901580810546875,
+        124.2625732421875,
+        0.25
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_West_1",
+      "country": "Russia",
+      "dimensions_m": [
+        4.2,
+        2.8
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        -23.901580810546875,
+        124.2625732421875,
+        0.25
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_West_2",
+      "country": "Oman",
+      "dimensions_m": [
+        4.2,
+        2.4003
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        -32.901580810546875,
+        124.2625732421875,
+        0.25
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_East_0",
+      "country": "Oman",
+      "dimensions_m": [
+        4.2,
+        2.4003
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        37.098419189453125,
+        124.2625732421875,
+        0.25
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_East_1",
+      "country": "Russia",
+      "dimensions_m": [
+        4.2,
+        2.8
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        46.098419189453125,
+        124.2625732421875,
+        0.25
+      ]
+    },
+    {
+      "object": "FLAG_Entrance_East_2",
+      "country": "Oman",
+      "dimensions_m": [
+        4.2,
+        2.4003
+      ],
+      "pole_height_m": 10,
+      "base_m": [
+        55.098419189453125,
+        124.2625732421875,
+        0.25
+      ]
+    }
+  ],
+  "flag_source": "https://www.fm.gov.om/en/ministry/media/downloads/",
+  "flag_sha256": "9e86fbfc8f10223e5ffbdfba5601f3b53b0a80e960edc341e99768baecc71574",
+  "perimeter_palms": 122,
+  "palms": "authored presentation date-palm mesh, instanced; species/irrigation not engineered",
+  "camera_and_pins": "unchanged v4 aerial camera and anchor positions",
+  "flag_animation": "Flags_Wind,4secondloop with2morph targets perflag",
+  "construction_and_wheel_clips": "retainedfromv4",
+  "source_v4_unchanged": true
+}

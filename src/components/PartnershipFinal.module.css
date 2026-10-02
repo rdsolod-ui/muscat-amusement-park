@@ -1,0 +1,15 @@
+.frame{background:transparent!important;isolation:isolate}
+.stage{position:absolute;inset:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 80%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);mask-composite:intersect}
+.frame .photo{opacity:0;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
+.frame .caption{bottom:5%;left:7%;right:12%;display:flex;flex-direction:column;gap:.25em;font-size:clamp(18px,1.5vw,58px);line-height:1.4;pointer-events:none;text-shadow:0 2px 14px #00191e}
+.caption [lang=en]{font-size:.72em;color:#d6e1dc}
+
+.stage{bottom:23%}
+.frame .caption{bottom:0;right:9%;left:8%;color:var(--ink);font-size:clamp(16px,1.15vw,45px);text-shadow:none;gap:.05em;line-height:1.4}
+.caption [lang=en]{color:var(--muted);font-size:.8em}
+.caption .group{font-size:1.08em;color:var(--gold);font-weight:500;margin-bottom:.2em}
+.caption .oman{margin-top:.38em}
+.caption .photoTime{position:absolute;top:-2.8em;right:0;font-size:.75em;color:var(--muted)}
+@media(max-width:900px){.stage{bottom:30%}.frame .caption{font-size:16px}}
+
+@media(min-width:901px) and (orientation:landscape){.stage{bottom:30%}}

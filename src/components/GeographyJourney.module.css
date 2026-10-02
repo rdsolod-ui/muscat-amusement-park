@@ -47,3 +47,17 @@
 @media screen and (max-width:900px){
  .earthScene[data-earth-embedded=true]{z-index:0}
 }
+
+/* Keep the map inside the visual half; its labels never sit behind Arabic copy. */
+@media screen and (min-width:901px){
+ .mapFrame{left:0;top:14%;width:51.5%;height:74%}
+ .surface{border-radius:0;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 83%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);mask-composite:intersect}
+ .source{left:8%;right:8%;bottom:4px;text-align:left;font-size:clamp(9px,.65vw,25px);line-height:1.45}
+ .placeName strong{font-size:clamp(12px,1vw,38px);letter-spacing:.035em}
+ .placeName>span{font-size:clamp(28px,2.2vw,84px)}
+ .placeName small{font-size:clamp(10px,.72vw,27px)}
+ .scale{left:5%;width:18vw;font-size:clamp(11px,.85vw,32px)}
+ .scale small{font-size:clamp(9px,.62vw,24px)}
+ .sea{font-size:clamp(9px,.65vw,25px);letter-spacing:.18em}
+}
+.canvas{transition:none}

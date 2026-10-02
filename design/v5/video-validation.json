@@ -1,0 +1,33 @@
+{
+  "source": "boomerang-video.mp4",
+  "source_sha256": "29c2040e0bc709e37ceded948bb04fd6573e9b68cf2a7e01744490ee35c1b492",
+  "source_video": {
+    "width": 2160,
+    "height": 3840,
+    "duration": "14.600000",
+    "nb_frames": "730",
+    "avg_frame_rate": "50/1"
+  },
+  "output": "media/v5/boomerang-video.webm",
+  "output_bytes": 9676046,
+  "output_sha256": "899f89426aac431c15d5c5489d22e564dac27fbe3cb312b4963f2a8218b5fd1e",
+  "output_duration": 14.621,
+  "video": {
+    "codec_name": "vp9",
+    "width": 1080,
+    "height": 1920,
+    "display_aspect_ratio": "9:16",
+    "avg_frame_rate": "50/1",
+    "nb_read_frames": "730"
+  },
+  "audio": {
+    "codec_name": "opus",
+    "sample_rate": "48000",
+    "channels": 2,
+    "channel_layout": "stereo"
+  },
+  "source_preserved": true,
+  "no_cropping_or_trim": true,
+  "derivative_resolution": "1080x1920 for browser playback; original4K retained",
+  "pass": true
+}

@@ -1,0 +1,294 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "read_only_checks_preserved_files": true,
+  "park": {
+    "wheel_height_m": 90.0,
+    "camera_unchanged": true,
+    "locks": {
+      "Original screenshot site perimeter": true,
+      "Reference zone rides": true,
+      "Reference zone water": true,
+      "Reference zone city": true,
+      "Reference zone parking": true,
+      "Reference zone utility": true,
+      "Parking bays and cars": true,
+      "Parking connected aisle00": true,
+      "Parking connected aisle01": true,
+      "Parking connected aisle02": true,
+      "Parking connected aisle03": true,
+      "Parking connected aisle04": true,
+      "Parking connected aisle05": true,
+      "Parking connected aisle06": true,
+      "Parking connected aisle07": true,
+      "Parking connected aisle08": true,
+      "Parking connected aisle09": true,
+      "Parking connected aisle10": true,
+      "Parking connected aisle11": true,
+      "Parking connected aisle12": true,
+      "Parking connected aisle13": true,
+      "Parking connected aisle14": true,
+      "Parking connected aisle15": true
+    },
+    "images": [
+      {
+        "name": "Image_0",
+        "packed": true,
+        "dimensions": [
+          256,
+          256
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_0.001",
+        "packed": true,
+        "dimensions": [
+          256,
+          256
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_1",
+        "packed": true,
+        "dimensions": [
+          1039,
+          474
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_1.001",
+        "packed": true,
+        "dimensions": [
+          146,
+          150
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_2",
+        "packed": true,
+        "dimensions": [
+          775,
+          775
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_3",
+        "packed": true,
+        "dimensions": [
+          775,
+          775
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "oman-flag.jpg",
+        "packed": true,
+        "dimensions": [
+          2000,
+          1143
+        ],
+        "decodes": true,
+        "relative_path": true
+      }
+    ],
+    "flags": [
+      {
+        "name": "FLAG_Entrance_East_0",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Entrance_East_1",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Entrance_East_2",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Entrance_West_0",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Entrance_West_1",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Entrance_West_2",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 0.78362860264576,
+        "uv_layers": 1
+      },
+      {
+        "name": "FLAG_Oman_Dome",
+        "morph_targets": [
+          "WindA",
+          "WindB"
+        ],
+        "max_wind_displacement_m": 2.2389390155365523,
+        "uv_layers": 1
+      }
+    ],
+    "pins": [
+      {
+        "id": "rides",
+        "projected_percent": [
+          26.78007483482361,
+          49.906665086746216
+        ],
+        "previous_percent": [
+          26.7801,
+          49.9067
+        ],
+        "error_percent": 3.491325378490728e-05
+      },
+      {
+        "id": "water",
+        "projected_percent": [
+          60.961490869522095,
+          69.43923830986023
+        ],
+        "previous_percent": [
+          60.9615,
+          69.4392
+        ],
+        "error_percent": 3.830986022990146e-05
+      },
+      {
+        "id": "city",
+        "projected_percent": [
+          42.88332164287567,
+          65.53583145141602
+        ],
+        "previous_percent": [
+          42.8833,
+          65.5358
+        ],
+        "error_percent": 3.145141602090007e-05
+      },
+      {
+        "id": "parking",
+        "projected_percent": [
+          60.879504680633545,
+          45.48805356025696
+        ],
+        "previous_percent": [
+          60.8795,
+          45.4881
+        ],
+        "error_percent": 4.6439743044857096e-05
+      },
+      {
+        "id": "utility",
+        "projected_percent": [
+          23.030591011047363,
+          29.585856199264526
+        ],
+        "previous_percent": [
+          23.0306,
+          29.5859
+        ],
+        "error_percent": 4.380073547238794e-05
+      }
+    ],
+    "external_libraries": 0,
+    "palms_added": 122
+  },
+  "boomerang": {
+    "dimensions_m": [
+      99.6700439453125,
+      39.76874542236328,
+      40.96331024169922
+    ],
+    "source_triangles": 534879,
+    "source_material_slots": 40,
+    "uv_layers": 1,
+    "modifiers": [
+      {
+        "type": "DECIMATE",
+        "ratio": 0.699999988079071
+      }
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "packed": true,
+        "dimensions": [
+          256,
+          256
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_1",
+        "packed": true,
+        "dimensions": [
+          146,
+          150
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_2",
+        "packed": true,
+        "dimensions": [
+          775,
+          775
+        ],
+        "decodes": true,
+        "relative_path": true
+      },
+      {
+        "name": "Image_3",
+        "packed": true,
+        "dimensions": [
+          775,
+          775
+        ],
+        "decodes": true,
+        "relative_path": true
+      }
+    ],
+    "external_libraries": 0
+  },
+  "pass": true
+}

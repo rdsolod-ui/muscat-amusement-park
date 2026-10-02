@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-02",
+  "heading": {
+    "ar": "المصادر وحالة التحقق",
+    "en": "Sources and verification status"
+  },
+  "introduction": {
+    "ar": "مراجع للسياق ولخبرات الجهة المطوّرة؛ لا تمثل موافقة على المشروع أو التزامًا بتمويله.",
+    "en": "Context and promoter references; these do not constitute project approval or a funding commitment."
+  },
+  "statusLabels": {
+    "verified": {
+      "ar": "موثّق بالمصدر",
+      "en": "Source verified"
+    },
+    "corporateClaim": {
+      "ar": "بيان من الشركة",
+      "en": "Company statement"
+    },
+    "promoterProvided": {
+      "ar": "معلومات الجهة المطوّرة",
+      "en": "Promoter-provided"
+    },
+    "proposed": {
+      "ar": "مقترح قيد الدراسة",
+      "en": "Proposed for review"
+    },
+    "unverified": {
+      "ar": "غير مثبت بالمصادر المتاحة",
+      "en": "Not established by available sources"
+    }
+  },
+  "sources": [
+    {
+      "id": "asaas-company",
+      "status": "verified",
+      "publisher": "ASAAS",
+      "title": {
+        "ar": "أساس — نهج الاستثمار والشراكة",
+        "en": "ASAAS — investment and partnership approach"
+      },
+      "url": "https://asaas.om/en/company/",
+      "summary": {
+        "ar": "توضح الشركة نهجها في الاستثمار والاستثمار المشترك والتعاون بين القطاعين العام والخاص.",
+        "en": "The company describes investment, co-investment and public/private collaboration."
+      },
+      "limit": {
+        "ar": "التعاون مع MAP مقترح؛ لم يُثبت وجود التزام استثماري.",
+        "en": "Cooperation with MAP is proposed; no investment commitment is established."
+      }
+    },
+    {
+      "id": "national-tourism",
+      "status": "verified",
+      "publisher": "Ministry of Heritage and Tourism",
+      "title": {
+        "ar": "السياحة ورؤية عُمان ٢٠٤٠",
+        "en": "Tourism and Oman Vision 2040"
+      },
+      "url": "https://mht.gov.om/media-center/news/oman-strengthens-tourism-sector-with-expansion-plans-and-global-connectivity-initiatives/",
+      "publishedAt": "2025-04-16",
+      "summary": {
+        "ar": "تربط الوزارة نمو السياحة بتنويع الاقتصاد والاستدامة وتجارب الزوار ومنافع المجتمع المحلي.",
+        "en": "The ministry connects tourism growth with diversification, sustainability, visitor experiences and community benefits."
+      },
+      "limit": {
+        "ar": "رؤية عُمان ٢٠٤٠ إطار وطني؛ لا تعني تأييدًا رسميًا للمشروع.",
+        "en": "Oman Vision 2040 is a national framework, not official endorsement of MAP."
+      }
+    },
+    {
+      "id": "tourism-support",
+      "status": "verified",
+      "publisher": "Invest Oman",
+      "title": {
+        "ar": "الاستثمار السياحي والحوافز",
+        "en": "Tourism investment and incentives"
+      },
+      "url": "https://www.investoman.om/start-investing/sectors/tourism-38",
+      "summary": {
+        "ar": "يعرض المصدر آليات عامة للاستثمار السياحي والانتفاع بالأراضي والحوافز.",
+        "en": "The source describes general tourism investment, land-use and incentive mechanisms."
+      },
+      "limit": {
+        "ar": "أهلية MAP والشروط المطبقة تتطلب تقييم الجهات المختصة؛ لا توجد إعانة مضمونة.",
+        "en": "MAP eligibility and applicable terms require assessment by the competent authorities; no subsidy is guaranteed."
+      }
+    },
+    {
+      "id": "mg-salalah",
+      "status": "corporateClaim",
+      "publisher": "MG group",
+      "title": {
+        "ar": "مشروع عجلة صلالة في محفظة MG Group",
+        "en": "Salalah wheel in MG Group's portfolio"
+      },
+      "url": "https://vsevpark.com/omanferriswheel",
+      "summary": {
+        "ar": "تدرج الشركة عجلة المراقبة في صلالة ضمن مشروعاتها في عُمان.",
+        "en": "The company lists the Salalah observation wheel among its Oman projects."
+      },
+      "limit": {
+        "ar": "المصدر بيان من الشركة؛ لا يثبت وحده جميع الأدوار التعاقدية في التنفيذ.",
+        "en": "This is a company portfolio statement; it alone does not establish every contractual delivery role."
+      }
+    },
+    {
+      "id": "asaas-leisure",
+      "status": "verified",
+      "publisher": "ASAAS",
+      "title": {
+        "ar": "الشرق — وجهة للترفيه والسياحة",
+        "en": "A’Sharq — leisure and tourism destination"
+      },
+      "url": "https://asaas.om/en/asharq-eng/",
+      "summary": {
+        "ar": "تعرض أساس تصورًا يضم حديقة مائية ومدينة ألعاب وتجارة ومطاعم وضيافة.",
+        "en": "ASAAS presents a concept combining water and theme parks, retail, dining and hospitality."
+      },
+      "limit": {
+        "ar": "صفحة المشروع لا تثبت اكتمال التنفيذ؛ لا يُستخدم ادعاء «الأول» لـ MAP.",
+        "en": "The page does not establish completion; it does not support a national 'first' claim for MAP."
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "eight-parks",
+      "status": "promoterProvided",
+      "title": {
+        "ar": "خبرات في ثمانية مشروعات حدائق",
+        "en": "Experience across eight park projects"
+      },
+      "summary": {
+        "ar": "ورد العدد في معلومات الجهة المطوّرة الحالية. لا يُقدّم كتصنيف لأكبر حدائق العالم.",
+        "en": "The count comes from the promoter's current project information. It is not presented as a ranking of the world's largest parks."
+      }
+    },
+    {
+      "id": "municipal-asks",
+      "status": "proposed",
+      "title": {
+        "ar": "الأرض والاستثمار والدعم",
+        "en": "Land, investment and support"
+      },
+      "summary": {
+        "ar": "طلبات لتيسير حقوق الانتفاع ودراسة الاستثمار والحوافز؛ لم تُعتمد بعد.",
+        "en": "Requests to facilitate land-use rights and assess investment and incentives; not yet approved."
+      }
+    },
+    {
+      "id": "first-largest",
+      "status": "unverified",
+      "title": {
+        "ar": "ادعاءات «الأول» و«الأكبر»",
+        "en": "First and largest claims"
+      },
+      "summary": {
+        "ar": "لم تثبتها المصادر التي تمت مراجعتها؛ يقدم MAP كوجهة عائلية جديدة لمسقط.",
+        "en": "These claims were not established by the inspected sources; MAP is presented as a new family destination for Muscat."
+      }
+    }
+  ],
+  "imageProvenance": {
+    "title": {
+      "ar": "صور صلالة",
+      "en": "Salalah imagery"
+    },
+    "original": {
+      "ar": "صور جوية أصلية قدمها فريق المشروع؛ طُوّرت نسخة من صورة RAW المختارة بدقتها الكاملة وباستخدام توازن الأبيض المسجل بالكاميرا، دون تعديل الملفات الأصلية.",
+      "en": "Original drone photographs supplied by the project team; the selected RAW image was developed at full resolution using the camera white balance, without modifying the original files."
+    },
+    "interpretations": {
+      "ar": "نسخ النهار والغروب والليل المعدلة توليديًا هي تصورات للإضاءة انطلاقًا من الصورة الأصلية، وليست لقطات توثيقية مستقلة.",
+      "en": "Generated day, sunset and night variants are lighting interpretations of the original photograph, not separate documentary captures."
+    }
+  }
+}

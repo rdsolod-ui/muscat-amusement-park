@@ -7,9 +7,10 @@ import * as THREE from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { asset } from "@/lib/assets";
 
-const MODEL = "models/muscat-park-v4.glb";
+const MODEL = "models/muscat-park-v5.glb";
 const CONSTRUCTION = "Park_Construction";
 const ROTATION = "Wheel_Rotation";
+const WIND = "Flags_Wind";
 
 type PositionAttribute = THREE.BufferAttribute | THREE.InterleavedBufferAttribute;
 type CompletedMesh = { position: PositionAttribute; matrix: THREE.Matrix4; context: boolean };
@@ -20,6 +21,7 @@ type Playback = {
   mixer: THREE.AnimationMixer;
   construction: THREE.AnimationAction;
   rotation: THREE.AnimationAction;
+  wind: THREE.AnimationAction | null;
   duration: number;
   elapsed: number;
   complete: boolean;
@@ -64,10 +66,13 @@ function Model({ running, reduced, replayKey, onComplete }: {
   useLayoutEffect(() => {
     const constructionClip = animations.find(clip => clip.name === CONSTRUCTION);
     const rotationClip = animations.find(clip => clip.name === ROTATION);
-    if (!constructionClip || !rotationClip) throw new Error("MAP v4 construction clips are missing");
+    if (!constructionClip || !rotationClip) throw new Error("MAP v5 construction clips are missing");
     const mixer = new THREE.AnimationMixer(model);
     const construction = mixer.clipAction(constructionClip);
     const rotation = mixer.clipAction(rotationClip);
+    const windClip = animations.find(clip => clip.name === WIND);
+    const wind = windClip ? mixer.clipAction(windClip) : null;
+    wind?.setLoop(THREE.LoopRepeat, Infinity);
     construction.setLoop(THREE.LoopOnce, 1);
     construction.clampWhenFinished = true;
     rotation.setLoop(THREE.LoopRepeat, Infinity);
@@ -96,14 +101,14 @@ function Model({ running, reduced, replayKey, onComplete }: {
         if (!context || contextEnvelope.containsPoint(vertex)) bounds.expandByPoint(vertex);
       }
     });
-    if (bounds.isEmpty()) throw new Error("MAP v4 has no geometry to display");
+    if (bounds.isEmpty()) throw new Error("MAP v5 has no geometry to display");
     bounds.getCenter(center.current);
     completedMeshes.current = meshes;
     setPlacement([-center.current.x, -center.current.y, -center.current.z]);
 
     construction.reset().play();
     mixer.update(0);
-    playback.current = { mixer, construction, rotation, duration: constructionClip.duration, elapsed: 0, complete: false };
+    playback.current = { mixer, construction, rotation, wind, duration: constructionClip.duration, elapsed: 0, complete: false };
     onComplete(false);
     invalidate();
     return () => {
@@ -174,11 +179,13 @@ function Model({ running, reduced, replayKey, onComplete }: {
         sim.construction.time = sim.duration;
         sim.construction.paused = true;
         sim.rotation.reset().play();
+        sim.wind?.reset().play();
         sim.mixer.update(0);
         onComplete(true);
       }
     } else {
       if (!sim.rotation.isRunning()) { sim.rotation.paused = false; sim.rotation.play(); }
+      if (sim.wind && !sim.wind.isRunning()) { sim.wind.paused = false; sim.wind.play(); }
       sim.mixer.update(step);
     }
   });

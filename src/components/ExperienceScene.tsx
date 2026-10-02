@@ -24,12 +24,15 @@ function EarthWorld(props:ExperienceSceneProps & {embedded:boolean;introTime:Mut
   const intro=!props.reducedMotion&&!props.paused&&props.introTime.current<4.5&&target<.12;
   if(intro)props.introTime.current+=dt;else if(target>=.12||props.reducedMotion)props.introTime.current=4.5;
   motion.current.intro=MathUtils.smoothstep(props.introTime.current,0,4.5);
-  motion.current.progress=props.reducedMotion||props.paused?target:MathUtils.damp(motion.current.progress,target,4.2,dt);
+  // Geography and Earth share the same clock. A second damping filter, or snapping
+  // to the target on pause, makes the two layers disagree during their dissolve.
+  if(props.reducedMotion||props.activeChapter===1)motion.current.progress=target;
+  else if(!props.paused)motion.current.progress=MathUtils.damp(motion.current.progress,target,4.2,dt);
   if(props.embedded){
    // Fit the complete sphere to the smaller viewport dimension; no clipping on narrow phones.
    camera.position.set(0,0,8.2/Math.min(1,size.width/size.height));camera.lookAt(0,0,0);
   }else{camera.position.set(0,0,size.width<760?11.2:10);camera.lookAt(0,size.width<760?.6:0,0);}
-  if(intro||Math.abs(motion.current.progress-target)>.0001)invalidate();
+  if(!props.paused&&(intro||Math.abs(motion.current.progress-target)>.0001))invalidate();
   if(!ready.current){ready.current=true;readyFrame.current=requestAnimationFrame(()=>callbacks.current.onReady?.());}
  },-30);
  return <RealisticEarth motion={motion} theme={props.theme} reducedMotion={props.reducedMotion} embedded={props.embedded}/>;
@@ -46,7 +49,7 @@ export default function ExperienceScene(props:ExperienceSceneProps){
   update();mobile.addEventListener("change",update);return()=>mobile.removeEventListener("change",update);
  },[props.activeChapter]);
  // Start from the hero pose instead of jumping straight to the close-up (.23).
- // Geography owns this six-second approach; the chapter's scroll anchor is not a camera cut.
+ // Geography owns this 16-second approach; the chapter's scroll anchor is not a camera cut.
  const travel=MathUtils.smootherstep(journey,0,.45);
  const earthProgress=placeActive?travel*.31:props.progress;
  const canvas=<div className={styles.earthScene} data-earth-embedded={Boolean(earthHost)}>

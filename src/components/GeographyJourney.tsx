@@ -169,7 +169,7 @@ export default function GeographyJourney({ active, stage, staticView = false }: 
         <div className={styles.mapShade} />
         <div className={styles.pin}><i /><span /></div>
         <div className={styles.placeName}>
-          <span lang="ar" dir="rtl">الموقع المقترح</span><strong>MUSCAT FAMILY PARK</strong>
+          <span lang="ar" dir="rtl">الموقع المقترح</span><strong>Muscat Amusement Park (MAP)</strong>
           <small dir="ltr" lang="en">23.64305° N · 58.17629° E</small>
         </div>
         <div className={styles.north}><span>N</span><i /></div>
