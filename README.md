@@ -40,9 +40,9 @@ The static export is written to `out/`. The preview server binds only to `127.0.
 - `docs/assets-provenance.md`: source and rights notes; third-party licence files are in `public/licenses/`.
 - `.github/workflows/build.yml`: installs the lockfile, builds and uploads the static output as an Actions artifact.
 
-## Publication and deployment are separate
+## Public preview and deployment
 
-Publishing this source repository on GitHub does not deploy the website. CI has read-only repository permissions and produces a downloadable artifact; it does not configure GitHub Pages, upload to a VPS or activate a public website. A future VPS release requires a separate command from the project owner.
+Public website: [Muscat Family Park](https://rdsolod-ui.github.io/muscat-amusement-park/). The owner authorized GitHub Pages on 2 October 2026. Push/PR CI still produces a build artifact only. To update the public preview, manually run the **Publish GitHub Pages** workflow on `codex/muscat-concept`; it rebuilds, type-checks and validates the static export before deploying that artifact. `revision.json` records the published commit and workflow ID. No custom domain or VPS is configured by this workflow. A future VPS release requires a separate command from the project owner.
 
 The website has passed local production-build and browser checks. Arabic editorial review, official site verification and venue testing remain separate. See [validation](docs/validation.md).
 
