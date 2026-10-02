@@ -1,0 +1,25 @@
+{
+  "source": "WFC-20A.skp",
+  "sourceSha256": "de22eab1dd6574b41d671921c333a1c56093ecebb7cc0a011c8eb7062883d816",
+  "target": "boomerang-wfc20a-native.glb (private conversion intermediate)",
+  "bytes": 37942096,
+  "units": "metres",
+  "axes": "Y-up; original x,z,-y",
+  "bboxMin": [
+    0.0,
+    0.0,
+    -39.76874542236328
+  ],
+  "bboxMax": [
+    99.6700439453125,
+    40.96331024169922,
+    0.0
+  ],
+  "facesTraversed": 196915,
+  "sourceInstances": 1180,
+  "triangles": 534879,
+  "materials": 40,
+  "textures": 4,
+  "errors": [],
+  "api": "SketchUpAPI 14.2 standalone; no live GUI modifications"
+}

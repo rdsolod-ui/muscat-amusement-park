@@ -191,13 +191,13 @@ export default function RealisticEarth({ motion, theme, reducedMotion, embedded 
   useFrame(() => {
     if (!root.current || !globe.current) return;
     const p = motion.current.progress;
-    const alpha = 1 - smooth(0.235, 0.287, p);
+    const alpha = 1 - smooth(0.215, 0.305, p);
     root.current.visible = alpha > 0.001;
     if (!root.current.visible) return;
-    const zoom = smooth(0.125, 0.23, p), descent = smooth(.23, .287, p), mobile = size.width < 760;
+    const zoom = smooth(0.075, 0.235, p), descent = smooth(.205, .305, p), mobile = size.width < 760;
     root.current.position.set(embedded ? 0 : mobile ? 0 : -2.55 + zoom * 0.8,
       embedded ? 0 : mobile ? -1.65 - zoom * 0.25 : -0.25, embedded ? 0 : -zoom * 0.6);
-    root.current.scale.setScalar(MathUtils.lerp(embedded ? 0.82 : mobile ? 0.84 : 1, embedded ? 1.05 : mobile ? 1.02 : 1.55, zoom) * (1 + descent * 1.5));
+    root.current.scale.setScalar(MathUtils.lerp(embedded ? 0.82 : mobile ? 0.84 : 1, embedded ? 1.05 : mobile ? 1.02 : 1.55, zoom) * (1 + descent * .9));
     const intro = reducedMotion ? 1 : motion.current.intro;
     globe.current.rotation.set(MUSCAT.latitude * DEG,
       -(Math.PI / 2 + MUSCAT.longitude * DEG) + (1 - zoom) * (0.38 - intro * 0.20), 0);

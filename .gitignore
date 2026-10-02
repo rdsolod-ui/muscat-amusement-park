@@ -12,3 +12,6 @@ out/
 deploy/
 receipts/
 .DS_Store
+
+__pycache__/
+*.pyc

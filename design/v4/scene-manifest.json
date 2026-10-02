@@ -1,0 +1,260 @@
+{
+  "revision": "v4",
+  "native_blender": "5.2.1 LTS",
+  "units": "metres",
+  "source_v3_sha256": "44318f4afc768618502b68df2c719f15be3cfb686edb1223a27f3e2707424cb9",
+  "source_geometry": "actual WFC-20A native SketchUp mesh",
+  "coaster_source_dimensions_m": [
+    99.6700439453125,
+    39.76874542236328,
+    40.96331024169922
+  ],
+  "coaster_display_decimate_ratio": 0.55,
+  "coaster_source_triangles": 534879,
+  "wheel": {
+    "height_m": 90,
+    "hub_height_m": 46.2,
+    "radius_m": 42,
+    "cabins": 36,
+    "source": "authored90mconcept;50mMAXreferenceonly",
+    "groups": {
+      "foundations": "wheel-foundations",
+      "supports": "wheel-supports",
+      "rim": "wheel-rim",
+      "spokes": "wheel-spokes",
+      "cabins": "wheel-cabins"
+    },
+    "rotor": "wheel-rotor",
+    "axis_blender": "Y",
+    "axis_gltf": "Z",
+    "clips": {
+      "Wheel_Construction": {
+        "duration_s": 15,
+        "stages": {
+          "foundations": [
+            0,
+            2
+          ],
+          "supports": [
+            2,
+            5
+          ],
+          "rim": [
+            5,
+            8
+          ],
+          "spokes": [
+            8,
+            10.5
+          ],
+          "cabins": [
+            10.5,
+            14
+          ]
+        },
+        "final_hold": [
+          14,
+          15
+        ]
+      },
+      "Wheel_Rotation": {
+        "duration_s": 60,
+        "loop": true,
+        "presentation_speed_not_operating_specification": true
+      }
+    }
+  },
+  "park_stages": {
+    "Build_Promenade": [
+      2,
+      7
+    ],
+    "Build_Dome": [
+      5,
+      9
+    ],
+    "Build_Shade": [
+      8,
+      12
+    ],
+    "Build_Boomerang": [
+      6,
+      11
+    ],
+    "wheel-foundations": [
+      0,
+      2
+    ],
+    "wheel-supports": [
+      2,
+      5
+    ],
+    "wheel-rim": [
+      5,
+      8
+    ],
+    "wheel-spokes": [
+      8,
+      10.5
+    ],
+    "wheel-cabins": [
+      10.5,
+      14
+    ]
+  },
+  "road_connection": {
+    "existing_junction_px": [
+      1035,
+      164
+    ],
+    "proposed_roundabout_px": [
+      945,
+      383
+    ],
+    "aisle_tie_distance_m": 4.271286407334517,
+    "aisle_tie_object": "Parking connected aisle01",
+    "survey_approved": false
+  },
+  "parking_bays": 1000,
+  "images": [
+    {
+      "name": "Image_0",
+      "packed": true
+    },
+    {
+      "name": "Image_0.001",
+      "packed": true
+    },
+    {
+      "name": "Image_1",
+      "packed": true
+    },
+    {
+      "name": "Image_1.001",
+      "packed": true
+    },
+    {
+      "name": "Image_2",
+      "packed": true
+    },
+    {
+      "name": "Image_3",
+      "packed": true
+    }
+  ],
+  "cameras": {
+    "aerial": {
+      "target": [
+        -40.380523681640625,
+        84.15386962890625,
+        0
+      ],
+      "resolution": [
+        1920,
+        1200
+      ],
+      "ortho_width_m": 1640,
+      "position_blender_m": [
+        299.6194763183594,
+        -780.8461303710938,
+        1590
+      ],
+      "geometry_status": "proposed concept"
+    },
+    "entrance": {
+      "target": [
+        11.098419189453125,
+        94.2625732421875,
+        7
+      ],
+      "resolution": [
+        1600,
+        1000
+      ],
+      "ortho_width_m": 215,
+      "position_blender_m": [
+        76.09841918945312,
+        244.2625732421875,
+        54
+      ],
+      "geometry_status": "proposed concept"
+    },
+    "promenade": {
+      "target": [
+        -76.31980895996094,
+        -108.6304931640625,
+        7
+      ],
+      "resolution": [
+        1600,
+        1000
+      ],
+      "ortho_width_m": 265,
+      "position_blender_m": [
+        15.680191040039062,
+        98.3695068359375,
+        84
+      ],
+      "geometry_status": "proposed concept"
+    },
+    "dome": {
+      "target": [
+        -81.67498779296875,
+        -254.3130645751953,
+        12
+      ],
+      "resolution": [
+        1600,
+        1000
+      ],
+      "ortho_width_m": 250,
+      "position_blender_m": [
+        26.32501220703125,
+        -99.31306457519531,
+        110
+      ],
+      "geometry_status": "proposed concept"
+    },
+    "rides": {
+      "target": [
+        -384.44091796875,
+        13.868362426757812,
+        12
+      ],
+      "resolution": [
+        1600,
+        1000
+      ],
+      "ortho_width_m": 250,
+      "position_blender_m": [
+        -279.44091796875,
+        -116.13163757324219,
+        100
+      ],
+      "geometry_status": "proposed concept"
+    },
+    "water": {
+      "target": [
+        212.94772338867188,
+        -67.02522277832031,
+        5
+      ],
+      "resolution": [
+        1600,
+        1000
+      ],
+      "ortho_width_m": 440,
+      "position_blender_m": [
+        422.9477233886719,
+        -307.0252227783203,
+        210
+      ],
+      "geometry_status": "proposed concept"
+    }
+  },
+  "coaster_source_px": [
+    422,
+    427
+  ],
+  "coaster_route_clearance": "moved into north-central ride cell; no overlap with declared pedestrian route centerlines; operating clearances not certified"
+}

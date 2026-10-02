@@ -38,7 +38,7 @@
  .journey[data-geography-embedded=true] .source{font-size:8px;left:1%;right:1%;bottom:0;text-align:center;line-height:1.5}
  .journey[data-geography-embedded=true] .scale,.journey[data-geography-embedded=true] .sea{display:none}
 }
-/* Keep the licence notice over unobscured sea, away from the right-hand copy scrim. */
+/* Keep the licence notice in the map column, away from the right-hand copy scrim. */
 @media screen and (min-width:901px){
  .source{left:7%;right:55%;bottom:144px;text-align:left;color:#e7eeeb;text-shadow:0 1px 4px #031b22,0 0 10px #031b22}
 }

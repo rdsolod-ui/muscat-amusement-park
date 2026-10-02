@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title_ar": "منتزه مسقط الترفيهي والمائي | وقت للعائلة وذكريات للمدينة",
-    "title_en": "Muscat Amusement & Water Park | A Family Destination for Muscat",
+    "title_ar": "منتزه مسقط للألعاب | ذكريات نصنعها معاً",
+    "title_en": "Muscat Amusement Park (MAP)",
     "description_ar": "تصور لوجهة عائلية في السيب تجمع الألعاب والحديقة المائية وممشى من طابقين وقبة عائلية، مع تطوير مرحلي.",
     "description_en": "A proposed family destination in Seeb, Muscat, combining rides, a water park, an indoor family centre and City Walk through phased development."
   },
   "chapters": [
     {
       "id": "family",
-      "kicker_ar": "وجهة عائلية مقترحة · السيب، مسقط",
-      "kicker_en": "A proposed family destination · Seeb, Muscat",
+      "kicker_ar": "منتزه مسقط للألعاب · السيب",
+      "kicker_en": "Muscat Amusement Park (MAP) · Seeb",
       "title_ar": "مسقط. ذكريات نصنعها معاً.",
       "title_en": "Muscat. Memories made together.",
       "body_ar": "وقت يجمع الآباء والأبناء، وذكريات تحمل اسم مسقط.",
@@ -65,8 +65,8 @@
       "kicker_en": "Playing together",
       "title_ar": "علامة جديدة في أفق مسقط.",
       "title_en": "A new landmark for Muscat.",
-      "body_ar": "عجلة بارتفاع ٩٠ متراً وأفعوانية كبيرة تصنعان قلب المغامرة.",
-      "body_en": "A 90-metre wheel and a major coaster anchor the adventure.",
+      "body_ar": "عجلة بارتفاع ٩٠ متراً وأفعوانية بوميرانغ بحلقة رأسية، في قلب المغامرة.",
+      "body_en": "A 90-metre wheel and a Boomerang looping coaster anchor the adventure.",
       "points": [
         {
           "ar": "دوّارات عائلية، برج سقوط وصالات ألعاب.",
@@ -116,8 +116,8 @@
       "kicker_en": "A considered first investment",
       "title_ar": "ابدأ بما يصنع التجربة. ثم توسّع.",
       "title_en": "Start with what makes the experience. Then expand.",
-      "body_ar": "البرنامج الجديد يشمل عجلة ٩٠ متراً وأفعوانية كبيرة وقبة متعددة الاستخدامات. لا يُعد برنامجاً منخفض التكلفة دون دراسة جدوى وعروض أسعار.",
-      "body_en": "The expanded programme includes a 90-metre wheel, major coaster and multipurpose dome. It is not a verified low-CAPEX scheme; feasibility and supplier quotations are needed.",
+      "body_ar": "البرنامج الجديد يشمل عجلة ٩٠ متراً وأفعوانية بوميرانغ وقبة متعددة الاستخدامات. لا يُعد برنامجاً منخفض التكلفة دون دراسة جدوى وعروض أسعار.",
+      "body_en": "The expanded programme includes a 90-metre wheel, Boomerang looping coaster and multipurpose dome. It is not a verified low-CAPEX scheme; feasibility and supplier quotations are needed.",
       "points": [
         {
           "ar": "مبانٍ بسيطة وتوظيف مدروس للهوية البصرية",

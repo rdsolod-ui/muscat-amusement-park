@@ -1,0 +1,93 @@
+{
+  "revision": "v4",
+  "sources": [
+    {
+      "file": "Masterplan-Areas.dwg",
+      "bytes": 70050,
+      "sha256": "94e0c04d5eadce37610bbd85bf80845c411b7b0c9373822e92e5d09d1881f86d",
+      "source_preserved": true
+    },
+    {
+      "file": "колесо 50-color м.max",
+      "bytes": 1513558016,
+      "sha256": "cbb296e46c9fec028e981bf0c2782da056e6719ef7b4bfd777191de090afa2ef",
+      "source_preserved": true
+    },
+    {
+      "file": "Цепочная.max",
+      "bytes": 696320,
+      "sha256": "047e73242e2594aadd73e74103704e8ddc9811639c7b85abd388742ad36bcdba",
+      "source_preserved": true
+    },
+    {
+      "file": "Башня падения.skp",
+      "bytes": 12606925,
+      "sha256": "73b3c4d32d65d551f59e5cd948e5b67271957ee04268c34e6203a3ba425bfba7",
+      "source_preserved": true
+    },
+    {
+      "file": "WFC-20A.skp",
+      "bytes": 11715216,
+      "sha256": "de22eab1dd6574b41d671921c333a1c56093ecebb7cc0a011c8eb7062883d816",
+      "source_preserved": true
+    },
+    {
+      "file": "Визуализация_2_Бумеранг_день.png",
+      "bytes": 2739200,
+      "sha256": "04c2468a459b5e6e4d50e5b9672b49670271cba9ab80c9999f43fa8d832aa138",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_2_Бумеранг_ночь.png",
+      "bytes": 2640038,
+      "sha256": "701017932394305bb0bc28d78c83036193adb5d3d40dd769401dba60392a033e",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_3_Бумеранг_день.png",
+      "bytes": 2551318,
+      "sha256": "83f40e836dc4173346637e504760fff00ec15e99134a188af6c43db3294e896c",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_3_Бумеранг_ночь.png",
+      "bytes": 2446339,
+      "sha256": "f8201796b859d137395f5b9927f8068cdebebc2a12f509dbbad403cc71910179",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_Бумеранг_4.png",
+      "bytes": 2570307,
+      "sha256": "1647aaf77cf4f66a2b94e45d9dac8a4ff1103c226dbbdaf8eb5a554a9eee0305",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_Бумеранг_день.png",
+      "bytes": 2595439,
+      "sha256": "f5e2a5386e3a11d8c9f290a41ab294738be69cc37f805ddf958d59b6e16bf1da",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_Бумеранг_ночь (2).png",
+      "bytes": 2641043,
+      "sha256": "de7f58d78be0a6c1ac11f80d7703840116b00add0f5fa49e87b5c39d0532a7ec",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    },
+    {
+      "file": "Визуализация_Бумеранг_ночь.png",
+      "bytes": 2598428,
+      "sha256": "f872a0fd5ab575da3ca635600f3117cace8fd6b00315911967e37666155b8028",
+      "role": "supplied appearance reference, not CAD dimensional evidence"
+    }
+  ],
+  "source_hierarchy": [
+    "Current brief and90mconfirmation",
+    "SuppliedWFC-20A geometry and original5zonecomposition",
+    "NativeMasterplanDWG with units unresolved until registration",
+    "Boomerangvisuals for materials only"
+  ],
+  "wheel": "90m authoredconcept,50mMAXvisualreferenceonly",
+  "coaster": "actualSKPmesh,notsurrogate;placement and ride approvals unverified",
+  "native_reuse": "Existing source-derived chaincarousel and drop-tower meshes remain in the v3 baseline; source SHA verified against earlier conversions",
+  "public_source_CAD": false
+}

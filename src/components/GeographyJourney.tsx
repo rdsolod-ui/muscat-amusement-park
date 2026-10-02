@@ -7,7 +7,7 @@ import { PlaneGeometry, SRGBColorSpace, Texture, Vector3 } from "three";
 import { assetPath } from "@/lib/asset-path";
 import styles from "./GeographyJourney.module.css";
 
-export const JOURNEY_DURATION = 12;
+export const JOURNEY_DURATION = 16;
 const IMAGE = "/data/geography/muscat-satellite.webp";
 const ELEVATION = "/data/geography/muscat-terrain.json";
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
@@ -71,7 +71,8 @@ export function useGeographyJourney(active: boolean, paused: boolean, reduced: b
     handle = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(handle);
   }, [active, paused, reduced]);
-  return stage;
+  // Re-enter at the overview in the first render, not one frame at the old site's close-up.
+  return active && !wasActive.current ? reduced ? 1 : 0 : stage;
 }
 
 class SatelliteBoundary extends Component<{ children: ReactNode; onFailure: () => void }, { failed: boolean }> {
@@ -109,8 +110,8 @@ function SatelliteSurface({ data, stage, onReady, onFailure }: { data: Prepared;
     return () => gl.domElement.removeEventListener("webglcontextlost", lost);
   }, [gl]);
   useFrame(() => {
-    const zoom = smooth(.23, .94, stage);
-    const tilt = smooth(.44, .95, stage);
+    const zoom = smooth(.36, .96, stage);
+    const tilt = smooth(.52, .97, stage);
     const distance = 29 * Math.pow(7.6 / 29, zoom);
     const angle = (3 + tilt * 52) * Math.PI / 180;
     camera.position.set(0, Math.cos(angle) * distance + target.y, Math.sin(angle) * distance);
@@ -146,12 +147,12 @@ export default function GeographyJourney({ active, stage, staticView = false }: 
   }, [active]);
   if (!active) return null;
   const use3D = !staticView && !graphicsOff && !failed && data !== null;
-  const alpha = smooth(.16, .34, stage);
-  const descent = smooth(.23, .94, stage);
+  const alpha = smooth(.26, .43, stage);
+  const descent = smooth(.36, .96, stage);
   const mode = use3D && ready ? "terrain-3d" : photoFailed ? "map-fallback" : "satellite-static";
   const label = stage < .36 ? "MUSCAT / SEEB" : stage < .72 ? "CITY TO SITE" : "PROPOSED PARK SITE";
   const scene = <div className={styles.journey} style={{ opacity: alpha }} data-geography-embedded={Boolean(embeddedHost)} data-geography-stage={stage.toFixed(3)}
-    data-geography-mode={mode} data-geography-tilt={(3 + smooth(.44, .95, stage) * 52).toFixed(1)}>
+    data-geography-mode={mode} data-geography-tilt={(3 + smooth(.52, .97, stage) * 52).toFixed(1)}>
     <div className={styles.mapFrame}>
       <div className={styles.surface}>
         {!photoFailed ? <img className={styles.satellite} src={assetPath(IMAGE)} alt="Esri World Imagery of Muscat and Seeb, centred on the proposed park site; acquisition dates vary"

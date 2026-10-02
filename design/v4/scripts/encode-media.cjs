@@ -1,0 +1,2 @@
+const fs=require('fs'),path=require('path');const sharp=require(path.join(process.argv[2],'sharp'));
+const root=path.resolve(__dirname,'../../..');(async()=>{fs.mkdirSync(path.join(root,'public/media/v4'),{recursive:true});for(const name of ['model-aerial','model-entrance','model-promenade','model-dome','model-rides','model-water','wheel-poster']){await sharp(path.join(root,'design/visuals/v4',name+'.png')).webp({quality:92,alphaQuality:100}).toFile(path.join(root,'public/media/v4',name+'.webp'));console.log(name);}})();

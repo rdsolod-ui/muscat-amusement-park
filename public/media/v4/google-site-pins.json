@@ -1,0 +1,104 @@
+{
+  "frame": "media/v4/google-site.svg",
+  "aspect_ratio": 1.6,
+  "viewbox": [
+    210,
+    100,
+    992,
+    620
+  ],
+  "position_units": "normalized [0,1] from top-left of displayed SVG; each point is the pin tip",
+  "pins": {
+    "rides": {
+      "position": [
+        0.308477,
+        0.447008
+      ],
+      "source_px": [
+        360,
+        499
+      ],
+      "world_xy_m": [
+        -394.34201278805267,
+        -56.297227134462446
+      ],
+      "title_ar": "حديقة الألعاب",
+      "title_en": "Amusement park"
+    },
+    "water": {
+      "position": [
+        0.587683,
+        0.4585
+      ],
+      "source_px": [
+        790,
+        510
+      ],
+      "world_xy_m": [
+        212.21260558778886,
+        -67.0586427571252
+      ],
+      "title_ar": "الحديقة المائية",
+      "title_en": "Water park"
+    },
+    "city": {
+      "position": [
+        0.452618,
+        0.505197
+      ],
+      "source_px": [
+        582,
+        555
+      ],
+      "world_xy_m": [
+        -80.67258615628816,
+        -132.38560015382245
+      ],
+      "title_ar": "سيتي ووك",
+      "title_en": "City Walk"
+    },
+    "parking": {
+      "position": [
+        0.540233,
+        0.262221
+      ],
+      "source_px": [
+        717,
+        321
+      ],
+      "world_xy_m": [
+        106.93491759512108,
+        197.10442858701572
+      ],
+      "title_ar": "مواقف السيارات",
+      "title_en": "Parking"
+    },
+    "utility": {
+      "position": [
+        0.242249,
+        0.296455
+      ],
+      "source_px": [
+        258,
+        354
+      ],
+      "world_xy_m": [
+        -539.8298980297986,
+        145.74817508133128
+      ],
+      "title_ar": "الخدمات الفنية",
+      "title_en": "Technical area"
+    }
+  },
+  "road": {
+    "existing_junction": [
+      0.746725,
+      0.099192
+    ],
+    "proposed_arrival_roundabout": [
+      0.688326,
+      0.326623
+    ]
+  },
+  "other_frames": "Use the model camera-projected coordinates exported by the Blender agent. Do not reuse Google screen positions on an oblique render."
+}

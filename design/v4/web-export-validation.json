@@ -1,0 +1,229 @@
+[
+  {
+    "file": "muscat-park-v4.glb",
+    "bytes": 12260748,
+    "sha256": "a7a4eb7b9f9a722ed7437ea2046d40f15a3366e9f223fddceb2be1ed80934555",
+    "meshCount": 93,
+    "nodeCount": 193,
+    "animationClips": [
+      {
+        "name": "Park_Construction",
+        "channels": 9
+      },
+      {
+        "name": "Wheel_Rotation",
+        "channels": 37
+      }
+    ],
+    "meshoptRequired": true,
+    "compressed": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 4,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 1039x474.",
+          "severity": 2,
+          "pointer": "/images/4"
+        }
+      ],
+      "truncated": false
+    },
+    "decoded": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 20,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 146x150.",
+          "severity": 2,
+          "pointer": "/images/1"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 775x775.",
+          "severity": 2,
+          "pointer": "/images/2"
+        },
+        {
+          "code": "IMAGE_NPOT_DIMENSIONS",
+          "message": "Image has non-power-of-two dimensions: 1039x474.",
+          "severity": 2,
+          "pointer": "/images/4"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 72 degenerate triangles (out of 3456).",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/1/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/52/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/56/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/66/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/53/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/54/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/58/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/59/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/61/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/62/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/63/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/64/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/65/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+          "severity": 2,
+          "pointer": "/meshes/55/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/57/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 3).",
+          "severity": 2,
+          "pointer": "/meshes/60/primitives/0/indices"
+        },
+        {
+          "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+          "message": "Indices accessor contains 1 degenerate triangles (out of 4).",
+          "severity": 2,
+          "pointer": "/meshes/67/primitives/0/indices"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  {
+    "file": "muscat-wheel-v4.glb",
+    "bytes": 214708,
+    "sha256": "f90b15b8dcf81138e47a0a545afd3a6d4269125e5c743adcbbebcb756a76bf2f",
+    "meshCount": 5,
+    "nodeCount": 83,
+    "animationClips": [
+      {
+        "name": "Wheel_Construction",
+        "channels": 5
+      },
+      {
+        "name": "Wheel_Rotation",
+        "channels": 37
+      }
+    ],
+    "meshoptRequired": true,
+    "compressed": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 2,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNSUPPORTED_EXTENSION",
+          "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+          "severity": 2,
+          "pointer": "/extensionsUsed/0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/buffers/0"
+        }
+      ],
+      "truncated": false
+    },
+    "decoded": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    }
+  }
+]

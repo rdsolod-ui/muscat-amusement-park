@@ -1,0 +1,44 @@
+/* MAP v4: the site fills the same soft-edged visual field as the location chapter. */
+.masterplan-v4 .plan-stage{isolation:isolate;border:0;border-radius:0;background:transparent;overflow:visible;aspect-ratio:16/10;height:auto}
+.masterplan-v4 .plan-layer{background:transparent;inset:0;overflow:visible}
+.masterplan-v4 .plan-artwork{width:100%;height:100%;object-fit:contain;background:transparent;border-radius:0;mask-image:linear-gradient(to right,transparent 0%,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+/* Google attribution stays intact and fully opaque along the lower edge. */
+.masterplan-v4 .frame-0 .plan-artwork{mask-image:linear-gradient(to right,transparent 0%,#000 2%,#000 98%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000);mask-composite:intersect}
+.masterplan-v4 .plan-caption{position:relative;inset:auto;padding:12px 0 0;background:none;display:flex;align-items:center;gap:8px;color:var(--muted);text-shadow:none}
+.masterplan-v4 .plan-caption [lang=en]{margin-inline-start:auto;font-size:11px}
+.masterplan-v4 .plan-pins{position:absolute;inset:0;direction:ltr}
+.masterplan-v4 .plan-pin{position:absolute;z-index:2;width:34px;height:42px;transform:translate(-50%,-100%);display:flex;justify-content:center;align-items:flex-start;padding:0;border:0;filter:drop-shadow(0 3px 7px #0009);color:#0d292c;font:500 12px/1 'IBM Plex Sans',sans-serif}
+.masterplan-v4 .plan-pin:before{content:'';position:absolute;inset:0;background:#f2ead7;clip-path:polygon(0 0,100% 0,100% 73%,50% 100%,0 73%);border-radius:50% 50% 0 0;z-index:-1}
+.masterplan-v4 .plan-pin span{margin-top:10px}
+.masterplan-v4 .plan-pin.is-selected:before{background:#e1b679}
+.masterplan-v4 .plan-pin.is-selected{z-index:3}
+.masterplan-v4 .plan-pin:hover{filter:drop-shadow(0 0 8px #e1b679)}
+.masterplan-v4 .plan-pin:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.masterplan-v4 .zone-preview{position:absolute;z-index:5;left:2%;bottom:7%;width:52%;margin:0;box-shadow:0 8px 30px #0008;animation:zone-arrive .65s ease both;overflow:hidden;border:1px solid #e2cba955;border-radius:3px;background:#10272b;direction:rtl}
+.masterplan-v4 .zone-preview>img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.masterplan-v4 .zone-preview figcaption{padding:9px 13px;display:flex;flex-direction:column;color:#fff;text-align:right;font-size:16px;line-height:1.35}
+.masterplan-v4 .zone-preview figcaption [lang=en]{font-family:'IBM Plex Sans',sans-serif;color:#d4ded9;font-size:11px;margin-top:3px}
+.masterplan-v4 .zone-preview-close{position:absolute;top:7px;left:7px;background:#0c2025d9;color:white;border-radius:50%;width:32px;height:32px}
+.masterplan-v4 .live-viewer{border-radius:0;overflow:hidden;background:transparent;mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent)}
+.masterplan-v4 .plan-actions a{display:flex;align-items:center;justify-content:center;color:var(--ink);padding:10px}
+.masterplan-v4 .plan-note{margin-top:0}
+@keyframes zone-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:901px){.chapter-site .visual{width:100%;left:auto}.masterplan-v4 .plan-stage{min-height:0}}
+@media screen and (min-width:901px) and (orientation:landscape){
+.experience.is-present .chapter-site .plan-stage{border:0;border-radius:0;background:none;aspect-ratio:16/10;height:auto;min-height:0}
+.experience.is-present .chapter-site .visual{width:100%;left:auto}
+.experience.is-present .masterplan-v4 .plan-caption{position:relative;inset:auto;font-size:1.05vw;padding:.7vw .5vw 0}
+.experience.is-present .masterplan-v4 .plan-caption [lang=en]{font-size:.9vw}
+.experience.is-present .masterplan-v4 .plan-pin{width:2vw;height:2.5vw;font-size:.8vw}
+.experience.is-present .masterplan-v4 .plan-pin span{margin-top:.62vw}
+.experience.is-present .masterplan-v4 .zone-preview figcaption{font-size:1.15vw;padding:.6vw .8vw}
+.experience.is-present .masterplan-v4 .zone-preview figcaption [lang=en]{font-size:.9vw}
+.experience.is-present .masterplan-v4 .zone-preview-close{width:2.2vw;height:2.2vw;min-height:28px;min-width:28px}
+.experience.is-present .masterplan-v4 .zone-preview-close svg{width:1.3vw;height:1.3vw}
+.experience.is-present .masterplan-v4 .plan-tools{flex-wrap:wrap}
+.experience.is-present .chapter .scene-rides{aspect-ratio:17/14}
+}
+@media(max-width:900px){.masterplan-v4 .plan-stage{width:calc(100% + 24px);margin-inline:-12px}.masterplan-v4 .plan-pin{width:30px;height:38px;font-size:11px}.masterplan-v4 .plan-pin span{margin-top:9px}.masterplan-v4 .zone-preview{width:65%;bottom:8%}.masterplan-v4 .plan-tools{flex-wrap:wrap}.masterplan-v4 .plan-caption{font-size:12px}.masterplan-v4 .plan-caption [lang=en]{font-size:10px}.masterplan-v4 .zone-preview figcaption{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.masterplan-v4 .zone-preview{animation:none}}
+
+.motion-paused .masterplan-v4 .zone-preview{animation:none}

@@ -1,0 +1,64 @@
+[
+  {
+    "file": "muscat-park-v4.glb",
+    "wheel_height_m": 90.00006174458377,
+    "world_bounds_m": {
+      "min": [
+        -796.3283081054688,
+        -0.37819026624181085,
+        -654.577006912313
+      ],
+      "max": [
+        903.7415771484375,
+        90.00000070756482,
+        349.2997056471693
+      ]
+    },
+    "animation_clips": [
+      {
+        "name": "Park_Construction",
+        "duration_s": 15,
+        "channels": 9
+      },
+      {
+        "name": "Wheel_Rotation",
+        "duration_s": 60,
+        "channels": 37
+      }
+    ],
+    "external_image_uris": [],
+    "absolute_host_paths": false,
+    "pass": true
+  },
+  {
+    "file": "muscat-wheel-v4.glb",
+    "wheel_height_m": 90.00006174458377,
+    "world_bounds_m": {
+      "min": [
+        -43.82497629201215,
+        -0.00006103701895199265,
+        -14.001403851435896
+      ],
+      "max": [
+        43.82497629201215,
+        90.00000070756482,
+        14.001403851435896
+      ]
+    },
+    "animation_clips": [
+      {
+        "name": "Wheel_Construction",
+        "duration_s": 15,
+        "channels": 5
+      },
+      {
+        "name": "Wheel_Rotation",
+        "duration_s": 60,
+        "channels": 37
+      }
+    ],
+    "external_image_uris": [],
+    "absolute_host_paths": false,
+    "pass": true
+  }
+]

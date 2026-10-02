@@ -24,7 +24,7 @@ function EarthWorld(props:ExperienceSceneProps & {embedded:boolean;introTime:Mut
   const intro=!props.reducedMotion&&!props.paused&&props.introTime.current<4.5&&target<.12;
   if(intro)props.introTime.current+=dt;else if(target>=.12||props.reducedMotion)props.introTime.current=4.5;
   motion.current.intro=MathUtils.smoothstep(props.introTime.current,0,4.5);
-  motion.current.progress=props.reducedMotion||props.paused?target:MathUtils.damp(motion.current.progress,target,6.5,dt);
+  motion.current.progress=props.reducedMotion||props.paused?target:MathUtils.damp(motion.current.progress,target,4.2,dt);
   if(props.embedded){
    // Fit the complete sphere to the smaller viewport dimension; no clipping on narrow phones.
    camera.position.set(0,0,8.2/Math.min(1,size.width/size.height));camera.lookAt(0,0,0);
@@ -45,8 +45,10 @@ export default function ExperienceScene(props:ExperienceSceneProps){
    ?document.getElementById(props.activeChapter===0?"earth-mobile-slot":"geography-mobile-slot"):null);
   update();mobile.addEventListener("change",update);return()=>mobile.removeEventListener("change",update);
  },[props.activeChapter]);
- const travel=MathUtils.smoothstep(journey,0,.5);
- const earthProgress=placeActive?Math.max(props.progress,.23+travel*.067):props.progress;
+ // Start from the hero pose instead of jumping straight to the close-up (.23).
+ // Geography owns this six-second approach; the chapter's scroll anchor is not a camera cut.
+ const travel=MathUtils.smootherstep(journey,0,.45);
+ const earthProgress=placeActive?travel*.31:props.progress;
  const canvas=<div className={styles.earthScene} data-earth-embedded={Boolean(earthHost)}>
   <Boundary onFailure={props.onFailure}><Canvas frameloop="demand" dpr={[1,1.5]} camera={{position:[0,0,10],fov:40,near:.08,far:100}}
    gl={{alpha:true,antialias:true,powerPreference:"high-performance",toneMapping:ACESFilmicToneMapping}}

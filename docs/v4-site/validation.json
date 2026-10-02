@@ -1,0 +1,30 @@
+{
+  "svg_xml_valid": true,
+  "source_jpeg_embedded_unchanged": true,
+  "source_sha256": "9a77255fb36a1e83ccf284a7bd3b7c26afed3c6d36c24168c5ddc78185bd2025",
+  "zones": 5,
+  "pin_ids": [
+    "rides",
+    "water",
+    "city",
+    "parking",
+    "utility"
+  ],
+  "pins_inside_frame": true,
+  "road_segments_join": true,
+  "viewbox": [
+    210,
+    100,
+    992,
+    620
+  ],
+  "google_logo_retained": true,
+  "provider_attribution_retained": true,
+  "image_review": "The rendered SVG was visually checked. Arabic labels shape correctly; zones follow original screenshot, and road connects distinct existing and proposed circles.",
+  "limits": [
+    "Concept geometry; no cadastral validation",
+    "World registration inherited from previous reference imagery",
+    "Displayed areas are user-supplied labels, not surveyed quantities",
+    "Other-frame pins require projection using their own camera"
+  ]
+}

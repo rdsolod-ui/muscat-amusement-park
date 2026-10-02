@@ -9,15 +9,16 @@ import {ArrowLeft,ArrowRight,ChevronDown,Compass,ExternalLink,EyeOff,Info,List,M
 import content from "@/data/content.json";
 import {asset} from "@/lib/assets";
 import Masterplan from "./Masterplan";
+import WheelConstruction from "./WheelConstruction";
 import ReferenceGallery from "./ReferenceGallery";
 
 type Chapter=typeof content.chapters[number];
 const source=(id:string)=>content.chapters.find(c=>c.id===id)!;
 const places:Chapter={...source("site"),id:"place",kicker_ar:"سلطنة عُمان · مسقط · السيب",kicker_en:"Sultanate of Oman · Muscat · Seeb",title_ar:"من مسقط، تبدأ حكاية جديدة.",title_en:"Muscat. The beginning of a new story.",body_ar:"الموقع المقترح في السيب، جنوب شارع السلام وقرب شارع الفروسية.",body_en:"Seeb, south of A Salam Street, near Al Furusiyyah Street.",points:[],note_ar:"المطابقة بصرية. يلزم تأكيد الحدود الرسمية وحقوق الأرض والمياه والوصول.",note_en:"Visual location match. Official boundaries, land rights, drainage and access need verification."};
-const chapters=[source("family"),places,source("rides"),source("site"),source("city-walk"),source("character"),source("water"),source("indoor"),source("comfort"),source("city"),source("land-request")];
+const chapters=[source("family"),places,source("site"),source("rides"),source("city-walk"),source("character"),source("water"),source("indoor"),source("comfort"),source("city"),source("land-request")];
 const journeyProgress=[0,.23,.39,.53,.62,.70,.76,.81,.835,.86,1];
 const ExperienceScene=dynamic(()=>import("./ExperienceScene"),{ssr:false});
-const names=[["الرؤية","Vision"],["المكان","Place"],["الألعاب","Landmark"],["المخطط العام","Masterplan"],["ممشى العائلة","City Walk"],["هوية المكان","Character"],["الحديقة المائية","Water park"],["قبة العائلة","Family dome"],["راحة العائلة","Family comfort"],["فرص لمسقط","City value"],["طلب الأرض","Land request"]];
+const names=[["الرؤية","Vision"],["المكان","Place"],["المخطط العام","Masterplan"],["الألعاب","Landmark"],["ممشى العائلة","City Walk"],["هوية المكان","Character"],["الحديقة المائية","Water park"],["قبة العائلة","Family dome"],["راحة العائلة","Family comfort"],["فرص لمسقط","City value"],["طلب الأرض","Land request"]];
 const media:Record<string,string>={city:"v3/city.webp",indoor:"v3/dome.webp",rides:"v3/rides.webp",water:"v3/water.webp","city-walk":"v3/promenade.webp",character:"v3/facades.webp",comfort:"v3/mist.webp"};
 const referenceArea:Record<string,string>={family:"entrance",place:"arrival",rides:"rides",site:"parking","city-walk":"citywalk",character:"cafes",water:"water",indoor:"dome",comfort:"comfort",city:"citywalk","land-request":"parking"};
 export function Pair({ar,en,className=""}:{ar:string;en:string;className?:string}){return <span className={"pair "+className}><span lang="ar" dir="rtl">{ar}</span><span className="en" lang="en" dir="ltr">{en}</span></span>}
@@ -25,6 +26,7 @@ function PhaseColumns(){return <div className="phase-columns">{source("phasing")
 function CityValue(){return <div className="value-list">{[["وقت للعائلة","Time together"],["فرص للأعمال المحلية","Local enterprise"],["سبب لزيارة المدينة","A reason to explore"]].map((v,i)=><article key={i}><Pair ar={v[0]} en={v[1]} className="value-title"/></article>)}</div>}
 function Scene({chapter,active,paused,reduced}:{chapter:Chapter;active:boolean;paused:boolean;reduced:boolean}){
  if(chapter.id==="site")return <Masterplan active={active} paused={paused} reduced={reduced}/>;
+ if(chapter.id==="rides")return <WheelConstruction active={active} paused={paused} reduced={reduced}/>;
  return <figure className={"scene scene-"+chapter.id}><img src={asset("media/"+media[chapter.id])} alt={chapter.title_ar+" — "+chapter.title_en} loading="lazy"/><div className="scene-shade"/><figcaption><span className="scene-dot"/><Pair ar="تصور مولد للمشروع المقترح" en="Generated concept visualization"/></figcaption></figure>;
 }
 export default function Experience(){
@@ -90,12 +92,12 @@ export default function Experience(){
    if(el){const tween=gsap.fromTo(el,{opacity:0,y:12},{opacity:1,y:0,duration:.55,ease:"power2.out"});return()=>{tween.kill();gsap.set(el,{clearProps:"opacity,transform"})}}
  },[present,active,reduced,motionPaused]);
  const togglePresent=()=>{const next=!present;setPresent(next);if(next)window.scrollTo({top:0});else setTimeout(()=>document.getElementById(chapters[active].id)?.scrollIntoView({behavior:"instant"}),30)};
- return <div ref={root} className={"experience "+(present?"is-present ":"")+(paused||reduced?"motion-paused":"")} data-version="2.0.0" data-scene-ready={ready} data-graphics={failed?"static":"webgl"} data-chapters={chapters.length}>
-   <div className="scene-wrap" aria-hidden="true">{failed?(active===1?<GeographyJourney active stage={1} staticView/>:active===0?<div className="earth-fallback"><img src={asset("textures/earth-v2/day-4096.webp")} alt=""/><span>OMAN · MUSCAT</span></div>:null):<ExperienceScene progress={progress} theme={theme} reducedMotion={reduced} activeChapter={active} paused={motionPaused} onReady={sceneReady} onFailure={sceneFailed}/>}</div>
+ return <div ref={root} className={"experience "+(present?"is-present ":"")+(paused||reduced?"motion-paused":"")} data-version="4.0.0" data-scene-ready={ready} data-graphics={failed?"static":"webgl"} data-chapters={chapters.length}>
+   <div className="scene-wrap" aria-hidden="true" style={{visibility:active>1?"hidden":"visible"}}>{failed?(active===1?<GeographyJourney active stage={1} staticView/>:active===0?<div className="earth-fallback"><img src={asset("textures/earth-v2/day-4096.webp")} alt=""/><span>OMAN · MUSCAT</span></div>:null):<ExperienceScene progress={progress} theme={theme} reducedMotion={reduced} activeChapter={active} paused={motionPaused} onReady={sceneReady} onFailure={sceneFailed}/>}</div>
    <a className="skip" href="#family">انتقل إلى المحتوى · Skip to content</a>
    {!hidden&&<header className="header" dir="ltr">
-     <button className="brand" onClick={()=>go(0)} aria-label="Muscat Family Park home"><svg viewBox="0 0 70 70" aria-hidden="true"><circle cx="35" cy="30" r="24"/><circle cx="35" cy="30" r="4"/><path d="M35 6v20m0 8v20M11 30h20m8 0h20M18 13l14 14m6 6 14 14M18 47l14-14m6-6 14-14M24 64l11-30 11 30"/></svg><Pair ar="مسقط" en="Family park"/></button>
-     <nav aria-label="التنقل الرئيسي · Main navigation">{[0,1,3,7,10].map(i=><button key={i} className={active===i?"active":""} onClick={()=>go(i)}><Pair ar={names[i][0]} en={names[i][1]}/></button>)}</nav>
+     <button className="brand" onClick={()=>go(0)} aria-label="Muscat Amusement Park (MAP) home"><svg viewBox="0 0 70 70" aria-hidden="true"><circle cx="35" cy="30" r="24"/><circle cx="35" cy="30" r="4"/><path d="M35 6v20m0 8v20M11 30h20m8 0h20M18 13l14 14m6 6 14 14M18 47l14-14m6-6 14-14M24 64l11-30 11 30"/></svg><Pair ar="مسقط" en="MAP"/></button>
+     <nav aria-label="التنقل الرئيسي · Main navigation">{[0,1,2,7,10].map(i=><button key={i} className={active===i?"active":""} onClick={()=>go(i)}><Pair ar={names[i][0]} en={names[i][1]}/></button>)}</nav>
      <div className="header-tools"><button className="theme-switch" role="switch" aria-checked={theme==="light"} aria-label="الوضع الفاتح · Light theme" onClick={()=>setTheme(theme==="dark"?"light":"dark")}><span className="theme-thumb"/><Sun size={17}/><Moon size={17}/></button><button className="icon-button mobile-menu" aria-label="الفصول · Chapters" onClick={()=>setMenu(true)}><List/></button></div>
    </header>}
    <main tabIndex={-1}>{chapters.map((c,i)=><section id={c.id} key={c.id} aria-labelledby={"title-"+c.id} className={"chapter chapter-"+c.id+" "+(i===active?"is-active ":"")+(i===0?"hero":"")+(i===1?" place":"")} style={present&&i!==active?{display:"none"}:undefined}>
@@ -108,15 +110,15 @@ export default function Experience(){
        <p className="title-en" lang="en" dir="ltr">{c.title_en}</p>
        {i===0&&<div id="earth-mobile-slot" aria-hidden="true">{failed&&<div className="mobile-earth-static"><img src={asset("textures/earth-v2/day-4096.webp")} alt=""/></div>}</div>}
        {i===1&&<div id="geography-mobile-slot" aria-hidden="true"/>}
-       {i!==3&&<div className="body-copy tv-lead"><p lang="ar" dir="rtl">{c.body_ar}</p><p className="en" lang="en" dir="ltr">{c.body_en}</p></div>}
-       {i>1&&i!==3&&i!==9&&i!==10&&<ul className="points tv-proof">{c.points.map((p,j)=><li key={j}><Pair ar={p.ar} en={p.en}/></li>)}</ul>}
-       {i===9&&!present&&<CityValue/>}{i===3&&<div id="masterplan-detail-slot"/>}
+       {c.id!=="site"&&<div className="body-copy tv-lead"><p lang="ar" dir="rtl">{c.body_ar}</p><p className="en" lang="en" dir="ltr">{c.body_en}</p></div>}
+       {i>1&&c.id!=="site"&&i!==9&&i!==10&&<ul className="points tv-proof">{c.points.map((p,j)=><li key={j}><Pair ar={p.ar} en={p.en}/></li>)}</ul>}
+       {i===9&&!present&&<CityValue/>}{c.id==="site"&&<div id="masterplan-detail-slot"/>}
        {i===0&&<div className="national-note tv-secondary"><Pair ar="رؤية وطنية تُلهم فرصاً محلية للعائلات والسياحة والأعمال." en="A national vision inspiring local opportunities for families, tourism and enterprise."/><a href="https://www.oman2040.om/" target="_blank" rel="noreferrer">رؤية عُمان 2040 · Oman Vision 2040 ↗</a></div>}
        {i===1&&<div className="national-note tv-secondary"><Pair ar="رؤية عُمان 2040" en="Oman Vision 2040"/><Pair ar="جودة الحياة والسياحة وتنويع الاقتصاد." en="Quality of life, tourism and economic diversification."/></div>}
-       {!present&&c.note_ar&&i!==10&&i!==3&&i!==9&&<details className="assumption"><summary><Pair ar="حدود التصور" en="Concept assumptions"/><ChevronDown size={15}/></summary><Pair ar={c.note_ar} en={c.note_en||""}/></details>}
+       {!present&&c.note_ar&&i!==10&&c.id!=="site"&&i!==9&&<details className="assumption"><summary><Pair ar="حدود التصور" en="Concept assumptions"/><ChevronDown size={15}/></summary><Pair ar={c.note_ar} en={c.note_en||""}/></details>}
        {i===0&&<button className="primary-button" onClick={()=>go(1)}><Pair ar="اكتشف الرؤية" en="Explore the vision"/><ArrowLeft size={22}/></button>}
        {i===1&&<a className="text-link" href="https://www.google.com/maps/search/?api=1&query=23.64305%2C58.17629" target="_blank" rel="noreferrer"><Pair ar="استكشف الموقع على خرائط جوجل" en="Explore the location on Google Maps"/><ExternalLink size={17}/></a>}
-       {i===2&&<div className="status-line tv-qualifier"><span/><Pair ar="أهداف مفاهيمية · رهن الجدوى والاعتمادات" en="Concept targets · feasibility and approvals required"/></div>}
+       {c.id==="rides"&&<div className="status-line tv-qualifier"><span/><Pair ar="أهداف مفاهيمية · رهن الجدوى والاعتمادات" en="Concept targets · feasibility and approvals required"/></div>}
        {i>1&&i<10&&<button className="text-link reference-trigger" onClick={()=>setReferences(true)}><Pair ar="حلول من أماكن حقيقية" en="Real-world photo references"/><ExternalLink size={18}/></button>}
        {i===10&&<><div className="decision-points">{c.points.map((p,j)=><Pair key={j} ar={p.ar} en={p.en}/>)}</div><button className="text-link" onClick={()=>setSources(true)}><Pair ar="المراجع وخطوات التحقق" en="Sources and verification steps"/><Info size={18}/></button></>}
      </div>
@@ -147,7 +149,7 @@ export default function Experience(){
      <Pair ar="تصور يمكن البناء عليه" en="A concept to develop and verify" className="dialog-title"/>
      <Pair ar="هذه مادة لمناقشة تخصيص الأرض، وليست موافقة على المشروع أو مخططاً هندسياً معتمداً." en="A land allocation discussion concept, not an approved project or an engineering design."/>
      <button className="text-link" onClick={()=>{setSources(false);setReferences(true)}}><Pair ar="افتح صور الحلول حسب المنطقة" en="Open photographs by zone"/><ExternalLink size={18}/></button>
-     <ul className="source-list"><li><Pair ar="الرسم الأصلي للمقارنة" en="Original source diagram for comparison"/><a href={asset("media/source-masterplan-diagram.svg")} target="_blank" rel="noreferrer">المخطط الأصلي · Original diagram ↗</a></li><li><Pair ar="البرنامج الموسّع يشمل عجلة ٩٠ متراً وأفعوانية كبيرة وقبة. التكلفة والسلامة والسعات لم تُعتمد؛ والتصميم يحتاج إلى عروض ومراجعات هندسية." en="The expanded programme includes a 90-metre wheel, major coaster and dome. Cost, safety and capacities are unapproved; supplier quotations and engineering reviews are required."/></li>
+     <ul className="source-list"><li><Pair ar="الرسم الأصلي للمقارنة" en="Original source diagram for comparison"/><a href={asset("media/source-masterplan-diagram.svg")} target="_blank" rel="noreferrer">المخطط الأصلي · Original diagram ↗</a></li><li><Pair ar="البرنامج الموسّع يشمل عجلة ٩٠ متراً وأفعوانية بوميرانغ وقبة. التكلفة والسلامة والسعات لم تُعتمد؛ والتصميم يحتاج إلى عروض ومراجعات هندسية." en="The expanded programme includes a 90-metre wheel, Boomerang looping coaster and dome. Cost, safety and capacities are unapproved; supplier quotations and engineering reviews are required."/></li>
        <li><Pair ar="الموقع: السيب، جنوب شارع السلام قرب شارع الفروسية. المطابقة البصرية لا تثبت الملكية أو الحدود الرسمية." en="Location: Seeb, south of A Salam Street near Al Furusiyyah Street. Visual registration does not establish ownership or official limits."/><a href="https://www.google.com/maps/search/?api=1&query=23.64305%2C58.17629" target="_blank" rel="noreferrer">Google Maps ↗</a></li>
        <li><Pair ar="مجموع مساحات المخطط الأصلي ٣٧ هكتاراً. مساحة الحد المرسوم على الصورة نحو ٥٠٫٤ هكتار؛ يلزم التحقق المساحي والهيدرولوجي والمروري." en="Original zone labels total 37 ha. The image-traced outline is approximately 50.4 ha; survey, hydrology and traffic verification are required."/></li>
        <li><Pair ar="المجسم يستند إلى المخطط الأصلي ونماذج ألعاب مقدمة. الصور التصورية المولدة تشرح الأجواء ولا تثبت المواصفات أو التكلفة." en="The model follows the original diagram and supplied ride models. Generated concept images illustrate atmosphere, not final specifications or cost."/></li>

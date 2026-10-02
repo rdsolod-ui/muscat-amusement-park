@@ -1,4 +1,4 @@
-# Muscat Amusement & Water Park
+# Muscat Amusement Park (MAP)
 
 ![Updated City Walk presentation](docs/v3-citywalk-tv.jpg)
 
@@ -42,7 +42,7 @@ The static export is written to `out/`. The preview server binds only to `127.0.
 
 ## Public preview and deployment
 
-Public website: [Muscat Family Park](https://rdsolod-ui.github.io/muscat-amusement-park/). The owner authorized GitHub Pages on 2 October 2026. Push/PR CI still produces a build artifact only. To update the public preview, manually run the **Publish GitHub Pages** workflow on `codex/muscat-concept`; it rebuilds, type-checks and validates the static export before deploying that artifact. `revision.json` records the published commit and workflow ID. No custom domain or VPS is configured by this workflow. A future VPS release requires a separate command from the project owner.
+Public website: [Muscat Amusement Park (MAP)](https://rdsolod-ui.github.io/muscat-amusement-park/). The owner authorized GitHub Pages on 2 October 2026. Push/PR CI still produces a build artifact only. To update the public preview, manually run the **Publish GitHub Pages** workflow on `codex/muscat-concept`; it rebuilds, type-checks and validates the static export before deploying that artifact. `revision.json` records the published commit and workflow ID. No custom domain or VPS is configured by this workflow. The owner separately authorized the VPS release on 2 October 2026; its publication is manual and is not part of GitHub Actions.
 
 The website has passed local production-build and browser checks. Arabic editorial review, official site verification and venue testing remain separate. See [validation](docs/validation.md).
 
@@ -60,8 +60,19 @@ Open `design/v3/muscat-park-v3.blend` in Blender to edit the current concept (me
 
 ## Revision 3
 
-The updated programme includes a 90 m wheel, large concept coaster, family rides and arcades; a wave pool, slides and beach lounge; two-storey City Walk buildings with shaded cafe verandas; a hemispherical laser-tag and performance venue; and slatted pergolas with seasonal mist along the modelled main pedestrian network. The roundabout approach, entrance and 1,000-space parking target are retained. The expanded programme has no approved CAPEX estimate.
+The updated programme includes a 90 m wheel, Boomerang looping coaster, family rides and arcades; a wave pool, slides and beach lounge; two-storey City Walk buildings with shaded cafe verandas; a hemispherical laser-tag and performance venue; and slatted pergolas with seasonal mist along the modelled main pedestrian network. The roundabout approach, entrance and 1,000-space parking target are retained. The expanded programme has no approved CAPEX estimate.
 
 Eight generated chapter illustrations have distinct files and hashes; none is reused across chapters. Documentary photographs are a separate source-linked catalogue, not depictions of the Muscat project. See [model and plan](design/v3/README.md), [photo research](docs/reference-research/README.md), [visual manifest](design/visuals/v3/visual-manifest.json) and [TV typography](docs/TV-PRESENTATION.md).
 
 The Present layout targets an 80-inch 4K display at 6 m. The 3840 × 2160 layout was measured in the browser and the 1280 × 720 composition visually inspected. Actual room readability remains to be verified.
+
+
+## Revision 4
+
+The first two chapters retain the Salalah Earth-to-city composition, now with a 16-second geography journey and a gentler 7.2-second globe approach. Masterplan and landmark chapters are swapped. Each masterplan view holds for five seconds with 1.6-second crossfades. Five zone selectors reveal independent pins and photorealistic closeups.
+
+The first masterplan frame uses an attributed Google Maps satellite screenshot, visually registered to the supplied diagram. The existing northeastern intersection connects to the proposed internal roundabout and parking in all three views. Read [site evidence](docs/v4-site/README.md). This does not establish cadastral boundaries or approved road access.
+
+The detailed Blender model contains the supplied WFC-20A geometry, a 90 m concept observation wheel, entrance, two-storey cafe promenade and hemisphere venue. The 3D control plays 15-second illustrative construction followed by wheel rotation and a gentle orbit. The separate landmark animation assembles the wheel against a generated Muscat park-and-mountain background. [Model validation](design/v4/validation) and [motion contract](docs/v4-motion.md).
+
+No CAPEX, engineering, ride safety or civil access approval is implied. The 50 m wheel source filename does not set the concept height: the owner explicitly retained 90 m.

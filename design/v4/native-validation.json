@@ -1,0 +1,104 @@
+{
+  "pass": true,
+  "blender": "5.2.1 LTS",
+  "units": 1.0,
+  "wheel_height_m": 90.0,
+  "parking_bays": 1000,
+  "locked_parcel_zones_parking": {
+    "Original screenshot site perimeter": true,
+    "Reference zone rides": true,
+    "Reference zone water": true,
+    "Reference zone city": true,
+    "Reference zone parking": true,
+    "Reference zone utility": true,
+    "Parking bays and cars": true,
+    "Parking connected aisle00": true,
+    "Parking connected aisle01": true,
+    "Parking connected aisle02": true,
+    "Parking connected aisle03": true,
+    "Parking connected aisle04": true,
+    "Parking connected aisle05": true,
+    "Parking connected aisle06": true,
+    "Parking connected aisle07": true,
+    "Parking connected aisle08": true,
+    "Parking connected aisle09": true,
+    "Parking connected aisle10": true,
+    "Parking connected aisle11": true,
+    "Parking connected aisle12": true,
+    "Parking connected aisle13": true,
+    "Parking connected aisle14": true,
+    "Parking connected aisle15": true
+  },
+  "images": [
+    {
+      "name": "Image_0",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "decodes": true,
+      "relative_path": true
+    },
+    {
+      "name": "Image_0.001",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "decodes": true,
+      "relative_path": true
+    },
+    {
+      "name": "Image_1",
+      "packed": true,
+      "size": [
+        1039,
+        474
+      ],
+      "decodes": true,
+      "relative_path": true
+    },
+    {
+      "name": "Image_1.001",
+      "packed": true,
+      "size": [
+        146,
+        150
+      ],
+      "decodes": true,
+      "relative_path": true
+    },
+    {
+      "name": "Image_2",
+      "packed": true,
+      "size": [
+        775,
+        775
+      ],
+      "decodes": true,
+      "relative_path": true
+    },
+    {
+      "name": "Image_3",
+      "packed": true,
+      "size": [
+        775,
+        775
+      ],
+      "decodes": true,
+      "relative_path": true
+    }
+  ],
+  "external_libraries": 0,
+  "source_unchanged": true,
+  "actions": 50,
+  "coaster_dimensions_m": [
+    99.6700439453125,
+    39.76874542236328,
+    40.96331024169922
+  ],
+  "source_coaster_triangles": 534879,
+  "proposed_road_and_metre_coaster_placement_not_surveyed": true
+}

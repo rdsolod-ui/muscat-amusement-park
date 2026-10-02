@@ -1,0 +1,62 @@
+{
+  "coaster_source_center_px": [
+    422,
+    427
+  ],
+  "source_bbox_fits_ride_zone": true,
+  "overlap_any_canopy": false,
+  "minimum_bbox_to_canopy_edge_m": 10.733520547662877,
+  "routes": [
+    {
+      "id": "CW-main",
+      "bbox_to_canopy_edge_m": 189.7213484921776,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "RIDES-loop-00",
+      "bbox_to_canopy_edge_m": 43.23071980257355,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "RIDES-loop-01",
+      "bbox_to_canopy_edge_m": 40.0428242938726,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "RIDES-loop-02",
+      "bbox_to_canopy_edge_m": 10.733520547662877,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "RIDES-loop-03",
+      "bbox_to_canopy_edge_m": 152.21896751011505,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "WATER-arrival",
+      "bbox_to_canopy_edge_m": 292.2938076542854,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "ARRIVAL-pedestrian",
+      "bbox_to_canopy_edge_m": 94.85783309622488,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "WATER-beach-walk",
+      "bbox_to_canopy_edge_m": 334.70515594865884,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "DOME-side-walk",
+      "bbox_to_canopy_edge_m": 252.6856705367468,
+      "bbox_crosses_canopy": false
+    },
+    {
+      "id": "DOME-event-seating",
+      "bbox_to_canopy_edge_m": 259.47790028712535,
+      "bbox_crosses_canopy": false
+    }
+  ],
+  "status": "concept layout check, not supplier operating-envelope or safety clearance"
+}
